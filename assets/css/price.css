@@ -1,0 +1,951 @@
+/* =========================================================
+   Donexia Pricing Section
+   White pricing cards + separate benefit cards
+========================================================= */
+
+.donexia-pricing-section {
+    --pricing-orange: #ff6a00;
+    --pricing-orange-dark: #d44a00;
+    --pricing-purple: #7c4dff;
+    --pricing-green: #32972d;
+    --pricing-blue: #0f55dc;
+    --pricing-heading: #111827;
+    --pricing-text: #405174;
+    --pricing-border: #e9e5e1;
+
+    position: relative;
+    padding: 90px 20px 70px;
+    background: transparent;
+    overflow: hidden;
+}
+
+.donexia-pricing-section,
+.donexia-pricing-section * {
+    box-sizing: border-box;
+}
+
+.donexia-pricing-container {
+    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
+}
+
+/* =========================================================
+   Heading
+========================================================= */
+
+.donexia-pricing-heading {
+    max-width: 1000px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.donexia-pricing-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+
+    padding: 10px 22px;
+    margin-bottom: 20px;
+
+    color: var(--pricing-heading);
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.donexia-pricing-label i {
+    color: var(--pricing-orange);
+    font-size: 23px;
+}
+
+.donexia-pricing-heading h2 {
+    margin: 0;
+
+    color: var(--pricing-heading);
+
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: clamp(36px, 4vw, 57px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -1px;
+}
+
+.donexia-pricing-heading > p {
+    margin: 19px 0 0;
+
+    color: var(--pricing-text);
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* =========================================================
+   Pricing Grid
+========================================================= */
+
+.donexia-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+/* Every pricing plan is a white card */
+
+.donexia-pricing-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    padding: 32px 30px;
+
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 18px;
+
+    box-shadow: 0 12px 35px rgba(17, 24, 39, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.donexia-pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(17, 24, 39, 0.13);
+}
+
+/* Professional plan keeps orange outline */
+
+.donexia-pricing-professional {
+    background: #ffffff;
+    border: 2px solid var(--pricing-orange);
+    border-radius: 18px;
+}
+
+/* =========================================================
+   Card Header
+========================================================= */
+
+.donexia-pricing-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+    min-height: 110px;
+}
+
+.donexia-pricing-card-header h3 {
+    margin: 0 0 9px;
+
+    color: var(--pricing-heading);
+
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.donexia-pricing-card-header p {
+    max-width: 190px;
+    margin: 0;
+
+    color: var(--pricing-text);
+
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.donexia-pricing-icon {
+    flex: 0 0 86px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 86px;
+    height: 86px;
+
+    border-radius: 50%;
+
+    font-size: 39px;
+}
+
+/* =========================================================
+   Price
+========================================================= */
+
+.donexia-pricing-price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    gap: 5px;
+    margin-top: 14px;
+
+    color: var(--pricing-heading);
+}
+
+.donexia-pricing-amount {
+    font-size: clamp(34px, 2.5vw, 42px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -1.5px;
+}
+
+.donexia-pricing-period {
+    color: #263455;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.donexia-pricing-billing {
+    margin-top: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.donexia-pricing-divider {
+    margin: 20px 0;
+
+    border-top: 1px dashed #d8d7d4;
+}
+
+/* =========================================================
+   Plan Features
+========================================================= */
+
+.donexia-pricing-features {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+    padding: 0;
+    margin: 0 0 26px;
+
+    list-style: none;
+}
+
+.donexia-pricing-features li {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    color: #17213c;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.donexia-pricing-features li i {
+    flex: 0 0 auto;
+
+    margin-top: 2px;
+
+    font-size: 17px;
+}
+
+/* =========================================================
+   Card Footer and Buttons
+========================================================= */
+
+.donexia-pricing-card-footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+.donexia-pricing-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 50px;
+
+    padding: 12px 20px;
+
+    border: 1.5px solid currentColor;
+    border-radius: 8px;
+
+    background: transparent;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.donexia-pricing-button:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.donexia-pricing-card-footer p {
+    margin: 12px 0 0;
+
+    color: #415071;
+
+    font-size: 13px;
+}
+
+/* =========================================================
+   Starter Plan
+========================================================= */
+
+.donexia-pricing-starter .donexia-pricing-icon {
+    color: var(--pricing-orange);
+    background: #fff0df;
+}
+
+.donexia-pricing-starter .donexia-pricing-billing,
+.donexia-pricing-starter .donexia-pricing-features i,
+.donexia-pricing-starter .donexia-pricing-button {
+    color: var(--pricing-orange);
+}
+
+.donexia-pricing-starter .donexia-pricing-button:hover {
+    color: #ffffff;
+    background: var(--pricing-orange);
+    border-color: var(--pricing-orange);
+}
+
+/* =========================================================
+   Growth Plan
+========================================================= */
+
+.donexia-pricing-growth .donexia-pricing-icon {
+    color: var(--pricing-purple);
+    background: #f1e9ff;
+}
+
+.donexia-pricing-growth .donexia-pricing-billing,
+.donexia-pricing-growth .donexia-pricing-features i,
+.donexia-pricing-growth .donexia-pricing-button {
+    color: var(--pricing-purple);
+}
+
+.donexia-pricing-growth .donexia-pricing-button:hover {
+    color: #ffffff;
+    background: var(--pricing-purple);
+    border-color: var(--pricing-purple);
+}
+
+/* =========================================================
+   Professional Plan
+========================================================= */
+
+.donexia-pricing-popular {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+    padding: 7px 14px;
+
+    color: #ffffff;
+    background: var(--pricing-orange);
+
+    border-radius: 8px 8px 4px 4px;
+
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    transform: translateX(-50%);
+
+    box-shadow: 0 8px 20px rgba(255, 106, 0, 0.25);
+}
+
+.donexia-pricing-professional .donexia-pricing-icon {
+    color: var(--pricing-orange);
+    background: #fff4e7;
+
+    border: 1px solid #ffd1a9;
+}
+
+.donexia-pricing-professional .donexia-pricing-billing,
+.donexia-pricing-professional .donexia-pricing-features i {
+    color: var(--pricing-orange);
+}
+
+.donexia-pricing-professional .donexia-pricing-button {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #ff6a00 0%,
+        #ff8700 100%
+    );
+
+    border-color: var(--pricing-orange);
+
+    box-shadow: 0 10px 20px rgba(255, 106, 0, 0.18);
+}
+
+.donexia-pricing-professional .donexia-pricing-button:hover {
+    color: #ffffff;
+
+    background: var(--pricing-orange-dark);
+    border-color: var(--pricing-orange-dark);
+}
+
+/* =========================================================
+   Enterprise Plan
+========================================================= */
+
+.donexia-pricing-enterprise .donexia-pricing-icon {
+    color: var(--pricing-green);
+    background: #eaf5e6;
+}
+
+.donexia-pricing-enterprise .donexia-pricing-billing,
+.donexia-pricing-enterprise .donexia-pricing-features i,
+.donexia-pricing-enterprise .donexia-pricing-button {
+    color: var(--pricing-green);
+}
+
+.donexia-pricing-enterprise .donexia-pricing-button:hover {
+    color: #ffffff;
+    background: var(--pricing-green);
+    border-color: var(--pricing-green);
+}
+
+/* =========================================================
+   Benefit Cards
+========================================================= */
+/* =========================================================
+   One Horizontal Benefits Card
+========================================================= */
+
+.donexia-pricing-benefits {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: 0;
+    margin-top: 45px;
+    padding: 24px 18px;
+
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 18px;
+
+    box-shadow: 0 12px 35px rgba(17, 24, 39, 0.08);
+}
+
+.donexia-pricing-benefit {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+    min-width: 0;
+    padding: 8px 22px;
+
+    background: transparent;
+    border-right: 1px solid #e5e1dd;
+}
+
+.donexia-pricing-benefit:last-child {
+    border-right: none;
+}
+
+.donexia-pricing-benefit-icon {
+    flex: 0 0 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+}
+
+.donexia-pricing-benefit h4 {
+    margin: 0 0 5px;
+
+    color: var(--pricing-heading);
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.donexia-pricing-benefit p {
+    margin: 0;
+
+    color: var(--pricing-text);
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+/* Benefit icon colors */
+
+.benefit-orange .donexia-pricing-benefit-icon {
+    color: var(--pricing-orange);
+    background: #fff0df;
+}
+
+.benefit-purple .donexia-pricing-benefit-icon {
+    color: #9b5ac4;
+    background: #f3e8fa;
+}
+
+.benefit-green .donexia-pricing-benefit-icon {
+    color: var(--pricing-green);
+    background: #e8f5e7;
+}
+
+.benefit-pink .donexia-pricing-benefit-icon {
+    color: #e74d70;
+    background: #fee9ee;
+}
+
+.benefit-blue .donexia-pricing-benefit-icon {
+    color: #1573bd;
+    background: #e5f2fc;
+}
+
+/* Tablet */
+
+@media (max-width: 1200px) {
+    .donexia-pricing-benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 0;
+    }
+
+    .donexia-pricing-benefit {
+        border-right: none;
+    }
+
+    .donexia-pricing-benefit:nth-child(odd) {
+        border-right: 1px solid #e5e1dd;
+    }
+
+    .donexia-pricing-benefit:last-child {
+        grid-column: 1 / -1;
+        justify-content: center;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+    .donexia-pricing-benefits {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+        padding: 20px;
+    }
+
+    .donexia-pricing-benefit,
+    .donexia-pricing-benefit:nth-child(odd),
+    .donexia-pricing-benefit:last-child {
+        grid-column: auto;
+
+        justify-content: flex-start;
+
+        padding: 18px 0;
+
+        border-right: none;
+        border-bottom: 1px solid #e5e1dd;
+    }
+
+    .donexia-pricing-benefit:first-child {
+        padding-top: 0;
+    }
+
+    .donexia-pricing-benefit:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}
+
+/* Benefit icon colors */
+
+.benefit-orange .donexia-pricing-benefit-icon {
+    color: var(--pricing-orange);
+    background: #fff0df;
+}
+
+.benefit-purple .donexia-pricing-benefit-icon {
+    color: #9b5ac4;
+    background: #f3e8fa;
+}
+
+.benefit-green .donexia-pricing-benefit-icon {
+    color: var(--pricing-green);
+    background: #e8f5e7;
+}
+
+.benefit-pink .donexia-pricing-benefit-icon {
+    color: #e74d70;
+    background: #fee9ee;
+}
+
+.benefit-blue .donexia-pricing-benefit-icon {
+    color: #1573bd;
+    background: #e5f2fc;
+}
+
+/* =========================================================
+   Bottom Billing Note
+========================================================= */
+
+.donexia-pricing-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    max-width: 100%;
+
+    margin: 28px auto 0;
+    padding: 13px 26px;
+
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 50px;
+
+    box-shadow: 0 8px 25px rgba(17, 24, 39, 0.05);
+}
+
+.donexia-pricing-note-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #253354;]
+    font-size: 14px;
+}
+
+.donexia-pricing-note-item i {
+    color: var(--pricing-orange);
+
+    font-size: 17px;
+}
+
+.donexia-pricing-note-divider {
+    width: 1px;
+    height: 26px;
+
+    margin: 0 28px;
+
+    background: #d6d1cc;
+}
+
+/* =========================================================
+   Responsive: Desktop and Tablet
+========================================================= */
+
+@media (max-width: 1250px) {
+    .donexia-pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .donexia-pricing-benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .donexia-pricing-benefit:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* =========================================================
+   Responsive: Mobile
+========================================================= */
+
+@media (max-width: 767px) {
+    .donexia-pricing-section {
+        padding: 70px 15px 55px;
+    }
+
+    .donexia-pricing-heading {
+        margin-bottom: 34px;
+    }
+
+    .donexia-pricing-label {
+        padding: 9px 16px;
+        font-size: 15px;
+    }
+
+    .donexia-pricing-heading h2 {
+        font-size: 34px;
+        letter-spacing: -0.5px;
+    }
+
+    .donexia-pricing-heading > p {
+        font-size: 16px;
+    }
+
+    .donexia-pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .donexia-pricing-card {
+        padding: 27px 23px 24px;
+    }
+
+    .donexia-pricing-card-header {
+        min-height: auto;
+    }
+
+    .donexia-pricing-card-header p {
+        max-width: 210px;
+    }
+
+    .donexia-pricing-icon {
+        flex-basis: 72px;
+
+        width: 72px;
+        height: 72px;
+
+        font-size: 32px;
+    }
+
+    .donexia-pricing-benefits {
+        grid-template-columns: 1fr;
+        gap: 18px;
+
+        margin-top: 35px;
+    }
+
+    .donexia-pricing-benefit,
+    .donexia-pricing-benefit:last-child {
+        grid-column: auto;
+    }
+
+    .donexia-pricing-note {
+        flex-direction: column;
+
+        gap: 11px;
+        width: 100%;
+
+        padding: 16px 18px;
+
+        border-radius: 14px;
+
+        text-align: center;
+    }
+
+    .donexia-pricing-note-divider {
+        width: 100%;
+        height: 1px;
+
+        margin: 0;
+    }
+}
+
+/* =========================================================
+   Responsive: Small Mobile
+========================================================= */
+
+@media (max-width: 420px) {
+    .donexia-pricing-card-header h3 {
+        font-size: 23px;
+    }
+
+    .donexia-pricing-icon {
+        flex-basis: 64px;
+
+        width: 64px;
+        height: 64px;
+
+        font-size: 28px;
+    }
+
+    .donexia-pricing-amount {
+        font-size: 34px;
+    }
+
+    .donexia-pricing-benefit {
+        padding: 20px 18px;
+    }
+
+    .donexia-pricing-benefit-icon {
+        flex-basis: 54px;
+
+        width: 54px;
+        height: 54px;
+
+        font-size: 25px;
+    }
+}
+
+
+/* =========================================================
+   One Horizontal Benefits Card
+========================================================= */
+
+.donexia-pricing-benefits {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: 0;
+    margin-top: 45px;
+    padding: 24px 18px;
+
+    background: #ffffff;
+    border: 1px solid #ececec;
+    border-radius: 18px;
+
+    box-shadow: 0 12px 35px rgba(17, 24, 39, 0.08);
+}
+
+.donexia-pricing-benefit {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+    min-width: 0;
+    padding: 8px 22px;
+
+    background: transparent;
+    border-right: 1px solid #e5e1dd;
+}
+
+.donexia-pricing-benefit:last-child {
+    border-right: none;
+}
+
+.donexia-pricing-benefit-icon {
+    flex: 0 0 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    border-radius: 50%;
+
+    font-size: 27px;
+}
+
+.donexia-pricing-benefit h4 {
+    margin: 0 0 5px;
+
+    color: var(--pricing-heading);
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.donexia-pricing-benefit p {
+    margin: 0;
+
+    color: var(--pricing-text);
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+/* Benefit icon colors */
+
+.benefit-orange .donexia-pricing-benefit-icon {
+    color: var(--pricing-orange);
+    background: #fff0df;
+}
+
+.benefit-purple .donexia-pricing-benefit-icon {
+    color: #9b5ac4;
+    background: #f3e8fa;
+}
+
+.benefit-green .donexia-pricing-benefit-icon {
+    color: var(--pricing-green);
+    background: #e8f5e7;
+}
+
+.benefit-pink .donexia-pricing-benefit-icon {
+    color: #e74d70;
+    background: #fee9ee;
+}
+
+.benefit-blue .donexia-pricing-benefit-icon {
+    color: #1573bd;
+    background: #e5f2fc;
+}
+
+/* Tablet */
+
+@media (max-width: 1200px) {
+    .donexia-pricing-benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 0;
+    }
+
+    .donexia-pricing-benefit {
+        border-right: none;
+    }
+
+    .donexia-pricing-benefit:nth-child(odd) {
+        border-right: 1px solid #e5e1dd;
+    }
+
+    .donexia-pricing-benefit:last-child {
+        grid-column: 1 / -1;
+        justify-content: center;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+    .donexia-pricing-benefits {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+        padding: 20px;
+    }
+
+    .donexia-pricing-benefit,
+    .donexia-pricing-benefit:nth-child(odd),
+    .donexia-pricing-benefit:last-child {
+        grid-column: auto;
+
+        justify-content: flex-start;
+
+        padding: 18px 0;
+
+        border-right: none;
+        border-bottom: 1px solid #e5e1dd;
+    }
+
+    .donexia-pricing-benefit:first-child {
+        padding-top: 0;
+    }
+
+    .donexia-pricing-benefit:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+}

@@ -1,0 +1,296 @@
+/* ─── style.css — Orange Theme ────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #fff7f0;
+  --card:        #ffffff;
+  --accent:      #e85d04;
+  --accent2:     #f48c06;
+  --accent-dark: #9d2b00;
+  --danger:      #c1121f;
+  --danger-bg:   #fff0f1;
+  --success:     #1b4332;
+  --success-bg:  #d8f3dc;
+  --text:        #1a1a1a;
+  --muted:       #6b7280;
+  --border:      #f0d5c0;
+  --input-bg:    #fffaf6;
+  --disabled-bg: #f5f0ec;
+  --radius:      12px;
+  --shadow:      0 8px 40px rgba(232, 93, 4, 0.12);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Dot-grid background */
+body::before {
+  content: "";
+  position: fixed; inset: 0;
+  background-image: radial-gradient(circle, #e85d0422 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-wrap {
+  width: 100%;
+  max-width: 560px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Card ── */
+.card {
+  background: var(--card);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+/* ── Header ── */
+.card-header {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.logo-ring {
+  width: 52px; height: 52px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1rem;
+  backdrop-filter: blur(4px);
+}
+.logo-ring svg { width: 30px; height: 30px; }
+
+.card-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: .25rem;
+}
+.card-header p {
+  font-size: .85rem;
+  opacity: 0.75;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+/* ── Form body ── */
+.form-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+label {
+  font-size: .8rem;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+/* OTP hint badge next to label */
+.otp-hint {
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--muted);
+  transition: color .3s;
+}
+.otp-hint.sent { color: #2d6a4f; }
+
+/* ── Inputs ── */
+input {
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: .7rem 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .95rem;
+  color: var(--text);
+  background: var(--input-bg);
+  transition: border-color .2s, box-shadow .2s, background .2s;
+  outline: none;
+  width: 100%;
+}
+input:focus {
+  border-color: var(--accent2);
+  box-shadow: 0 0 0 3px rgba(244,140,6,.15);
+  background: #fff;
+}
+input::placeholder { color: #ccc; }
+input:disabled {
+  background: var(--disabled-bg);
+  color: #aaa;
+  cursor: not-allowed;
+  border-color: #ead5c0;
+}
+
+/* ── Mobile + Send OTP row ── */
+.input-with-btn {
+  display: flex;
+  gap: .5rem;
+  align-items: stretch;
+}
+.input-with-btn input {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Send OTP button */
+.btn-otp {
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .82rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  min-width: 94px;
+  height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity .2s, transform .1s;
+  flex-shrink: 0;
+}
+.btn-otp:hover:not(:disabled) { opacity: .9; transform: translateY(-1px); }
+.btn-otp:active:not(:disabled) { transform: translateY(0); }
+.btn-otp:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Spinner inside Send OTP */
+.otp-spinner {
+  width: 16px; height: 16px;
+  border: 2px solid rgba(255,255,255,.35);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  display: none;
+  position: absolute;
+}
+
+/* ── Register button ── */
+.btn-submit {
+  margin-top: .5rem;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: .85rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: .02em;
+  position: relative;
+  height: 50px;
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity .2s, transform .1s;
+}
+.btn-submit:hover:not(:disabled) { opacity: .92; transform: translateY(-1px); }
+.btn-submit:active:not(:disabled) { transform: translateY(0); }
+.btn-submit:disabled {
+  background: linear-gradient(135deg, #f0c080, #d09060);
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Register spinner */
+.btn-spinner {
+  width: 20px; height: 20px;
+  border: 2.5px solid rgba(255,255,255,.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  display: none;
+  position: absolute;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Response Message ── */
+.response-msg {
+  margin: 0 2rem 2rem;
+  border-radius: var(--radius);
+  padding: .9rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-size: .95rem;
+  font-weight: 500;
+  animation: fadeSlide .3s ease;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.response-msg.success {
+  background: var(--success-bg);
+  color: var(--success);
+  border: 1px solid #74c69d;
+}
+.response-msg.error {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid #f4a0a5;
+}
+
+.msg-icon {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.success .msg-icon { background: #74c69d; color: #fff; }
+.error   .msg-icon { background: #e5383b; color: #fff; }
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .form-row { grid-template-columns: 1fr; }
+  .form-body { padding: 1.5rem; }
+  .card-header { padding: 2rem 1.5rem 1.5rem; }
+  .response-msg { margin: 0 1.5rem 1.5rem; }
+  .btn-otp { min-width: 80px; font-size: .78rem; }
+}

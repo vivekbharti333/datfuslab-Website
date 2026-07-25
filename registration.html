@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<link href="assets/css/wa_style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap" rel="stylesheet"/>
+<title>Create Your Donexia NGO CRM Account | Datfuslab</title><meta content="Register for Donexia NGO CRM to manage donors, donations, receipts, campaigns and communication from one platform." name="description"/><meta content="noindex, follow" name="robots"/><link href="https://datfuslab.com/registration" rel="canonical"/><meta content="website" property="og:type"/><meta content="Datfuslab Technologies" property="og:site_name"/><meta content="Create Your Donexia NGO CRM Account | Datfuslab" property="og:title"/><meta content="Register for Donexia NGO CRM to manage donors, donations, receipts, campaigns and communication from one platform." property="og:description"/><meta content="https://datfuslab.com/registration" property="og:url"/><meta content="https://datfuslab.com/assets/img/logo/logo-black02.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Create Your Donexia NGO CRM Account | Datfuslab" name="twitter:title"/><meta content="Register for Donexia NGO CRM to manage donors, donations, receipts, campaigns and communication from one platform." name="twitter:description"/><meta content="https://datfuslab.com/assets/img/logo/logo-black02.png" name="twitter:image"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://datfuslab.com/#organization",
+      "name": "Datfuslab Technologies Pvt. Ltd.",
+      "url": "https://datfuslab.com/",
+      "logo": "https://datfuslab.com/assets/img/logo/logo-black02.png",
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://datfuslab.com/#website",
+      "url": "https://datfuslab.com/",
+      "name": "Datfuslab Technologies",
+      "publisher": {
+        "@id": "https://datfuslab.com/#organization"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://datfuslab.com/registration#webpage",
+      "url": "https://datfuslab.com/registration",
+      "name": "Create Your Donexia NGO CRM Account | Datfuslab",
+      "description": "Register for Donexia NGO CRM to manage donors, donations, receipts, campaigns and communication from one platform.",
+      "isPartOf": {
+        "@id": "https://datfuslab.com/#website"
+      },
+      "about": {
+        "@id": "https://datfuslab.com/#organization"
+      }
+    }
+  ]
+}</script></head>
+<body>
+<div class="page-wrap">
+<div class="card">
+<div class="card-header">
+<div class="logo-ring">
+<svg fill="none" viewbox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20" r="18" stroke="white" stroke-width="2"></circle>
+<path d="M12 20c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8" stroke="white" stroke-linecap="round" stroke-width="2"></path>
+<circle cx="20" cy="20" fill="white" r="3"></circle>
+</svg>
+</div>
+<h1>NGO CRM Registration</h1>
+<p> User Registration</p>
+</div>
+<form class="form-body" id="registerForm" novalidate="">
+<div class="form-row">
+<div class="form-group">
+<label for="firstName">First Name</label>
+<input id="firstName" placeholder="Vivek" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="lastName">Last Name</label>
+<input id="lastName" placeholder="Bharti" required="" type="text"/>
+</div>
+</div>
+<!-- Mobile + Send OTP -->
+<div class="form-row">
+<div class="form-group">
+<label for="mobileNo">Mobile No.</label>
+<div class="input-with-btn">
+<input id="mobileNo" maxlength="10" placeholder="10-digit number" required="" type="tel"/>
+<button class="btn-otp" id="sendOtpBtn" type="button">
+<span class="otp-btn-text">Send OTP</span>
+<span class="otp-spinner" id="otpSpinner"></span>
+</button>
+</div>
+</div>
+<div class="form-group">
+<label for="alternateMobile">Alternate Mobile</label>
+<input id="alternateMobile" placeholder="9999999999" type="tel"/>
+</div>
+</div>
+<div class="form-group">
+<label for="emailId">Email Address</label>
+<input id="emailId" placeholder="vivek@example.com" required="" type="email"/>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="password">Password</label>
+<input id="password" placeholder="••••••••" required="" type="password"/>
+</div>
+<div class="form-group">
+<label for="dob">Date of Birth</label>
+<input id="dob" required="" type="date"/>
+</div>
+</div>
+<!-- <div class="form-row">
+          <div class="form-group">
+            <label for="aadharNumber">Aadhaar Number</label>
+            <input type="text" id="aadharNumber" placeholder="123412341234" maxlength="12" required />
+          </div>
+          <div class="form-group">
+            <label for="panNumber">PAN Number</label>
+            <input type="text" id="panNumber" placeholder="ABCDE1234F" maxlength="10" required />
+          </div>
+        </div> -->
+<!-- OTP — disabled until Send OTP succeeds -->
+<div class="form-group">
+<label for="otp">
+            OTP
+            <span class="otp-hint" id="otpHint"></span>
+</label>
+<input disabled="" id="otp" maxlength="6" placeholder="Click 'Send OTP' first" required="" type="text"/>
+</div>
+<!-- Hidden fields -->
+<input id="roleType" type="hidden" value="SUPERADMIN"/>
+<input id="service" type="hidden" value="NGO_CRM"/>
+<input id="createdBy" type="hidden" value="SYSTEM"/>
+<input id="userPicture" type="hidden" value=""/>
+<button class="btn-submit" disabled="" id="submitBtn" type="submit">
+<span class="btn-text">Register</span>
+<span class="btn-spinner" id="spinner"></span>
+</button>
+</form>
+<!-- Response Message -->
+<div class="response-msg" id="responseMsg" style="display:none">
+<span class="msg-icon" id="msgIcon"></span>
+<span class="msg-text" id="msgText"></span>
+</div>
+</div>
+</div>
+<script src="assets/js/wa_app.js"></script>
+</body>
+</html>
