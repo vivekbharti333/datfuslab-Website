@@ -46,7 +46,7 @@ NGO software, donor management, donation tracking, campaign analytics, CRM for n
 - kindful.com
 
 ## Technologies Used
-React, Node.js, AWS, MySQL
+Angular, java, AWS, MySQL
 
 ## Key People
 
