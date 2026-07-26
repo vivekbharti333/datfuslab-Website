@@ -58,24 +58,32 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify(request)
             });
 
-            let result;
+            const responseText = await response.text();
+            let result = {};
 
-            try {
-                result = await response.json();
-            } catch (jsonError) {
-                throw new Error("Invalid response received from server.");
+            if (responseText) {
+                try {
+                    result = JSON.parse(responseText);
+                } catch (jsonError) {
+                    result = { responseMessage: responseText };
+                }
             }
 
             console.log("Contact API response:", result);
 
-            if (
-                response.ok &&
-                result.responseCode === 200 &&
-                result.payload &&
-                result.payload.respCode === 200
-            ) {
+            const payload = result && result.payload ? result.payload : {};
+            const responseCode = Number(result.responseCode);
+            const payloadCode = Number(payload.respCode);
+            const hasErrorCode =
+                (Number.isFinite(responseCode) && responseCode >= 400) ||
+                (Number.isFinite(payloadCode) && payloadCode >= 400);
+            const isSuccess = response.ok && !hasErrorCode;
+
+            if (isSuccess) {
                 const successMessage =
-                    result.payload.respMesg || "Message sent successfully.";
+                    payload.respMesg ||
+                    result.responseMessage ||
+                    "Message sent successfully.";
 
                 messageDiv.innerHTML = `
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -107,8 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             } else {
                 const errorMessage =
-                    result?.payload?.respMesg ||
-                    result?.responseMessage ||
+                    payload.respMesg ||
+                    result.responseMessage ||
                     "Unable to process your request.";
 
                 messageDiv.innerHTML = `
@@ -131,9 +139,14 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
             console.error("Contact form error:", error);
 
+            const errorMessage =
+                error && error.message === "Failed to fetch"
+                    ? "The server could not be reached. Please try again shortly."
+                    : error.message || "Something went wrong. Please try again later.";
+
             messageDiv.innerHTML = `
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong>Error!</strong> Something went wrong. Please try again later.
+                    <strong>Error!</strong> ${escapeHtml(errorMessage)}
                     <button
                         type="button"
                         class="btn-close"

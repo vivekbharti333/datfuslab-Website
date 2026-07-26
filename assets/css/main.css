@@ -80,7 +80,7 @@
 /* Price Table */
   .pricing-section {
     text-align: center;
-    padding: 50px 15px;
+    padding: 10px 15px 50px;
   }
 
   .pricing-section h2 {
@@ -15364,5 +15364,137 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     color: #fff; }
     .hds-footer-links li a:hover {
       text-decoration: underline; }
+
+/* Keep the site header logo consistently sized on every page. */
+.header-logo img,
+.xb-logo-mobile img {
+  width: 85% !important;
+  height: auto !important;
+}
+
+/* Keep the DPIIT certificate consistently sized in every page footer. */
+.footer img[src*="DPIIT-header"] {
+  width: 90% !important;
+  height: auto !important;
+}
+
+/* Four-column footer with the certificate in the final column. */
+.footer-style-two .footer-inner {
+  display: grid !important;
+  grid-template-columns:
+    minmax(0, 4fr)
+    minmax(0, 3fr)
+    minmax(0, 3fr)
+    minmax(0, 3fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.footer-style-two .footer-inner > .footer-widget {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 991px) {
+  .footer-style-two .footer-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575px) {
+  .footer-style-two .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* More compact NGO CRM hero heading. */
+.hero-style-four .xb-hero .ngo-hero-title {
+  font-size: 56px;
+  line-height: 1.15;
+}
+
+@media (max-width: 991px) {
+  .hero-style-four .xb-hero .ngo-hero-title {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-style-four .xb-hero .ngo-hero-title {
+    font-size: 36px;
+  }
+}
+
+/* Responsive contact form layout. */
+@media (max-width: 991px) {
+  .contact .item-contact_form {
+    min-height: 0;
+    margin-right: 0;
+  }
+
+  .contact .item-contact_info {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .contact {
+    padding-top: 45px;
+  }
+
+  .contact .row.pb-130 {
+    padding-bottom: 70px;
+  }
+
+  .contact .item-contact_form,
+  .contact .item-contact_info {
+    padding: 25px 20px 30px;
+  }
+
+  .contact .item-contact_form .xb-title {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .contact .item-contact_form .xb-content {
+    line-height: 1.6;
+  }
+
+  .contact .item-contact_form .input-field {
+    margin-bottom: 20px;
+  }
+
+  .contact .item-contact_form .input-field label {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .contact .item-contact_form input,
+  .contact .item-contact_form select,
+  .contact .item-contact_form textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .contact .item-contact_form textarea {
+    min-height: 130px;
+    resize: vertical;
+  }
+
+  .contact .item-contact_form .nice-select {
+    width: 100%;
+  }
+
+  .contact .item-contact_form .cp-btn {
+    width: 100%;
+    padding: 17px 20px;
+  }
+
+  .contact #contactMessage .alert {
+    overflow-wrap: anywhere;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
