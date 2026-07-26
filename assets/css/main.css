@@ -15372,6 +15372,49 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
   height: auto !important;
 }
 
+/* Keep the logo and hamburger on one line in the mobile header. */
+@media (max-width: 1199px) {
+  .header-area .header__wrap {
+    flex-wrap: nowrap;
+  }
+
+  .header-area .header-logo {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 260px;
+  }
+
+  .header-area .header-logo img {
+    display: block;
+    width: 100% !important;
+    max-width: 260px;
+    height: auto !important;
+  }
+
+  .header-area .header-bar-mobile {
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+
+  /* Use the same black hamburger color as the index mobile header. */
+  .header-area .xb-nav-mobile,
+  .header-area .xb-nav-mobile:hover,
+  .header-area .stricked-menu .xb-nav-mobile,
+  .header-area .stricked-menu .xb-nav-mobile:hover {
+    color: var(--color-black) !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .header-area .header-logo {
+    max-width: calc(100% - 52px);
+  }
+
+  .header-area .header-logo img {
+    max-width: 230px;
+  }
+}
+
 /* Keep the DPIIT certificate consistently sized in every page footer. */
 .footer img[src*="DPIIT-header"] {
   width: 90% !important;
