@@ -17,6 +17,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://datfuslab.com/fqa</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://datfuslab.com/mobile-app-development</loc>
     <priority>0.7</priority>
   </url>
