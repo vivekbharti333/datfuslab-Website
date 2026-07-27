@@ -15403,6 +15403,18 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
   .header-area .stricked-menu .xb-nav-mobile:hover {
     color: var(--color-black) !important;
   }
+
+  /* Index page mobile menu icon. */
+  .it-services .header-area .xb-nav-mobile,
+  .it-services .header-area .xb-nav-mobile:hover {
+    color: #ffffff !important;
+  }
+
+  /* Index page sticky header mobile menu icon. */
+  .it-services .header-area .stricked-menu .xb-nav-mobile,
+  .it-services .header-area .stricked-menu .xb-nav-mobile:hover {
+    color: #000000 !important;
+  }
 }
 
 @media (max-width: 575px) {
