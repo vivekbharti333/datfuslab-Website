@@ -15536,9 +15536,13 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
       text-decoration: underline; }
 
 /* Keep the site header logo consistently sized on every page. */
-.header-logo img,
+.header-logo img {
+  width: 108% !important;
+  height: auto !important;
+}
+
 .xb-logo-mobile img {
-  width: 85% !important;
+  width: 90% !important;
   height: auto !important;
 }
 
@@ -15550,8 +15554,8 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
   }
 
   .header-area .header-logo {
-    flex: 0 1 230px;
-    min-width: 180px;
+    flex: 0 0 285px;
+    min-width: 285px;
   }
 
   .header-area .main-menu__wrap {
@@ -15589,8 +15593,8 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
 
   .header-area .header-logo img {
     display: block;
-    width: 100% !important;
-    max-width: 260px;
+    width: 105% !important;
+    max-width: 275px;
     height: auto !important;
   }
 
