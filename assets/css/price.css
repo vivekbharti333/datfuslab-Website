@@ -3,6 +3,416 @@
    White pricing cards + separate benefit cards
 ========================================================= */
 
+/* =========================================================
+   Donexia FAQ Section
+========================================================= */
+
+.donexia-faq-section {
+    --faq-orange: #ff6a00;
+    --faq-heading: #111827;
+    --faq-text: #405174;
+    --faq-border: #e9e5e1;
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+}
+
+.donexia-faq-heading {
+    max-width: 850px;
+    margin: 0 auto 46px;
+}
+
+.donexia-faq-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+    color: var(--faq-heading);
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.donexia-faq-label i {
+    color: var(--faq-orange);
+    font-size: 22px;
+}
+
+.donexia-faq-heading h2 {
+    margin: 0;
+    color: var(--faq-heading);
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: clamp(36px, 4vw, 57px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -1px;
+}
+
+.donexia-faq-heading p {
+    max-width: 720px;
+    margin: 18px auto 0;
+    color: var(--faq-text);
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.donexia-faq-list {
+    max-width: 980px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--faq-border);
+    border-radius: 20px;
+    box-shadow: 0 16px 45px rgba(17, 24, 39, 0.08);
+}
+
+.donexia-faq-item {
+    border-bottom: 1px solid var(--faq-border);
+}
+
+.donexia-faq-item:last-child {
+    border-bottom: 0;
+}
+
+.donexia-faq-item summary {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 82px;
+    padding: 22px 88px 22px 30px;
+    color: var(--faq-heading);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+    cursor: pointer;
+    list-style: none;
+    transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.donexia-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.donexia-faq-item summary:hover,
+.donexia-faq-item summary:focus-visible,
+.donexia-faq-item[open] summary {
+    color: var(--faq-orange);
+    background: transparent;
+}
+
+.donexia-faq-item summary:focus-visible {
+    outline: 3px solid rgba(255, 106, 0, 0.28);
+    outline-offset: -3px;
+}
+
+.donexia-faq-icon {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    width: 38px;
+    height: 38px;
+    transform: translateY(-50%);
+    background: var(--faq-orange);
+    border-radius: 50%;
+    box-shadow: 0 7px 18px rgba(255, 106, 0, 0.22);
+}
+
+.donexia-faq-icon::before,
+.donexia-faq-icon::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 2px;
+    content: "";
+    background: #fff;
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s ease;
+}
+
+.donexia-faq-icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.donexia-faq-item[open] .donexia-faq-icon::after {
+    transform: translate(-50%, -50%) rotate(0);
+}
+
+.donexia-faq-answer {
+    padding: 0 88px 27px 30px;
+    color: var(--faq-text);
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.donexia-faq-answer p {
+    margin: 0;
+}
+
+.donexia-faq-answer a {
+    color: var(--faq-orange);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+    .donexia-faq-section {
+        padding-top: 60px;
+        padding-bottom: 90px;
+    }
+
+    .donexia-faq-heading {
+        margin-bottom: 30px;
+    }
+
+    .donexia-faq-heading h2 {
+        font-size: 36px;
+    }
+
+    .donexia-faq-item summary {
+        min-height: 72px;
+        padding: 18px 66px 18px 20px;
+        font-size: 17px;
+    }
+
+    .donexia-faq-icon {
+        right: 18px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .donexia-faq-answer {
+        padding: 0 20px 23px;
+        font-size: 16px;
+    }
+}
+
+/* =========================================================
+   Donexia SEO Content Sections
+========================================================= */
+
+.donexia-content-section {
+    --content-orange: #ff6a00;
+    --content-heading: #111827;
+    --content-text: #405174;
+    --content-border: #ebe7e2;
+    position: relative;
+    background: #ffffff;
+}
+
+.donexia-audience-section {
+    background: #fffaf6;
+}
+
+.donexia-content-heading {
+    max-width: 880px;
+    margin: 0 auto 45px;
+}
+
+.donexia-content-heading-left {
+    margin: 0;
+    padding-right: 35px;
+}
+
+.donexia-content-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 17px;
+    color: var(--content-heading);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.donexia-content-kicker i {
+    color: var(--content-orange);
+}
+
+.donexia-content-heading h2 {
+    margin: 0;
+    color: var(--content-heading);
+    font-family: var(--font-heading, Georgia, serif);
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -1px;
+}
+
+.donexia-content-heading p {
+    margin: 19px 0 0;
+    color: var(--content-text);
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+.donexia-content-heading .thm-btn {
+    margin-top: 30px;
+}
+
+.donexia-content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.donexia-content-card {
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid var(--content-border);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(17, 24, 39, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.donexia-content-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255, 106, 0, 0.4);
+    box-shadow: 0 18px 40px rgba(17, 24, 39, 0.1);
+}
+
+.donexia-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 20px;
+    color: var(--content-orange);
+    background: #fff0df;
+    border-radius: 50%;
+}
+
+.donexia-card-icon img {
+    display: block;
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+}
+
+.donexia-card-icon img:not([src$="analyze-icon.png"]) {
+    filter: brightness(0) saturate(100%) invert(46%) sepia(99%) saturate(3314%) hue-rotate(1deg) brightness(103%) contrast(104%);
+}
+
+.donexia-content-card h3,
+.donexia-steps h3,
+.donexia-security-note h3 {
+    margin: 0 0 9px;
+    color: var(--content-heading);
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.donexia-content-card p,
+.donexia-steps p,
+.donexia-security-note p {
+    margin: 0;
+    color: var(--content-text);
+    line-height: 1.7;
+}
+
+.donexia-onboarding-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background: #ffffff !important;
+    border-top: 1px solid var(--content-border);
+}
+
+.donexia-steps {
+    margin: 0;
+}
+
+.donexia-steps li {
+    display: flex;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--content-border);
+}
+
+.donexia-steps li:first-child {
+    padding-top: 0;
+}
+
+.donexia-steps li:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.donexia-steps li > span {
+    flex: 0 0 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    color: #ffffff;
+    background: var(--content-orange);
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 7px 18px rgba(255, 106, 0, 0.22);
+}
+
+.donexia-security-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 50px;
+    padding: 28px 30px;
+    background: #fff8f1;
+    border: 1px solid #ffd9b8;
+    border-radius: 16px;
+}
+
+.donexia-security-note > i {
+    flex: 0 0 auto;
+    color: var(--content-orange);
+    font-size: 28px;
+}
+
+@media (max-width: 991px) {
+    .donexia-content-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .donexia-content-heading-left {
+        margin-bottom: 35px;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .donexia-content-section {
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+
+    .donexia-content-heading {
+        margin-bottom: 30px;
+    }
+
+    .donexia-content-heading h2 {
+        font-size: 35px;
+    }
+
+    .donexia-content-heading p {
+        font-size: 16px;
+    }
+
+    .donexia-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .donexia-content-card {
+        padding: 24px;
+    }
+
+    .donexia-security-note {
+        padding: 23px 20px;
+    }
+}
+
 .donexia-pricing-section {
     --pricing-orange: #ff6a00;
     --pricing-orange-dark: #d44a00;
@@ -445,6 +855,7 @@
 
     gap: 0;
     margin-top: 45px;
+    margin-bottom: 70px;
     padding: 24px 18px;
 
     background: #ffffff;
@@ -483,6 +894,35 @@
     border-radius: 50%;
 
     font-size: 27px;
+}
+
+.donexia-pricing-benefit-icon img {
+    display: block;
+    width: 29px;
+    height: 29px;
+    object-fit: contain;
+}
+
+.benefit-orange .donexia-pricing-benefit-icon img {
+    filter: brightness(0) saturate(100%) invert(46%) sepia(99%) saturate(3314%) hue-rotate(1deg) brightness(103%) contrast(104%);
+}
+
+.benefit-purple .donexia-pricing-benefit-icon img {
+    filter: brightness(0) saturate(100%) invert(42%) sepia(56%) saturate(1170%) hue-rotate(239deg) brightness(87%) contrast(89%);
+}
+
+.benefit-green .donexia-pricing-benefit-icon img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) saturate(100%) invert(47%) sepia(26%) saturate(1416%) hue-rotate(68deg) brightness(91%) contrast(91%);
+}
+
+.benefit-pink .donexia-pricing-benefit-icon img {
+    filter: brightness(0) saturate(100%) invert(43%) sepia(75%) saturate(1754%) hue-rotate(317deg) brightness(96%) contrast(88%);
+}
+
+.benefit-blue .donexia-pricing-benefit-icon img {
+    filter: brightness(0) saturate(100%) invert(34%) sepia(78%) saturate(1348%) hue-rotate(175deg) brightness(87%) contrast(91%);
 }
 
 .donexia-pricing-benefit h4 {
@@ -561,6 +1001,7 @@
 
         gap: 0;
         padding: 20px;
+        margin-bottom: 45px;
     }
 
     .donexia-pricing-benefit,
@@ -583,6 +1024,279 @@
     .donexia-pricing-benefit:last-child {
         padding-bottom: 0;
         border-bottom: none;
+    }
+}
+
+/* =========================================================
+   NGO CRM Responsive Safeguards
+========================================================= */
+
+.help_desk {
+    overflow-x: hidden;
+}
+
+.help_desk img {
+    max-width: 100%;
+}
+
+.donexia-onboarding-section {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.pricing-section,
+.mobile-cards,
+.plan-card,
+.donexia-content-grid,
+.donexia-content-card,
+.donexia-pricing-benefits,
+.donexia-faq-list {
+    min-width: 0;
+}
+
+@media (max-width: 991px) {
+    .help_desk .hero-style-four {
+        padding-top: 95px;
+    }
+
+    .help_desk .hero_wrap {
+        padding-top: 45px;
+    }
+
+    .help_desk .hero-right_img {
+        width: min(100%, 480px);
+        margin: 25px auto 0;
+    }
+
+    .donexia-content-heading,
+    .donexia-faq-heading,
+    .pricing-section-heading {
+        max-width: 680px;
+    }
+
+    .donexia-onboarding-section .row > [class*="col-"] {
+        width: 100%;
+    }
+
+    .help_desk .fanfact-wrap {
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .help_desk .xb-fanfact-item {
+        flex: 1 1 calc(50% - 20px);
+        min-width: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .help_desk .container,
+    .help_desk .container-fluid {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .help_desk .header-logo img,
+    .help_desk .xb-logo-mobile img {
+        width: auto;
+        max-width: 175px;
+        height: 58px !important;
+        object-fit: contain;
+    }
+
+    .help_desk .hero-style-four {
+        padding-top: 80px;
+    }
+
+    .help_desk .hero_wrap {
+        padding-top: 30px;
+    }
+
+    .help_desk .hero-style-four .xb-hero .ngo-hero-title {
+        overflow-wrap: anywhere;
+        font-size: clamp(32px, 10vw, 40px);
+        line-height: 1.15;
+    }
+
+    .help_desk .hero-style-four .xb-hero .xb-item--content {
+        font-size: 17px;
+        line-height: 1.65;
+    }
+
+    .help_desk .hero-style-four .xb-hero .xb-item--item li {
+        align-items: flex-start;
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .help_desk .hero-style-four .xb-hero .xb-item--item li span {
+        flex: 0 0 22px;
+    }
+
+    .help_desk .hero-right_img {
+        width: min(92%, 390px);
+        margin-top: 15px;
+    }
+
+    .help_desk .hero-right_img .xb-img {
+        transform: scale(0.82);
+        transform-origin: center;
+    }
+
+    .donexia-content-kicker,
+    .donexia-faq-label {
+        font-size: 15px;
+        line-height: 1.4;
+    }
+
+    .donexia-content-heading h2,
+    .donexia-faq-heading h2,
+    .pricing-section-heading h2 {
+        overflow-wrap: anywhere;
+        font-size: clamp(31px, 9vw, 37px);
+        line-height: 1.18;
+        letter-spacing: -0.5px;
+    }
+
+    .pricing-section {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .mobile-cards {
+        width: 100%;
+    }
+
+    .plan-card {
+        width: 100%;
+    }
+
+    .pricing-section .feature {
+        align-items: flex-start;
+    }
+
+    .pricing-section .feature span:first-child {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .pricing-section .btn,
+    .donexia-content-heading .thm-btn {
+        min-height: 48px;
+    }
+
+    .donexia-pricing-benefits {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .donexia-pricing-benefit {
+        gap: 16px;
+    }
+
+    .donexia-pricing-benefit-icon {
+        flex: 0 0 54px;
+        width: 54px;
+        height: 54px;
+    }
+
+    .donexia-steps li {
+        gap: 14px;
+    }
+
+    .donexia-steps li > span {
+        flex-basis: 42px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .donexia-security-note {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .help_desk .fanfact-wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .help_desk .xb-fanfact-item {
+        width: 100%;
+    }
+
+    .help_desk .xb-fanfact-item .xb-item--number {
+        overflow-wrap: anywhere;
+        font-size: clamp(29px, 9vw, 40px);
+    }
+
+    .donexia-faq-item summary {
+        min-height: 66px;
+        padding-right: 60px;
+        touch-action: manipulation;
+    }
+
+    .help_desk .cta {
+        padding-top: 85px;
+        padding-bottom: 90px;
+    }
+
+    .help_desk .cta .title {
+        font-size: clamp(32px, 9vw, 40px);
+        line-height: 1.2;
+    }
+
+    .help_desk .footer-inner {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .help_desk .footer-copyright,
+    .help_desk .footer-link {
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 420px) {
+    .help_desk .container,
+    .help_desk .container-fluid {
+        padding-right: 14px;
+        padding-left: 14px;
+    }
+
+    .plan-card,
+    .donexia-content-card {
+        border-radius: 15px;
+    }
+
+    .plan-card-top {
+        padding-right: 0;
+    }
+
+    .plan-popular {
+        position: static;
+        align-self: flex-start;
+        margin: -25px 0 18px;
+        border-radius: 0 0 9px 9px;
+    }
+
+    .price-amount {
+        font-size: 24px;
+    }
+
+    .donexia-faq-item summary {
+        padding-left: 16px;
+        font-size: 16px;
+    }
+
+    .donexia-faq-icon {
+        right: 14px;
     }
 }
 
@@ -639,7 +1353,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #253354;]
+    color: #253354;
     font-size: 14px;
 }
 
