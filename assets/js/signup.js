@@ -1,6 +1,6 @@
 // Change these values when the API location or account-creation route changes.
-const API_BASE_URL = "https://donexia.in/drmapinew/";
-//const API_BASE_URL = "http://localhost/mycrm/"
+// const API_BASE_URL = "https://donexia.in/drmapinew/";
+const API_BASE_URL = "http://localhost/mycrm/"
 const SEND_OTP_PATH = "sendOtp";
 const VERIFY_OTP_PATH = "verifyOtp";
 const CREATE_ACCOUNT_PATH = "superAdminRegistration";
@@ -76,7 +76,7 @@ async function sendOTP(isResend = false) {
         document.getElementById("timer").textContent = "Sending...";
     }
     try {
-        const data = await postApi(SEND_OTP_PATH, { payload: { mobileNo: mobile } });
+        const data = await postApi(SEND_OTP_PATH, { payload: { mobileNo: mobile, requestedFor: "SIGNUP" } });
         const result = data.payload || {};
         if (data.responseCode === 200 && result.respCode === 200) {
             verifiedMobile = mobile;
@@ -118,7 +118,8 @@ async function verifyOTP() {
         const data = await postApi(VERIFY_OTP_PATH, {
             payload: {
                 mobileNo: verifiedMobile || document.getElementById("mobile").value.trim(),
-                otp
+                otp,
+                requestedFor: "SIGNUP"
             }
         });
         const result = data.payload || {};
@@ -160,7 +161,11 @@ async function createAccount() {
     const ngoFirstName = document.getElementById("ngoFirstName").value.trim();
     const ngoLastName = document.getElementById("ngoLastName").value.trim();
     const address = document.getElementById("ngoAddress").value.trim();
-    if (!ngoFirstName || !ngoLastName || !address) return alert("Please fill all required NGO details.");
+
+    if (!ngoFirstName || !ngoLastName || !address) {
+        return alert("Please fill all required NGO details.");
+    }
+
     const requestBody = {
         payload: {
             firstName: document.getElementById("firstName").value.trim(),
@@ -181,12 +186,55 @@ async function createAccount() {
                 companyFirstName: ngoFirstName,
                 companyLastName: ngoLastName,
                 regAddress: address,
-                ngoWebsite: document.getElementById("website").value.trim()
+                website: document.getElementById("website").value.trim()
             }
         }
     };
+
+    const formData = new FormData();
+
+    // JSON payload
+    formData.append("payload", JSON.stringify(requestBody));
+
+    // Company Logo (optional)
+    const logoInput = document.getElementById("companyLogoFile");
+
+    if (logoInput && logoInput.files.length > 0) {
+        formData.append("companyLogoFile", logoInput.files[0]);
+    }
+
     setButtonLoading("createAccountButton", true, "Creating...");
-    try { const data = await postApi(CREATE_ACCOUNT_PATH, requestBody); const result = data.payload || {}; if (data.responseCode === 200 && result.respCode === 200) { alert(result.respMesg || "Account created successfully."); showSection("successSection"); } else alert(result.respMesg || data.responseMessage || "Account creation failed."); } catch (error) { alert(error.message); } finally { setButtonLoading("createAccountButton", false); }
+
+    try {
+
+        const response = await fetch(apiUrl(CREATE_ACCOUNT_PATH), {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        const result = data.payload || {};
+
+        if (response.ok && data.responseCode === 200 && result.respCode === 200) {
+
+            alert(result.respMesg || "Account created successfully.");
+            showSection("successSection");
+
+        } else {
+
+            alert(result.respMesg || data.responseMessage || "Account creation failed.");
+        }
+
+    } catch (error) {
+
+        console.error(error);
+        alert(error.message || "Something went wrong.");
+
+    } finally {
+
+        setButtonLoading("createAccountButton", false);
+    }
 }
 
 function updateStepper(step) { if (step >= 2) { document.getElementById("stepIndicator1").classList.add("completed"); document.getElementById("stepIndicator2").classList.add("active"); document.getElementById("line1").classList.add("active"); } if (step >= 3) { document.getElementById("stepIndicator2").classList.add("completed"); document.getElementById("stepIndicator3").classList.add("active"); document.getElementById("line2").classList.add("active"); } }
