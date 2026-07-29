@@ -259,7 +259,7 @@
                     <!-- =================================================
          FORM CONTAINER
     ================================================== -->
-                    <main class="dx-signup-form-container">
+                    <div class="dx-signup-form-container">
                         <!-- =================================================
              STEP 1A
              VERIFY CONTACT
@@ -286,14 +286,14 @@
                             </div>
                             <!-- MOBILE NUMBER -->
                             <div class="dx-signup-form-group">
-                                <label for="mobile">
+                                <label class="dx-signup-required" for="mobile">
                                     Mobile Number
                                 </label>
                                 <div class="dx-signup-phone-input">
                                     <div class="dx-signup-country-code">
                                         🇮🇳   +91
                                     </div>
-                                    <input autocomplete="tel" id="mobile" inputmode="numeric" maxlength="10"
+                                    <input autocomplete="tel" id="mobile" inputmode="numeric" maxlength="10" required
                                         placeholder="Enter your mobile number" type="tel" />
                                 </div>
                                 <small class="dx-signup-error" id="mobileError"></small>
@@ -337,7 +337,7 @@
                                 </div>
                             </div>
                             <!-- OTP TITLE -->
-                            <label class="dx-signup-otp-title">
+                            <label class="dx-signup-otp-title dx-signup-required">
                                 Enter 6-digit OTP
                             </label>
                             <!-- OTP INPUT -->
@@ -402,83 +402,83 @@
                             <!-- FULL NAME -->
                             <div class="dx-signup-form-row">
                                 <div class="dx-signup-form-group">
-                                    <label for="firstName">
+                                    <label class="dx-signup-required" for="firstName">
                                         First Name
                                     </label>
                                     <div class="dx-signup-input-with-icon">
                                         <span>
                                             ♙
                                         </span>
-                                        <input autocomplete="given-name" id="firstName"
+                                        <input autocomplete="given-name" id="firstName" required
                                             placeholder="Enter your first name" type="text" />
                                     </div>
                                     <small class="dx-signup-error" id="firstNameError"></small>
                                 </div>
                                 <div class="dx-signup-form-group">
-                                    <label for="lastName">Last Name</label>
+                                    <label class="dx-signup-required" for="lastName">Last Name</label>
                                     <div class="dx-signup-input-with-icon"><span>♙</span><input
-                                            autocomplete="family-name" id="lastName" placeholder="Enter your last name"
+                                            autocomplete="family-name" id="lastName" placeholder="Enter your last name" required
                                             type="text" /></div>
                                     <small class="dx-signup-error" id="lastNameError"></small>
                                 </div>
                             </div>
                             <div class="dx-signup-form-group">
-                                <label for="emailId">Email ID</label>
+                                <label class="dx-signup-required" for="emailId">Email ID</label>
                                 <div class="dx-signup-input-with-icon"><span>✉</span><input autocomplete="email"
-                                        id="emailId" placeholder="Enter your email address" type="email" /></div>
+                                        id="emailId" placeholder="Enter your email address" required type="email" /></div>
                                 <small class="dx-signup-error" id="emailError"></small>
                                 <small>Login credentials will be sent to this email address.</small>
                             </div>
                             <!-- PASSWORD -->
                             <div class="dx-signup-form-row">
                                 <div class="dx-signup-form-group">
-                                    <label for="password">
+                                    <label class="dx-signup-required" for="password">
                                         Password
                                     </label>
                                     <div class="dx-signup-input-with-icon">
                                         <span>
                                             🔒
                                         </span>
-                                        <input autocomplete="new-password" id="password"
+                                        <input autocomplete="new-password" id="password" required
                                             placeholder="Create a strong password" type="password" />
                                         <button aria-label="Show password" class="dx-signup-password-toggle"
                                             onclick="togglePassword('password', this)" type="button"><i
-                                                class="bi bi-eye"></i></button>
+                                                class="far fa-eye"></i></button>
                                     </div>
                                     <small class="dx-signup-error" id="passwordError"></small>
                                 </div>
                                 <!-- CONFIRM PASSWORD -->
                                 <div class="dx-signup-form-group">
-                                    <label for="confirmPassword">
+                                    <label class="dx-signup-required" for="confirmPassword">
                                         Confirm Password
                                     </label>
                                     <div class="dx-signup-input-with-icon">
                                         <span>
                                             🔒
                                         </span>
-                                        <input autocomplete="new-password" id="confirmPassword"
+                                        <input autocomplete="new-password" id="confirmPassword" required
                                             placeholder="Confirm your password" type="password" />
                                         <button aria-label="Show password" class="dx-signup-password-toggle"
                                             onclick="togglePassword('confirmPassword', this)" type="button"><i
-                                                class="bi bi-eye"></i></button>
+                                                class="far fa-eye"></i></button>
                                     </div>
                                     <small class="dx-signup-error" id="confirmPasswordError"></small>
                                 </div>
                                 <!-- TERMS -->
                             </div>
                             <label class="dx-signup-checkbox">
-                                <input id="terms" type="checkbox" />
-                                <span>
+                                <input id="terms" required type="checkbox" />
+                                <span class="dx-signup-required">
 
                                     I agree to the
 
-                                    <a href="#">
+                                    <a href="terms-conditions">
                                         Terms of Service
                                     </a>
 
                                     and
 
-                                    <a href="#">
+                                    <a href="privacy-policy">
                                         Privacy Policy
                                     </a>
                                 </span>
@@ -516,31 +516,64 @@
                                     🏢
                                 </div>
                             </div>
+                            <!-- NGO LOGO -->
+                            <div class="dx-signup-logo-panel">
+                                <div class="dx-signup-logo-preview" id="companyLogoPreview">
+                                    <span class="dx-signup-logo-placeholder" aria-hidden="true">🏢</span>
+                                    <img id="companyLogoPreviewImage" alt="Selected NGO logo preview" hidden />
+                                </div>
+                                <div class="dx-signup-logo-copy">
+                                    <span class="dx-signup-logo-eyebrow">Organisation identity</span>
+                                    <h4>Add your NGO logo</h4>
+                                    <p>Upload your organisation’s logo to personalise donation receipts and official
+                                        documents.</p>
+                                    <div class="dx-signup-logo-guidance">
+                                        <span class="dx-signup-logo-guidance-icon" aria-hidden="true">✓</span>
+                                        <span><strong>Recommended size: 225 × 225 px</strong> for a clear,
+                                            professional appearance on receipts. You can also add or update your NGO
+                                            logo after signup.</span>
+                                    </div>
+                                    <div class="dx-signup-logo-actions">
+                                        <label class="dx-signup-logo-button" for="companyLogoFile">
+                                            <span aria-hidden="true">↑</span>
+                                            Choose logo
+                                        </label>
+                                        <button class="dx-signup-logo-remove" id="removeCompanyLogo" type="button" hidden>
+                                            Remove
+                                        </button>
+                                    </div>
+                                    <input class="dx-signup-logo-input" type="file" id="companyLogoFile"
+                                        accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp" />
+                                    <small class="dx-signup-error" id="companyLogoError"></small>
+                                </div>
+                            </div>
                             <!-- ROW 1 -->
                             <div class="dx-signup-form-row">
                                 <!-- NGO NAME -->
                                 <div class="dx-signup-form-group">
-                                    <label for="ngoFirstName">
+                                    <label class="dx-signup-required" for="ngoFirstName">
                                         NGO First Name
                                     </label>
-                                    <input id="ngoFirstName" placeholder="Enter NGO first name" type="text" />
+                                    <input id="ngoFirstName" placeholder="Enter NGO first name" required type="text" />
+                                    <small class="dx-signup-error" id="ngoFirstNameError"></small>
                                 </div>
                                 <!-- REGISTRATION NUMBER -->
                                 <div class="dx-signup-form-group">
-                                    <label for="ngoLastName">
+                                    <label class="dx-signup-required" for="ngoLastName">
                                         NGO Last Name
                                     </label>
-                                    <input id="ngoLastName" placeholder="Enter NGO last name" type="text" />
+                                    <input id="ngoLastName" placeholder="Enter NGO last name" required type="text" />
+                                    <small class="dx-signup-error" id="ngoLastNameError"></small>
                                 </div>
                             </div>
                             <!-- ROW 2 -->
                             <div class="dx-signup-form-row">
                                 <!-- NGO TYPE -->
                                 <div class="dx-signup-form-group">
-                                    <label for="ngoType">
+                                    <label class="dx-signup-required" for="ngoType">
                                         NGO Type
                                     </label>
-                                    <select id="ngoType">
+                                    <select id="ngoType" required>
                                         <option value="">
                                             Select NGO type
                                         </option>
@@ -560,35 +593,24 @@
                                             Other
                                         </option>
                                     </select>
+                                    <small class="dx-signup-error" id="ngoTypeError"></small>
                                 </div>
                                 <!-- WEBSITE -->
                                 <div class="dx-signup-form-group">
-                                    <label for="website">
+                                    <label class="dx-signup-required" for="website">
                                         NGO Website
                                     </label>
-                                    <input id="website" placeholder="https://www.yourngo.org" type="url" />
+                                    <input id="website" placeholder="https://www.yourngo.org" required type="url" />
+                                    <small class="dx-signup-error" id="websiteError"></small>
                                 </div>
                             </div>
-                            <!-- NGO LOGO -->
-                            <div class="dx-signup-form-group">
-                                <label for="companyLogoFile">
-                                    NGO Logo
-                                </label>
-
-                                <input type="file" id="companyLogoFile" accept=".png,.jpg,.jpeg,.webp,.svg"
-                                    class="form-control">
-
-                                <small class="text-muted">
-                                    Upload your NGO logo (PNG, JPG, JPEG, SVG or WEBP).
-                                </small>
-                            </div>
-
                             <!-- NGO ADDRESS -->
                             <div class="dx-signup-form-group">
-                                <label for="ngoAddress">
+                                <label class="dx-signup-required" for="ngoAddress">
                                     NGO Address
                                 </label>
-                                <textarea id="ngoAddress" placeholder="Enter complete NGO address"></textarea>
+                                <textarea id="ngoAddress" placeholder="Enter complete NGO address" required></textarea>
+                                <small class="dx-signup-error" id="ngoAddressError"></small>
                             </div>
                             <!-- CREATE ACCOUNT -->
                             <div class="dx-signup-navigation">
@@ -616,16 +638,14 @@
                                 Account Created Successfully!
                             </h3>
                             <p>
-                                Welcome to Donexia.
-                                Your account has been created successfully.
+                                Welcome to Donexia. We have sent your login credentials to the email address you
+                                provided.
                             </p>
-                            <button class="dx-signup-primary-btn" type="button">
-
+                            <a class="dx-signup-primary-btn" href="https://donexia.in/crm">
                                 Go to Dashboard →
-
-                            </button>
+                            </a>
                         </section>
-                    </main>
+                    </div>
                     <!-- =================================================
                         FEATURES
                     ================================================== -->
@@ -795,7 +815,6 @@
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/signup.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

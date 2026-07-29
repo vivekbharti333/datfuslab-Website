@@ -1,6 +1,6 @@
-// Change these values when the API location or account-creation route changes.
+// Production API used by the public signup page.
 // const API_BASE_URL = "https://donexia.in/drmapinew/";
-const API_BASE_URL = "http://localhost/mycrm/"
+const API_BASE_URL = "http://localhost/mycrm/";
 const SEND_OTP_PATH = "sendOtp";
 const VERIFY_OTP_PATH = "verifyOtp";
 const CREATE_ACCOUNT_PATH = "superAdminRegistration";
@@ -31,9 +31,75 @@ async function postApi(path, requestBody) {
 
 function showMessage(elementId, message, isError = true) {
     const element = document.getElementById(elementId);
+    if (!element) return;
     element.textContent = message || "";
     element.style.color = isError ? "#dc3545" : "#198754";
 }
+
+const companyLogoInput = document.getElementById("companyLogoFile");
+const companyLogoPreview = document.getElementById("companyLogoPreview");
+const companyLogoPreviewImage = document.getElementById("companyLogoPreviewImage");
+const companyLogoPlaceholder = companyLogoPreview?.querySelector(".dx-signup-logo-placeholder");
+const removeCompanyLogoButton = document.getElementById("removeCompanyLogo");
+let companyLogoObjectUrl = "";
+
+function clearCompanyLogo() {
+    if (companyLogoObjectUrl) URL.revokeObjectURL(companyLogoObjectUrl);
+    companyLogoObjectUrl = "";
+    if (companyLogoInput) companyLogoInput.value = "";
+    if (companyLogoPreviewImage) {
+        companyLogoPreviewImage.src = "";
+        companyLogoPreviewImage.hidden = true;
+    }
+    if (companyLogoPlaceholder) companyLogoPlaceholder.hidden = false;
+    if (companyLogoPreview) companyLogoPreview.classList.remove("has-image");
+    if (removeCompanyLogoButton) removeCompanyLogoButton.hidden = true;
+    showMessage("companyLogoError", "");
+}
+
+companyLogoInput?.addEventListener("change", () => {
+    const file = companyLogoInput.files?.[0];
+    showMessage("companyLogoError", "");
+    if (!file) return clearCompanyLogo();
+    if (!["image/png", "image/jpeg", "image/webp"].includes(file.type)) {
+        clearCompanyLogo();
+        return showMessage("companyLogoError", "Please choose a PNG, JPG or WEBP image.");
+    }
+    if (file.size > 2 * 1024 * 1024) {
+        clearCompanyLogo();
+        return showMessage("companyLogoError", "Logo must be smaller than 2 MB.");
+    }
+    if (companyLogoObjectUrl) URL.revokeObjectURL(companyLogoObjectUrl);
+    companyLogoObjectUrl = URL.createObjectURL(file);
+    companyLogoPreviewImage.src = companyLogoObjectUrl;
+    companyLogoPreviewImage.hidden = false;
+    companyLogoPlaceholder.hidden = true;
+    companyLogoPreview.classList.add("has-image");
+    removeCompanyLogoButton.hidden = false;
+});
+
+removeCompanyLogoButton?.addEventListener("click", clearCompanyLogo);
+
+const fieldErrorMap = {
+    mobile: "mobileError",
+    firstName: "firstNameError",
+    lastName: "lastNameError",
+    emailId: "emailError",
+    password: "passwordError",
+    confirmPassword: "confirmPasswordError",
+    terms: "termsError",
+    ngoFirstName: "ngoFirstNameError",
+    ngoLastName: "ngoLastNameError",
+    ngoType: "ngoTypeError",
+    website: "websiteError",
+    ngoAddress: "ngoAddressError"
+};
+
+Object.entries(fieldErrorMap).forEach(([fieldId, errorId]) => {
+    const field = document.getElementById(fieldId);
+    const eventName = field?.type === "checkbox" || field?.tagName === "SELECT" ? "change" : "input";
+    field?.addEventListener(eventName, () => showMessage(errorId, ""));
+});
 
 function setButtonLoading(buttonId, isLoading, loadingText) {
     const button = document.getElementById(buttonId);
@@ -53,7 +119,7 @@ function togglePassword(inputId, button) {
     const reveal = input.type === "password";
     input.type = reveal ? "text" : "password";
     button.setAttribute("aria-label", reveal ? "Hide password" : "Show password");
-    button.innerHTML = `<i class="bi bi-eye${reveal ? "-slash" : ""}"></i>`;
+    button.innerHTML = `<i class="far fa-eye${reveal ? "-slash" : ""}"></i>`;
 }
 
 function showSection(sectionId) {
@@ -160,10 +226,31 @@ function goBackToPersonalDetails() {
 async function createAccount() {
     const ngoFirstName = document.getElementById("ngoFirstName").value.trim();
     const ngoLastName = document.getElementById("ngoLastName").value.trim();
+    const ngoType = document.getElementById("ngoType").value;
+    const website = document.getElementById("website").value.trim();
     const address = document.getElementById("ngoAddress").value.trim();
 
-    if (!ngoFirstName || !ngoLastName || !address) {
-        return alert("Please fill all required NGO details.");
+    ["ngoFirstNameError", "ngoLastNameError", "ngoTypeError", "websiteError", "ngoAddressError"]
+        .forEach(id => showMessage(id, ""));
+
+    let firstInvalidField = null;
+    const requireField = (condition, fieldId, errorId, message) => {
+        if (condition) return;
+        showMessage(errorId, message);
+        if (!firstInvalidField) firstInvalidField = document.getElementById(fieldId);
+    };
+
+    requireField(ngoFirstName.length >= 2, "ngoFirstName", "ngoFirstNameError", "Please enter the NGO first name.");
+    requireField(ngoLastName.length >= 2, "ngoLastName", "ngoLastNameError", "Please enter the NGO last name.");
+    requireField(Boolean(ngoType), "ngoType", "ngoTypeError", "Please select an NGO type.");
+    requireField(Boolean(website), "website", "websiteError", "Please enter the NGO website.");
+    requireField(!website || /^https?:\/\/.+\..+/i.test(website), "website", "websiteError", "Enter a complete URL starting with http:// or https://.");
+    requireField(Boolean(address), "ngoAddress", "ngoAddressError", "Please enter the complete NGO address.");
+
+    if (firstInvalidField) {
+        firstInvalidField.focus();
+        firstInvalidField.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
     }
 
     const requestBody = {
@@ -186,7 +273,7 @@ async function createAccount() {
                 companyFirstName: ngoFirstName,
                 companyLastName: ngoLastName,
                 regAddress: address,
-                website: document.getElementById("website").value.trim()
+                website
             }
         }
     };
@@ -217,8 +304,6 @@ async function createAccount() {
         const result = data.payload || {};
 
         if (response.ok && data.responseCode === 200 && result.respCode === 200) {
-
-            alert(result.respMesg || "Account created successfully.");
             showSection("successSection");
 
         } else {
