@@ -188,6 +188,227 @@
 }
 
 /* =========================================================
+   NGO product hero polish
+========================================================= */
+
+.feature .ngo-feature-title {
+    font-size: 42px;
+    line-height: 1.18;
+}
+
+#donexia-audience-title,
+#pricing-plans-title,
+#donexia-onboarding-title {
+    font-family: var(--font-heading);
+    font-style: normal;
+}
+
+@media (max-width: 991px) {
+    .feature .ngo-feature-title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 575px) {
+    .feature .ngo-feature-title {
+        font-size: 30px;
+    }
+}
+
+.ngo-product-hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 88% 16%, rgba(255, 188, 74, 0.2), transparent 29%),
+        radial-gradient(circle at 8% 76%, rgba(139, 92, 246, 0.1), transparent 27%),
+        linear-gradient(180deg, #fffaf3 0%, #ffffff 92%);
+}
+
+.ngo-product-hero::before {
+    position: absolute;
+    top: 155px;
+    right: -90px;
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(240, 157, 48, 0.2);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.ngo-product-hero .hero_wrap {
+    position: relative;
+    z-index: 1;
+    padding-top: 30px;
+    padding-bottom: 48px;
+}
+
+.ngo-hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+    padding: 9px 15px;
+    color: #6f4317;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(222, 151, 63, 0.32);
+    border-radius: 999px;
+    box-shadow: 0 8px 28px rgba(88, 53, 17, 0.07);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.ngo-hero-kicker i,
+.ngo-hero-note i {
+    color: #ef9129;
+}
+
+.ngo-product-hero .xb-hero .xb-item--content {
+    max-width: 660px;
+    margin: 16px 0 22px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.65;
+}
+
+.ngo-product-hero .xb-hero .xb-item--item {
+    max-width: 680px;
+}
+
+.ngo-product-hero .xb-hero .xb-item--item li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+.ngo-product-hero .xb-hero .xb-item--item li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.ngo-product-hero .xb-hero .xb-item--item li span {
+    flex: 0 0 22px;
+    margin-top: 2px;
+    margin-right: 10px;
+}
+
+.ngo-hero-action {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px 22px;
+    margin-top: 26px;
+}
+
+.ngo-hero-note {
+    margin: 0;
+    color: #596275;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ngo-product-hero .hero-right-image {
+    max-width: 390px;
+    margin-left: auto;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    box-shadow: 0 30px 80px rgba(44, 31, 17, 0.14);
+    backdrop-filter: blur(8px);
+}
+
+.ngo-product-hero .hero-right_img {
+    margin-right: 0;
+}
+
+.ngo-product-hero .hero-right-image img {
+    display: block;
+    width: 100%;
+    max-height: 500px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+@media (max-width: 1199px) {
+    .ngo-product-hero .hero-right_img {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .ngo-product-hero .hero_wrap {
+        padding-top: 28px;
+        padding-bottom: 52px;
+    }
+
+    .ngo-product-hero .hero-right_img {
+        max-width: 420px;
+        margin: 25px auto 0;
+    }
+
+    .ngo-product-hero .hero-right-image {
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .ngo-product-hero {
+        padding-top: 92px;
+    }
+
+    .ngo-product-hero .hero_wrap {
+        padding-top: 18px;
+        padding-bottom: 40px;
+    }
+
+    .ngo-hero-kicker {
+        margin-bottom: 16px;
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .ngo-product-hero .xb-hero .ngo-hero-title {
+        font-size: 34px;
+        line-height: 1.18;
+    }
+
+    .ngo-product-hero .xb-hero .xb-item--content {
+        margin: 14px 0 18px;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .ngo-product-hero .xb-hero .xb-item--item li {
+        font-size: 15px;
+    }
+
+    .ngo-hero-action {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 22px;
+    }
+
+    .ngo-hero-action .thm-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .ngo-product-hero .hero-right-image {
+        max-width: 330px;
+        padding: 10px;
+        border-radius: 22px;
+    }
+
+    .ngo-product-hero .hero-right-image img {
+        max-height: 410px;
+    }
+}
+
+/* =========================================================
    Donexia SEO Content Sections
 ========================================================= */
 
