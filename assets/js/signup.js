@@ -1,6 +1,5 @@
 // Production API used by the public signup page.
-// const API_BASE_URL = "https://donexia.in/drmapinew/";
-const API_BASE_URL = "http://localhost/mycrm/";
+const API_BASE_URL = "https://donexia.in/drmapinew/";
 const SEND_OTP_PATH = "sendOtp";
 const VERIFY_OTP_PATH = "verifyOtp";
 const CREATE_ACCOUNT_PATH = "superAdminRegistration";
@@ -9,7 +8,17 @@ let verifiedMobile = "";
 let verifiedOtp = "";
 let timerInterval;
 let canResendOtp = false;
+let signupStartTracked = false;
 const otpInputs = document.querySelectorAll(".dx-signup-otp-input");
+
+document.querySelector(".dx-signup-page")?.addEventListener("input", event => {
+    if (signupStartTracked || !event.target.matches("input, select, textarea")) return;
+    signupStartTracked = true;
+    window.trackEvent?.("signup_start", {
+        product: "Donexia",
+        method: "web_form"
+    });
+});
 
 function apiUrl(path) {
     return `${API_BASE_URL.replace(/\/$/, "")}/${path.replace(/^\//, "")}`;
@@ -304,6 +313,12 @@ async function createAccount() {
         const result = data.payload || {};
 
         if (response.ok && data.responseCode === 200 && result.respCode === 200) {
+            window.trackEvent?.("sign_up", {
+                method: "donexia_web_form",
+                product: "Donexia",
+                currency: "INR",
+                value: 1500
+            });
             showSection("successSection");
 
         } else {

@@ -9,6 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
+    const requestedSubject = new URLSearchParams(window.location.search).get("subject");
+    const subjectSelect = document.getElementById("subject");
+    if (requestedSubject && subjectSelect) {
+        const matchingOption = Array.from(subjectSelect.options)
+            .find(option => option.value === requestedSubject);
+        if (matchingOption) {
+            subjectSelect.value = requestedSubject;
+            if (window.jQuery && typeof window.jQuery.fn.niceSelect === "function") {
+                window.jQuery(subjectSelect).niceSelect("update");
+            }
+        }
+    }
+
     form.addEventListener("submit", async function (e) {
         e.preventDefault();
 
@@ -80,6 +93,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const isSuccess = response.ok && !hasErrorCode;
 
             if (isSuccess) {
+                const selectedService = request.payload.leadFor;
+                const isDemoRequest = selectedService === "Donexia Demo";
+
+                window.trackEvent?.("generate_lead", {
+                    lead_type: isDemoRequest ? "demo_request" : "contact_form",
+                    service: selectedService || "general_enquiry",
+                    currency: "INR",
+                    value: isDemoRequest ? 1000 : 500
+                });
+
                 const successMessage =
                     payload.respMesg ||
                     result.responseMessage ||
