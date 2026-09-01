@@ -48,4 +48,30 @@
     <loc>https://datfuslab.com/website-design</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://datfuslab.com/bulk-sms</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://datfuslab.com/bulk-whatsapp-message</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://datfuslab.com/bulk-email</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://datfuslab.com/web-hosting-server</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://datfuslab.com/linux-server</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://datfuslab.com/windows-server</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
+
+

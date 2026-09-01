@@ -10,7 +10,7 @@
 
 <!-- Google tag (gtag.js) -->
 <script defer src="assets/js/analytics.js"></script>
-<link href="assets/img/favicon/favicon.ico" rel="shortcut icon" type="assets/img/logo/logo-black02.png"/>
+<link href="assets/img/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 <!-- css include -->
 <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="assets/css/fontawesome.css" rel="stylesheet"/>
@@ -20,9 +20,10 @@
 <link href="assets/css/odometer.css" rel="stylesheet"/>
 <link href="assets/css/nice-select.css" rel="stylesheet"/>
 <link href="assets/css/magnific-popup.css" rel="stylesheet"/>
-<link href="assets/css/cursor.css" rel="stylesheet"/>
 <link href="assets/css/custom-font.css" rel="stylesheet"/>
 <link href="assets/css/main.css" rel="stylesheet"/>
+<link href="assets/css/navigation-nested.css" rel="stylesheet"/>
+<link href="assets/css/contact-page.css" rel="stylesheet"/>
 
 
 <title>Contact Datfuslab Technologies | Discuss Your IT Project</title><meta content="Contact Datfuslab Technologies for custom software, website design, mobile app development, digital marketing and NGO CRM solutions." name="description"/><meta content="index, follow" name="robots"/><link href="https://datfuslab.com/contact" rel="canonical"/><meta content="website" property="og:type"/><meta content="Datfuslab Technologies" property="og:site_name"/><meta content="Contact Datfuslab Technologies | Discuss Your IT Project" property="og:title"/><meta content="Contact Datfuslab Technologies for custom software, website design, mobile app development, digital marketing and NGO CRM solutions." property="og:description"/><meta content="https://datfuslab.com/contact" property="og:url"/><meta content="https://datfuslab.com/assets/img/og-preview.jpg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Contact Datfuslab Technologies | Discuss Your IT Project" name="twitter:title"/><meta content="Contact Datfuslab Technologies for custom software, website design, mobile app development, digital marketing and NGO CRM solutions." name="twitter:description"/><meta content="https://datfuslab.com/assets/img/og-preview.jpg" name="twitter:image"/><script type="application/ld+json">{
@@ -30,12 +31,35 @@
   "@graph": [
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://datfuslab.com/#organization",
       "name": "Datfuslab Technologies Pvt. Ltd.",
       "url": "https://datfuslab.com/",
-      "logo": "https://datfuslab.com/assets/img/logo/logo-black02.png",
-      "sameAs": []
+      "logo": "https://datfuslab.com/assets/img/logo/logo-black02.webp",
+      "image": "https://datfuslab.com/assets/img/og-preview.jpg",
+      "telephone": ["+91-120-3161977", "+91-7004063385"],
+      "email": "info@datfuslab.com",
+      "priceRange": "₹₹",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1507, B12, Sector 16",
+        "addressLocality": "Noida",
+        "addressRegion": "Uttar Pradesh",
+        "postalCode": "201301",
+        "addressCountry": "IN"
+      },
+      "areaServed": {"@type": "Country", "name": "India"},
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }],
+      "sameAs": [
+        "https://www.facebook.com/people/Datfuslab-Technologies-Pvt-Ltd/61561485053807/",
+        "https://www.linkedin.com/in/datfuslab/",
+        "https://www.instagram.com/datfuslab_technologies/"
+      ]
     },
     {
       "@type": "WebSite",
@@ -48,7 +72,7 @@
       "inLanguage": "en-IN"
     },
     {
-      "@type": "WebPage",
+      "@type": "ContactPage",
       "@id": "https://datfuslab.com/contact#webpage",
       "url": "https://datfuslab.com/contact",
       "name": "Contact Datfuslab Technologies | Discuss Your IT Project",
@@ -62,7 +86,7 @@
     }
   ]
 }</script></head>
-<body class="sco_agency">
+<body class="sco_agency contact-page-modern">
 <!-- backtotop - start -->
 <div class="xb-backtotop style-2 active">
 <a class="scroll" href="#">
@@ -99,6 +123,20 @@
 <li><a href="website-design">Website Design</a></li>
 <li><a href="mobile-app-development">Mobile App Development</a></li>
 <li><a href="digital-marketing">Digital Marketing</a></li>
+<li class="menu-item-has-children bulk-message-menu"><a href="bulk-sms"><span>Bulk Message</span></a>
+<ul class="submenu sub-menu">
+<li><a href="bulk-email">Bulk Email</a></li>
+<li><a href="bulk-sms">Bulk SMS</a></li>
+<li><a href="bulk-whatsapp-message">Bulk WhatsApp</a></li>
+</ul>
+</li>
+<li class="menu-item-has-children server-service-menu"><a href="web-hosting-server"><span>Hosting &amp; Servers</span></a>
+<ul class="submenu sub-menu">
+<li><a href="web-hosting-server">Web Hosting Server</a></li>
+<li><a href="linux-server">Linux Server</a></li>
+<li><a href="windows-server">Windows Server</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="menu-item-has-children">
@@ -108,7 +146,7 @@
 </ul>
 </li>
 <li><a href="about-us"><span>About Us</span></a></li>
-<li><a href="fqa"><span>FQA</span></a></li>
+<li><a href="fqa"><span>FAQ</span></a></li>
 <li><a href="contact"><span>Contact</span></a></li>
 </ul>
 </nav>
@@ -116,9 +154,9 @@
 <!-- END Desktop Menu -->
 <!-- Mobile Menu Icon -->
 <div class="header-bar-mobile side-menu d-xl-none">
-<a class="xb-nav-mobile" href="javascript:void(0);">
+<button class="xb-nav-mobile" type="button" aria-label="Open navigation menu">
 <i class="far fa-bars"></i>
-</a>
+</button>
 </div>
 <!-- Contact Button -->
 <div class="header-contact d-none d-md-block">
@@ -147,6 +185,20 @@
 <li><a href="website-design">Website Design</a></li>
 <li><a href="mobile-app-development">Mobile Application Development</a></li>
 <li><a href="digital-marketing">Digital Marketing</a></li>
+<li class="menu-item-has-children bulk-message-menu"><a href="bulk-sms"><span>Bulk Message</span></a>
+<ul class="submenu sub-menu">
+<li><a href="bulk-email">Bulk Email</a></li>
+<li><a href="bulk-sms">Bulk SMS</a></li>
+<li><a href="bulk-whatsapp-message">Bulk WhatsApp</a></li>
+</ul>
+</li>
+<li class="menu-item-has-children server-service-menu"><a href="web-hosting-server"><span>Hosting &amp; Servers</span></a>
+<ul class="submenu sub-menu">
+<li><a href="web-hosting-server">Web Hosting Server</a></li>
+<li><a href="linux-server">Linux Server</a></li>
+<li><a href="windows-server">Windows Server</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="menu-item menu-item-has-children">
@@ -156,7 +208,7 @@
 </ul>
 </li>
 <li class="menu-item"><a href="about-us">About Us</a></li>
-<li class="menu-item"><a href="fqa">FQA</a></li>
+<li class="menu-item"><a href="fqa">FAQ</a></li>
 <li class="menu-item"><a href="contact">Contact</a></li>
 </ul>
 </nav>
@@ -172,15 +224,20 @@
 <div class="container">
 <div class="page-title-wrap sd-title-wrap">
 <div class="row mt-none-30 align-items-end">
-<div class="col-lg-9 mt-30">
+<div class="col-lg-7 mt-30">
 <div class="page-title-box">
-<span class="sub-title"><img width="20" height="20" loading="lazy" decoding="async" alt="" src="assets/img/icon/music-icon.svg"/> Contact us</span>
-<h1 class="title">Connect with our team for <br/> cutting-edge IT solutions and <br/> transformative digital growth. </h1>
+<span class="sub-title"><img width="20" height="20" loading="lazy" decoding="async" alt="" src="assets/img/icon/music-icon.svg"/> Start a conversation</span>
+<h1 class="title">Turn your requirement into a clear plan</h1>
+<p class="contact-hero-lead">Tell us what you want to build, improve or automate. We will review the essential details and help you identify a practical next step for your project.</p>
+<div class="contact-hero-actions"><a class="contact-hero-primary" href="#contact-form">Start your enquiry <span aria-hidden="true">↓</span></a><a class="contact-hero-secondary" href="tel:+917004063385"><i class="far fa-phone" aria-hidden="true"></i> Call +91-7004063385</a></div>
+<div class="contact-hero-proof"><span>Clear project discussion</span><span>Requirement-based guidance</span><span>Practical next steps</span></div>
 </div>
 </div>
-<div class="col-lg-3 mt-30">
+<div class="col-lg-5 mt-30">
 <div class="sd-right-img pos-rel">
-<img width="336" height="325" decoding="async" alt="" src="assets/img/hero/contact-img.png"/>
+<div class="contact-hero-panel-label"><span>Project support</span><strong>Let’s clarify your next move</strong></div>
+<img width="1024" height="1536" decoding="async" alt="Technology consultant ready to discuss a software project" src="assets/img/hero/contact-consultant-v2.png"/>
+<div class="contact-hero-status"><i aria-hidden="true"></i><span>Project enquiries welcome</span></div>
 <div class="sd-arrow-shape style-3">
 <img width="42" height="38" decoding="async" alt="" class="xbzoominzoomup" src="assets/img/shape/brd_shape.png"/>
 </div>
@@ -197,8 +254,9 @@
 <div class="row pb-130 mt-none-30">
 <div class="col-lg-8 mt-30">
 <div class="cs-contact-wrap cs-contact-form cd-contact-form item-contact_form">
-<h2 class="xb-title">Send us a message</h2>
-<p class="xb-content">Give us a chance to serve and bring magic to your brand.</p>
+<span class="contact-form-kicker">Project enquiry</span>
+<h2 class="xb-title">Let’s understand your requirement</h2>
+<p class="xb-content">Complete the form with the essential details. We will use them only to review and respond to your enquiry.</p>
 <form action="" class="contact-form" id="contact-form" method="post">
 <div class="row">
 <!-- Full Name -->
@@ -206,7 +264,7 @@
 <div class="input-field">
 <label for="fullName">Name*</label>
 <div class="input-box">
-<input id="fullName" name="fullName" placeholder="Your Name" required="" type="text"/>
+<input autocomplete="name" id="fullName" name="fullName" placeholder="Your full name" required="" type="text"/>
 </div>
 </div>
 </div>
@@ -215,7 +273,7 @@
 <div class="input-field">
 <label for="email">Email*</label>
 <div class="input-box">
-<input id="email" name="email" placeholder="Your Email" required="" type="email"/>
+<input autocomplete="email" id="email" name="email" placeholder="name@company.com" required="" type="email"/>
 </div>
 </div>
 </div>
@@ -224,7 +282,7 @@
 <div class="input-field">
 <label for="phone">Phone*</label>
 <div class="input-box">
-<input id="phone" name="phone" placeholder="Your Mobile Number" required="" type="tel"/>
+<input autocomplete="tel" id="phone" name="phone" placeholder="Your mobile number" required="" type="tel"/>
 </div>
 </div>
 </div>
@@ -233,7 +291,7 @@
 <div class="input-field">
 <label for="organization">Company / Organization</label>
 <div class="input-box">
-<input id="organization" name="organization" placeholder="Company Name" type="text"/>
+<input autocomplete="organization" id="organization" name="organization" placeholder="Company or organisation name" type="text"/>
 </div>
 </div>
 </div>
@@ -250,6 +308,10 @@
 <option value="Mobile App Development">Mobile App Development</option>
 <option value="Digital Marketing">Digital Marketing</option>
 <option value="Bulk SMS / WhatsApp">Bulk SMS / WhatsApp</option>
+<option value="Bulk Email">Bulk Email</option>
+<option value="Web Hosting">Web Hosting</option>
+<option value="Linux Server Management">Linux Server Management</option>
+<option value="Windows Server Management">Windows Server Management</option>
 <option value="Donexia Demo">Donexia Demo</option>
 <option value="Other">Other</option>
 </select>
@@ -261,7 +323,7 @@
 <div class="input-field text-field">
 <label for="message">Message*</label>
 <div class="input-box">
-<textarea id="message" name="message" placeholder="Write your message here..." required="" rows="5"></textarea>
+<textarea id="message" name="message" placeholder="Describe your goal, current setup, key users and preferred timeline" required="" rows="5"></textarea>
 </div>
 </div>
 </div>
@@ -280,31 +342,27 @@
 <div class="item-contact_info">
 <div class="xb-item--inner">
 <div class="xb-item--top">
-<h3 class="xb-item--title">Contact Info</h3>
-<span class="xb-item--hotline"><img width="24" height="24" loading="lazy" decoding="async" alt="" src="assets/img/icon/call-calling.svg"/> <a href="tel:+911203161977" data-track-location="contact_info">0120-3161977</a>, <a href="tel:+917004063385" data-track-location="contact_info">+91-7004063385</a> · <a href="https://wa.me/917004063385" target="_blank" rel="noopener noreferrer" data-track-location="contact_info">WhatsApp</a></span>
-<span class="xb-item--email"><img width="24" height="24" loading="lazy" decoding="async" alt="" src="assets/img/icon/icon-sms.svg"/> info@datfuslab.com</span>
-<ul class="social_icons_block list-unstyled ul_li">
-<li><a aria-label="Facebook" href="#!"><i class="fab fa-facebook-f"></i></a></li>
-<li>
-<a aria-label="Twitter" href="#!"><svg fill="none" height="17" viewbox="0 0 17 17" width="17" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.3872 0H15.9952L10.299 7.20048L17 17H11.7545L7.64298 11.0582L2.94415 17H0.332464L6.42395 9.29688L0 0H5.37853L9.09105 5.43101L13.3872 0ZM12.4711 15.2755H13.9155L4.5917 1.63462H3.0402L12.4711 15.2755Z" fill="#0C111D"></path>
-</svg></a>
-</li>
-<li><a aria-label="Linkedin" href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-</ul>
+<span class="contact-info-kicker">Direct contact</span>
+<h3 class="xb-item--title">Talk with our team</h3>
+<div class="contact-methods">
+<div class="contact-method"><span class="contact-method__icon"><img width="22" height="22" loading="lazy" decoding="async" alt="" src="assets/img/icon/call-calling.svg"/></span><div><small>Call our team</small><a href="tel:+911203161977" data-track-location="contact_info">0120-3161977</a><a href="tel:+917004063385" data-track-location="contact_info">+91-7004063385</a></div></div>
+<div class="contact-method"><span class="contact-method__icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></span><div><small>WhatsApp</small><a href="https://wa.me/917004063385" target="_blank" rel="noopener noreferrer" data-track-location="contact_info">Start a WhatsApp chat</a></div></div>
+<div class="contact-method"><span class="contact-method__icon"><img width="22" height="22" loading="lazy" decoding="async" alt="" src="assets/img/icon/icon-sms.svg"/></span><div><small>Email</small><a href="mailto:info@datfuslab.com">info@datfuslab.com</a></div></div>
 </div>
+</div>
+<div class="contact-office-grid">
 <div class="contact-info_widget">
-<h3 class="xb-title">Noida office</h3>
-<span class="xb-location">1507, B12, Sector - 16, <br/>Noida</span>
+<span class="contact-office-icon"><i class="far fa-map-marker-alt" aria-hidden="true"></i></span><div><h3 class="xb-title">Noida office</h3>
+<span class="xb-location">1507, B12, Sector 16,<br/>Noida, Uttar Pradesh</span></div>
 </div>
 <!-- <div class="contact-info_widget">
                                     <h3 class="xb-title">United kingdom office</h3>
                                     <span class="xb-location">12 Buckingham Rd, <br> Thwaite, HG3 4 TY, UK </span>
                                 </div> -->
-<hr class="breack-line"/>
 <div class="contact-info_widget">
-<h3 class="xb-title">our office open time</h3>
-<span class="xb-location">Mon - Sat : 9.00 am - 6.00 pm <br/> Sunday : Closed</span>
+<span class="contact-office-icon"><i class="far fa-clock" aria-hidden="true"></i></span><div><h3 class="xb-title">Office hours</h3>
+<span class="xb-location">Monday–Saturday<br/>9:00 am–6:00 pm</span></div>
+</div>
 </div>
 </div>
 </div>
@@ -315,7 +373,7 @@
 <!-- contact end  -->
 <!-- google map start  -->
 <div class="gmap_canvas bg-light">
-<iframe allowfullscreen="" height="350" loading="lazy" src="https://maps.google.com/maps?q=Noida%20India&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="border:0;" width="100%"></iframe>
+<iframe allowfullscreen="" height="350" loading="lazy" src="https://maps.google.com/maps?q=Noida%20India&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" style="border:0;" title="Datfuslab Technologies office location in Noida" width="100%"></iframe>
 </div>
 <!-- google map end  -->
 </main>
@@ -343,12 +401,17 @@
 <div class="footer-widget">
 <span class="xb-item--sub-title">Our Services</span>
 <ul class="xb-item--holder list-unstyled">
-<li class="xb-item--list">Software Development</li>
-<li class="xb-item--list">CRM | ERP | Billing Software</li>
-<li class="xb-item--list">Bulk Message</li>
-<li class="xb-item--list">Manpower</li>
-<li class="xb-item--list">Website Design &amp; Development</li>
-<li class="xb-item--list">Domain &amp; Server</li>
+<li class="xb-item--list"><a href="software-development">Software Development</a></li>
+<li class="xb-item--list"><a href="website-design">Website Design &amp; Development</a></li>
+<li class="xb-item--list"><a href="mobile-app-development">Mobile App Development</a></li>
+<li class="xb-item--list"><a href="digital-marketing">Digital Marketing</a></li>
+<li class="xb-item--list"><a href="ngo-crm-software">NGO CRM Software</a></li>
+<li class="xb-item--list"><a href="bulk-sms">Bulk SMS</a></li>
+<li class="xb-item--list"><a href="bulk-whatsapp-message">Bulk WhatsApp Messaging</a></li>
+<li class="xb-item--list"><a href="bulk-email">Bulk Email</a></li>
+<li class="xb-item--list"><a href="web-hosting-server">Web Hosting</a></li>
+<li class="xb-item--list"><a href="linux-server">Linux Server Management</a></li>
+<li class="xb-item--list"><a href="windows-server">Windows Server Management</a></li>
 </ul>
 </div>
 <div class="footer-widget">
@@ -392,7 +455,6 @@
 <script src="assets/js/odometer.min.js"></script>
 <script src="assets/js/imagesloaded.pkgd.min.js"></script>
 <script src="assets/js/isotope.pkgd.min.js"></script>
-<script src="assets/js/cursor-bundle.js"></script>
 <script src="assets/js/easing.min.js"></script>
 <script src="assets/js/scrollspy.js"></script>
 <script src="assets/js/jquery.nice-select.min.js"></script>
@@ -402,3 +464,8 @@
 <script src="assets/js/contact.js"></script>
 </body>
 </html>
+
+
+
+
+

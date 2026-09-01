@@ -1,0 +1,11 @@
+<svg width="1275" height="330" viewBox="0 0 1275 330" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M2 2L10 6L2 10" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <path d="M6 7V316C6 322 9 325 15 325H313C319 325 322 322 322 316V14C322 8 325 5 331 5H629C635 5 638 8 638 14V316C638 322 641 325 647 325H944C950 325 953 322 953 316V14C953 8 956 5 962 5H1261C1267 5 1270 8 1270 14V314"
+        stroke="white" stroke-opacity="0.68" stroke-width="1.7" stroke-linecap="round" stroke-dasharray="3 8" marker-end="url(#arrow)"/>
+  <circle cx="6" cy="7" r="5" fill="#111112" stroke="white" stroke-opacity="0.9" stroke-width="2"/>
+  <circle cx="1270" cy="320" r="5" fill="#111112" stroke="white" stroke-opacity="0.9" stroke-width="2"/>
+</svg>

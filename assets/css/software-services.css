@@ -1,0 +1,185 @@
+.software-service-page {
+  --soft-ink: #111827;
+  --soft-muted: #5f6878;
+  --soft-line: rgba(17, 24, 39, .1);
+  --soft-orange: #d44a00;
+  --soft-orange-rgb: 212, 74, 0;
+  background: #fff;
+}
+
+.software-service-page main { overflow: hidden; background: #fff; }
+
+.software-service-page .page-title {
+  min-height: 610px;
+  padding: 155px 0 90px !important;
+  overflow: hidden;
+  background: linear-gradient(115deg, #fff8f3 0%, #f8f9fb 58%, #fff 100%) !important;
+}
+
+.software-service-page .page-title::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: 4%;
+  top: 80px;
+  border-radius: 50%;
+  background: rgba(var(--soft-orange-rgb), .09);
+  filter: blur(95px);
+}
+
+.software-service-page .page-title::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .22;
+  background-image: linear-gradient(rgba(17,24,39,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(17,24,39,.07) 1px, transparent 1px);
+  background-size: 72px 72px;
+  -webkit-mask-image: linear-gradient(to right, transparent 4%, #000 48%, transparent 96%);
+  mask-image: linear-gradient(to right, transparent 4%, #000 48%, transparent 96%);
+  pointer-events: none;
+}
+
+.software-service-page .page-title-wrap { position: relative; z-index: 1; }
+.software-service-page .page-title-box .sub-title { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 22px; padding: 10px 15px; border: 1px solid rgba(var(--soft-orange-rgb),.15); border-radius: 999px; color: var(--soft-orange); background: rgba(var(--soft-orange-rgb),.07); font-size: 13px; font-weight: 700; }
+.software-service-page .page-title-box .title { max-width: 760px; color: var(--soft-ink); font-size: clamp(48px,5.1vw,70px); line-height: 1.02; letter-spacing: -.058em; }
+.software-service-page .software-hero-lead { max-width: 720px; margin: 24px 0 0; color: var(--soft-muted); font-size: 18px; line-height: 1.65; }
+.software-service-page .software-hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 15px 24px; margin-top: 30px; }
+.software-service-page .software-hero-button { display: inline-flex; align-items: center; justify-content: center; gap: 24px; min-height: 56px; padding: 0 24px; border-radius: 999px; color: #fff; background: var(--soft-orange); box-shadow: 0 14px 30px rgba(var(--soft-orange-rgb),.2); font-weight: 700; }
+.software-service-page .software-hero-button:hover { color: #fff; background: var(--soft-ink); transform: translateY(-2px); }
+.software-service-page .software-hero-link { display: inline-flex; align-items: center; gap: 12px; color: var(--soft-ink); font-weight: 700; }
+.software-service-page .software-hero-link:hover { color: var(--soft-orange); }
+.software-service-page .software-hero-proof { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
+.software-service-page .software-hero-proof span { position: relative; padding: 8px 12px 8px 28px; border: 1px solid var(--soft-line); border-radius: 999px; color: #475164; background: rgba(255,255,255,.72); font-size: 12px; font-weight: 600; }
+.software-service-page .software-hero-proof span::before { content: ""; position: absolute; top: 50%; left: 12px; width: 7px; height: 7px; border-radius: 50%; background: var(--soft-orange); transform: translateY(-50%); box-shadow: 0 0 0 4px rgba(var(--soft-orange-rgb),.1); }
+.software-service-page .sd-right-img { display: flex; align-items: flex-end; justify-content: center; min-height: 430px; padding: 86px 24px 54px; overflow: hidden; border: 1px solid var(--soft-line); border-radius: 30px; background: linear-gradient(155deg,rgba(255,255,255,.94),rgba(var(--soft-orange-rgb),.08)); box-shadow: 0 28px 70px rgba(17,24,39,.1); backdrop-filter: blur(10px); }
+.software-service-page .sd-right-img::before { content: ""; position: absolute; width: 250px; height: 250px; right: -85px; bottom: -80px; border: 1px solid rgba(var(--soft-orange-rgb),.15); border-radius: 50%; }
+.software-service-page .sd-right-img > img { position: relative; z-index: 1; width: min(100%, 285px); height: auto; }
+.software-service-page .software-hero-panel-label { position: absolute; z-index: 2; top: 25px; left: 25px; }
+.software-service-page .software-hero-panel-label span, .software-service-page .software-hero-panel-label strong { display: block; }
+.software-service-page .software-hero-panel-label span { margin-bottom: 4px; color: var(--soft-orange); font-size: 11px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.software-service-page .software-hero-panel-label strong { color: var(--soft-ink); font-size: 16px; }
+.software-service-page .software-hero-panel-status { position: absolute; z-index: 3; right: 18px; bottom: 18px; display: inline-flex; align-items: center; gap: 9px; padding: 10px 13px; border: 1px solid rgba(17,24,39,.08); border-radius: 12px; color: var(--soft-ink); background: rgba(255,255,255,.92); box-shadow: 0 10px 26px rgba(17,24,39,.1); font-size: 11px; font-weight: 700; }
+.software-service-page .software-hero-panel-status i { width: 8px; height: 8px; border-radius: 50%; background: #23a36d; box-shadow: 0 0 0 4px rgba(35,163,109,.12); }
+.software-service-page .sd-arrow-shape { display: none; }
+
+.software-service-page .sd-ser-content_wrap { padding: 105px 0 95px !important; }
+.software-service-page .sd-ser-content { max-width: 1240px; margin: 0 auto; color: var(--soft-muted); font-size: 16px; line-height: 1.7; }
+.software-service-page .software-benefits-layout { display: grid; grid-template-columns: minmax(0,.82fr) minmax(0,1.18fr); align-items: center; gap: clamp(42px,6vw,86px); }
+.software-service-page .software-benefits-intro { max-width: 500px; }
+.software-service-page .software-benefits-intro > span { display: block; margin-bottom: 14px; color: var(--soft-orange); font-size: 13px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.software-service-page .software-benefits-intro h2 { margin-bottom: 20px; color: var(--soft-ink); font-size: clamp(35px,3.7vw,50px); line-height: 1.1; letter-spacing: -.047em; }
+.software-service-page .software-benefits-intro p { margin-bottom: 15px; color: var(--soft-muted); font-size: 16px; line-height: 1.7; }
+.software-service-page .sd-ser-content br { display: none; }
+.software-service-page .sd-ser-content ul { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); grid-auto-rows: 1fr; gap: 15px; width: 100%; margin: 0; padding: 0; list-style: none; }
+.software-service-page .sd-ser-content li { position: relative; min-height: 180px; margin: 0 !important; padding: 22px 20px 19px; overflow: hidden; border: 1px solid var(--soft-line); border-radius: 17px; background: linear-gradient(145deg,#fff 0%,#fff 72%,rgba(var(--soft-orange-rgb),.035) 100%); box-shadow: 0 10px 28px rgba(17,24,39,.05); font-size: 14px; line-height: 1.55; text-align: left; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+.software-service-page .sd-ser-content li::before { content: ""; position: absolute; top: 0; left: 50%; width: 40px; height: 3px; border-radius: 0 0 4px 4px; background: var(--soft-orange); transform: translateX(-50%); transition: width .25s ease; }
+.software-service-page .sd-ser-content li:hover { transform: translateY(-5px); border-color: rgba(var(--soft-orange-rgb),.35); box-shadow: 0 22px 48px rgba(17,24,39,.1); }
+.software-service-page .sd-ser-content li:hover::before { width: calc(100% - 44px); }
+.software-service-page .software-capability-icon { display: grid; place-items: center; width: 42px; height: 42px; margin: 0 0 16px; border: 1px solid rgba(var(--soft-orange-rgb),.13); border-radius: 12px; background: rgba(var(--soft-orange-rgb),.07); }
+.software-service-page .software-capability-icon img { width: 24px; height: 24px; object-fit: contain; }
+.software-service-page .sd-ser-content li strong { display: block; margin-bottom: 7px; color: var(--soft-ink); font-size: 17px; line-height: 1.3; letter-spacing: -.018em; }
+
+.software-service-page .sd-process_warp { padding: 90px 0 62px; background: #111112; }
+.software-service-page .sd-heading { max-width: 850px; }
+.software-service-page .sd-process_warp .sd-title { color: #fff; }
+.software-service-page .sd-title { margin-bottom: 14px; color: var(--soft-ink); font-size: clamp(34px,4vw,50px); line-height: 1.12; letter-spacing: -.045em; }
+.software-service-page .sd-process_warp .sd-content { color: rgba(255,255,255,.65); }
+.software-service-page .sd-process_inner { display: flex; align-items: flex-start; justify-content: space-between; gap: 0; margin-top: 48px; padding: 10px 0 8px; }
+.software-service-page .sd-process-item { position: relative; z-index: 1; flex: 0 0 25%; width: 25%; max-width: 308px; min-height: 300px; margin: 30px 0 0; padding: 0 20px 0 60px; overflow: visible; border: 0; border-radius: 0; background: transparent; }
+.software-service-page .sd-process-item .xb-item--icon { display: block; width: 53px; height: 53px; margin: 0; border-radius: 0; background: transparent; }
+.software-service-page .sd-process-item .xb-item--icon img { width: 53px; height: 53px; }
+.software-service-page .sd-process-item .xb-item--title { min-height: 30px; margin: 37px 0 17px; color: #fff; font-size: 17px; line-height: 1.4; letter-spacing: -.015em; white-space: nowrap; }
+.software-service-page .sd-process-item .xb-item--contact { color: rgba(255,255,255,.66); font-size: 14px; line-height: 1.65; }
+.software-service-page .sd-process-item:nth-child(2) .xb-item--icon,
+.software-service-page .sd-process-item:nth-child(2) .xb-item--title,
+.software-service-page .sd-process-item:nth-child(2) .xb-item--contact { transform: translateX(-17px); }
+.software-service-page .sd-process-item:nth-child(3) .xb-item--icon,
+.software-service-page .sd-process-item:nth-child(3) .xb-item--title,
+.software-service-page .sd-process-item:nth-child(3) .xb-item--contact { transform: translateX(-32px); }
+.software-service-page .sd-process-item:nth-child(4) .xb-item--icon,
+.software-service-page .sd-process-item:nth-child(4) .xb-item--title,
+.software-service-page .sd-process-item:nth-child(4) .xb-item--contact { transform: translateX(-45px); }
+.software-service-page .sd-process-item .xb-item--number { position: absolute; top: 7px; right: auto; left: 0; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid rgba(255,255,255,.32); border-radius: 50%; color: #111112; background: #fff; box-shadow: 0 5px 18px rgba(0,0,0,.28); font-size: 15px; font-weight: 800; }
+.software-service-page .sd-process-item:nth-child(1) .xb-item--number { left: -2px; }
+.software-service-page .sd-process-item:nth-child(2) .xb-item--number { left: -17px; }
+.software-service-page .sd-process-item:nth-child(3) .xb-item--number { left: -32px; }
+.software-service-page .sd-process-item:nth-child(4) .xb-item--number { left: -45px; }
+.software-service-page .sd-process_inner .sd-shape { position: absolute; z-index: 0; top: 0; left: 12px; display: block; width: calc(100% - 24px); pointer-events: none; }
+.software-service-page .sd-process_inner .sd-shape img { width: 100%; height: auto; filter: none; opacity: 1; }
+
+.software-service-page .sd-service_wrap { padding: 100px 0 !important; }
+.software-service-page .sd-service_wrap:nth-of-type(2) { background: #f7f8fa; }
+.software-service-page .sd-ser-outcome { padding: 0; border: 0; background: transparent; }
+.software-service-page .sd-ser-outcome .sd-content { max-width: 850px; color: var(--soft-muted); font-size: 16px; line-height: 1.7; }
+.software-service-page .sd-list-item { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; margin-top: 38px; }
+.software-service-page .sd-ser-list { width: auto; margin: 0; }
+.software-service-page .sd-ser-list li { min-height: 64px; margin-bottom: 12px; padding: 17px 20px; border: 1px solid var(--soft-line); border-radius: 13px; color: var(--soft-ink); background: #fff; box-shadow: 0 8px 24px rgba(17,24,39,.04); }
+.software-service-page .sd-ser-list li img { width: 20px; height: 20px; margin-right: 12px; }
+
+.software-service-page section[aria-labelledby="software-expertise-title"] { background: #fff; }
+.software-service-page section[aria-labelledby="software-expertise-title"] .row > div { display: flex; flex-direction: column; min-height: 190px; padding: 28px; border-right: 1px solid var(--soft-line); }
+.software-service-page section[aria-labelledby="software-expertise-title"] .row > div:last-child { border-right: 0; }
+.software-service-page section[aria-labelledby="software-expertise-title"] h3 { margin-bottom: 12px; color: var(--soft-ink); font-size: 21px; }
+.software-service-page section[aria-labelledby="software-expertise-title"] p { color: var(--soft-muted); font-size: 15px; line-height: 1.65; }
+
+.software-cta { padding: 75px 0 95px; }
+.software-cta__box { display: flex; align-items: end; justify-content: space-between; gap: 40px; padding: clamp(38px,5vw,62px); border-radius: 26px; color: #fff; background: linear-gradient(125deg, var(--soft-orange), #161616 78%); box-shadow: 0 26px 68px rgba(var(--soft-orange-rgb),.17); }
+.software-cta__box > div { max-width: 780px; }
+.software-cta__box > div > span { display: block; margin-bottom: 13px; color: rgba(255,255,255,.7); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.software-cta h2 { margin: 0; color: #fff; font-size: clamp(32px,3.7vw,48px); line-height: 1.12; letter-spacing: -.045em; }
+.software-cta p { max-width: 690px; margin: 14px 0 0; color: rgba(255,255,255,.72); font-size: 16px; line-height: 1.6; }
+.software-cta__button { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 20px; min-height: 56px; padding: 0 24px; border-radius: 999px; color: var(--soft-ink); background: #fff; font-weight: 700; }
+.software-cta__button:hover { color: #fff; background: var(--soft-orange); box-shadow: inset 0 0 0 1px rgba(255,255,255,.5); }
+
+@media (max-width: 991px) {
+  .software-service-page .page-title { min-height: auto; padding: 130px 0 75px !important; }
+  .software-service-page .sd-right-img { max-width: 450px; margin-top: 30px; }
+  .software-service-page .sd-ser-content ul { grid-template-columns: repeat(2,1fr); }
+  .software-service-page .software-benefits-layout { grid-template-columns: 1fr; gap: 34px; }
+  .software-service-page .software-benefits-intro { max-width: 720px; }
+  .software-service-page .sd-process_inner { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+  .software-service-page .sd-process-item { width: auto; max-width: none; min-height: 235px; margin: 0; padding: 25px 24px 24px 78px; border: 1px solid rgba(255,255,255,.12); border-radius: 17px; background: rgba(255,255,255,.04); }
+  .software-service-page .sd-process-item .xb-item--number { top: 25px; left: 23px; }
+  .software-service-page .sd-process-item:nth-child(n) .xb-item--number { left: 23px; }
+  .software-service-page .sd-process-item .xb-item--title { min-height: 0; margin: 27px 0 12px; white-space: normal; }
+  .software-service-page .sd-process-item:nth-child(n) .xb-item--icon,
+  .software-service-page .sd-process-item:nth-child(n) .xb-item--title,
+  .software-service-page .sd-process-item:nth-child(n) .xb-item--contact { transform: none; }
+  .software-service-page .sd-process_inner .sd-shape { display: none; }
+  .software-service-page section[aria-labelledby="software-expertise-title"] .row > div { border-right: 0; border-bottom: 1px solid var(--soft-line); }
+  .software-cta__box { align-items: flex-start; flex-direction: column; }
+}
+
+@media (max-width: 575px) {
+  .software-service-page .page-title-box .title { font-size: 42px; }
+  .software-service-page .page-title { padding: 108px 0 62px !important; }
+  .software-service-page .page-title-box .sub-title { margin-bottom: 16px; }
+  .software-service-page .software-hero-lead { margin-top: 18px; font-size: 16px; }
+  .software-service-page .software-hero-actions { align-items: stretch; flex-direction: column; margin-top: 24px; }
+  .software-service-page .software-hero-button { width: 100%; justify-content: space-between; }
+  .software-service-page .software-hero-link { justify-content: center; min-height: 42px; }
+  .software-service-page .software-hero-proof { gap: 7px; margin-top: 20px; }
+  .software-service-page .software-hero-proof span { padding: 7px 10px 7px 25px; }
+  .software-service-page .sd-right-img { min-height: 350px; padding: 74px 18px 48px; border-radius: 22px; }
+  .software-service-page .software-hero-panel-label { top: 20px; left: 20px; }
+  .software-service-page .sd-ser-content_wrap, .software-service-page .sd-process_warp, .software-service-page .sd-service_wrap { padding: 75px 0 !important; }
+  .software-service-page .sd-ser-content ul, .software-service-page .sd-process_inner, .software-service-page .sd-list-item { grid-template-columns: 1fr; }
+  .software-service-page .software-benefits-intro h2 { font-size: 34px; }
+  .software-service-page .sd-ser-content li { min-height: 0; padding: 21px; }
+  .software-service-page .sd-process_inner { margin-top: 35px; padding-bottom: 0; }
+  .software-service-page .sd-process-item { min-height: 0; padding: 23px 20px 23px 72px; }
+  .software-service-page .sd-process-item .xb-item--number { top: 22px; left: 18px; }
+  .software-service-page .sd-process-item:nth-child(n) .xb-item--number { left: 18px; }
+  .software-service-page .sd-process-item .xb-item--title { margin-top: 24px; font-size: 18px; }
+  .software-service-page .sd-ser-list li { align-items: flex-start; min-height: 0; padding: 15px 16px; line-height: 1.5; }
+  .software-cta { padding: 55px 0 75px; }
+  .software-cta__box { padding: 32px 25px; border-radius: 20px; }
+  .software-cta__button { width: 100%; justify-content: space-between; }
+}
+
+@media (max-width: 380px) {
+  .software-service-page .page-title-box .title { font-size: 36px; }
+  .software-service-page .sd-title { font-size: 31px; }
+  .software-service-page .sd-process-item { padding-left: 67px; }
+}

@@ -15,14 +15,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
 <!-- Google tag (gtag.js) -->
 <script defer src="assets/js/analytics.js"></script>
-<link href="assets/img/favicon/favicon.ico" rel="shortcut icon" type="assets/img/logo/logo-black02.png"/>
+<link href="assets/img/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 <!-- css include -->
 <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="assets/css/fontawesome.css" rel="stylesheet"/>
 <link href="assets/css/animate.css" rel="stylesheet"/>
 <link href="assets/css/custom-font.css" rel="stylesheet"/>
 <link href="assets/css/main.css" rel="stylesheet"/>
+<link href="assets/css/navigation-nested.css" rel="stylesheet"/>
 <link href="assets/css/price.css" rel="stylesheet"/>
+<link href="assets/css/ngo-crm-page.css?v=20260816-1" rel="stylesheet"/>
 
 
 <title>NGO CRM Software for Donations &amp; 80G Receipts | Donexia</title>
@@ -75,15 +77,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }
     },
     {
-      "@type": "SoftwareApplication",
+      "@type": "Product",
       "@id": "https://datfuslab.com/ngo-crm-software#software",
       "name": "Donexia",
       "url": "https://datfuslab.com/ngo-crm-software",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
+      "category": "Web-based NGO CRM software",
       "description": "Manage donors and donations, generate 80G receipts, automate communication and track campaigns with Donexia NGO CRM software for Indian NGOs.",
-      "publisher": {
+      "brand": {
         "@id": "https://datfuslab.com/#organization"
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "url": "https://datfuslab.com/ngo-crm-software#pricing",
+        "priceCurrency": "INR",
+        "lowPrice": "15000",
+        "highPrice": "50000",
+        "offerCount": "3"
       }
     },
     {
@@ -200,6 +209,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><a href="website-design">Website Design</a></li>
 <li><a href="mobile-app-development">Mobile App Development</a></li>
 <li><a href="digital-marketing">Digital Marketing</a></li>
+<li class="menu-item-has-children bulk-message-menu"><a href="bulk-sms"><span>Bulk Message</span></a>
+<ul class="submenu sub-menu">
+<li><a href="bulk-email">Bulk Email</a></li>
+<li><a href="bulk-sms">Bulk SMS</a></li>
+<li><a href="bulk-whatsapp-message">Bulk WhatsApp</a></li>
+</ul>
+</li>
+<li class="menu-item-has-children server-service-menu"><a href="web-hosting-server"><span>Hosting &amp; Servers</span></a>
+<ul class="submenu sub-menu">
+<li><a href="web-hosting-server">Web Hosting Server</a></li>
+<li><a href="linux-server">Linux Server</a></li>
+<li><a href="windows-server">Windows Server</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="menu-item-has-children">
@@ -217,9 +240,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- END Desktop Menu -->
 <!-- Mobile Menu Icon -->
 <div class="header-bar-mobile side-menu d-xl-none">
-<a class="xb-nav-mobile" href="javascript:void(0);">
+<button class="xb-nav-mobile" type="button" aria-label="Open navigation menu">
 	<i class="far fa-bars"></i>
-</a>
+</button>
                         </div>
 <!-- Contact Button -->
 <div class="header-contact d-none d-md-block">
@@ -247,6 +270,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li><a href="website-design">Website Design</a></li>
 <li><a href="mobile-app-development">Mobile Application Development</a></li>
 <li><a href="digital-marketing">Digital Marketing</a></li>
+<li class="menu-item-has-children bulk-message-menu"><a href="bulk-sms"><span>Bulk Message</span></a>
+<ul class="submenu sub-menu">
+<li><a href="bulk-email">Bulk Email</a></li>
+<li><a href="bulk-sms">Bulk SMS</a></li>
+<li><a href="bulk-whatsapp-message">Bulk WhatsApp</a></li>
+</ul>
+</li>
+<li class="menu-item-has-children server-service-menu"><a href="web-hosting-server"><span>Hosting &amp; Servers</span></a>
+<ul class="submenu sub-menu">
+<li><a href="web-hosting-server">Web Hosting Server</a></li>
+<li><a href="linux-server">Linux Server</a></li>
+<li><a href="windows-server">Windows Server</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="menu-item menu-item-has-children">
@@ -274,7 +311,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="row align-items-center mt-none-30">
 <div class="col-xl-7 col-lg-6 mt-30">
 <div class="xb-hero">
-<span class="ngo-hero-kicker wow fadeInUp" data-wow-duration="600ms"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Donexia for Indian NGOs</span>
+<span class="ngo-hero-kicker wow fadeInUp" data-wow-duration="600ms"><i class="far fa-heart" aria-hidden="true"></i> Donexia for Indian NGOs</span>
 <h1 id="ngo-hero-title" class="xb-item--title ngo-hero-title wow fadeInUp" data-wow-duration="600ms">NGO CRM for Donors, Donations &amp; 80G Receipts</h1>
 <p class="xb-item--content wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">Manage donors, donations, receipts and campaigns in one simple system built for Indian NGOs.</p>
 <ul class="xb-item--item list-unstyled wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
@@ -284,14 +321,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 <div class="xb-btn ngo-hero-action wow fadeInUp" data-wow-delay="450ms" data-wow-duration="600ms">
 <a href="signup" class="thm-btn thm-btn--three">Start Free Trial<span><img width="15" height="16" loading="lazy" decoding="async" class="img--one" src="assets/img/icon/arrow-black.png" alt=""/><img width="15" height="16" loading="lazy" decoding="async" class="img--two" src="assets/img/icon/arrow-black.png" alt=""/></span></a>
-<p class="ngo-hero-note"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Quick setup with guided onboarding</p>
+<a class="ngo-hero-secondary" href="#pricing">View pricing</a>
 </div>
+<p class="ngo-hero-note"><i class="far fa-check-circle" aria-hidden="true"></i> Quick setup with guided onboarding</p>
 </div>
 </div>
 <div class="col-xl-5 col-lg-6 mt-30">
 <div class="hero-right_img pos-rel">
 <div class="hero-right-image">
-<img width="1122" height="1402" decoding="async" alt="Donexia NGO CRM dashboard showing donations, donors, campaigns and receipt management" class="wow fadeInLeft" data-duration=".7s" src="assets/img/hero/donexia-crm-dashboard.png"/>
+<img width="1251" height="1251" decoding="async" fetchpriority="high" alt="Donexia NGO CRM dashboard showing donor records, donation reporting, campaigns and 80G receipts" class="wow fadeInLeft" data-duration=".7s" src="assets/img/hero/donexia-crm-dashboard-v2.png"/>
 </div>
 </div>
 </div>
@@ -326,8 +364,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="row align-items-center mt-none-30">
 <div class="col-lg-6 mt-30">
 <div class="feature-left-item pos-rel">
-<div class="xb-img"><img width="471" height="593" loading="lazy" decoding="async" alt="" src="assets/img/feature/img02.png"/></div>
-<div class="xb-img-two"><img width="212" height="150" loading="lazy" decoding="async" alt="" class="updown-2" src="assets/img/feature/img01.png"/></div>
+<div class="donexia-lifecycle-visual">
+<img width="1254" height="1254" loading="lazy" decoding="async" src="assets/img/feature/donation-lifecycle-v2.png" alt="Four-step NGO donation lifecycle from donor profile and donation recording to 80G receipt generation and reporting"/>
+</div>
 </div>
 </div>
 <div class="col-lg-6 mt-30">
@@ -396,7 +435,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section class="donexia-content-section donexia-audience-section pt-120 pb-120" aria-labelledby="donexia-audience-title">
 <div class="container">
 <div class="donexia-content-heading text-center">
-<span class="donexia-content-kicker"><i class="fa-solid fa-people-group" aria-hidden="true"></i> Built for mission-driven teams</span>
+<span class="donexia-content-kicker"><i class="far fa-users" aria-hidden="true"></i> Built for mission-driven teams</span>
 <h2 id="donexia-audience-title">One donor management system for different types of NGOs</h2>
 <p>Donexia gives fundraising and operations teams a shared view of donor relationships without relying on disconnected spreadsheets and manual receipt workflows.</p>
 </div>
@@ -681,7 +720,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="row align-items-start mt-none-30">
 <div class="col-lg-5 mt-30">
 <div class="donexia-content-heading donexia-content-heading-left">
-<span class="donexia-content-kicker"><i class="fa-solid fa-route" aria-hidden="true"></i> A guided start</span>
+<span class="donexia-content-kicker"><i class="far fa-route" aria-hidden="true"></i> A guided start</span>
 <h2 id="donexia-onboarding-title">Move from scattered records to an organised NGO CRM</h2>
 <p>Our team helps you choose the right setup, prepare existing data and introduce Donexia to the people who will use it.</p>
 <a class="thm-btn thm-btn--three" href="signup">Start your free trial<span><img width="15" height="16" loading="lazy" decoding="async" alt="" class="img--one" src="assets/img/icon/arrow-black.png"/><img width="15" height="16" loading="lazy" decoding="async" alt="" class="img--two" src="assets/img/icon/arrow-black.png"/></span></a>
@@ -697,7 +736,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div>
 <div class="donexia-security-note">
-<i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+<i class="far fa-shield-check" aria-hidden="true"></i>
 <div><h3>Security starts with controlled access</h3><p>Donexia supports role-based permissions so administrators can control who can view or manage sensitive records. Your NGO should also use strong passwords, remove access for former staff and follow its own data-retention and compliance policies.</p></div>
 </div>
 </div>
@@ -801,19 +840,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <span class="xb-title">Zendesk</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img loading="lazy" decoding="async" src="assets/img/icon/cashfree-icon.png" alt=""></div>
-                                        <span class="xb-title">Instagram</span>
+                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/wallet.png" alt="Cashfree payment integration"></div>
+                                        <span class="xb-title">Cashfree</span>
                                     </div>
                                     <div class="integration-item">
                                         <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon03.png" alt=""></div>
                                         <span class="xb-title">Messenger</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img loading="lazy" decoding="async" src="assets/img/icon/rozarpay-icon.png" alt=""></div>
-                                        <span class="xb-title">Rozarpay</span>
+                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/wallet.png" alt="Razorpay payment integration"></div>
+                                        <span class="xb-title">Razorpay</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img loading="lazy" decoding="async" src="assets/img/icon/phonepay-icon.png" alt=""></div>
+                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/wallet.png" alt="PhonePe payment integration"></div>
                                         <span class="xb-title">PhonePe</span>
                                     </div>
                                     <div class="integration-item">
@@ -952,7 +991,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="container">
 <div class="donexia-faq-heading text-center">
 <div class="donexia-faq-label">
-<i class="fa-solid fa-circle-question" aria-hidden="true"></i>
+<i class="far fa-question-circle" aria-hidden="true"></i>
 <span>Frequently Asked Questions</span>
 </div>
 <h2 id="donexia-faq-title">Everything you need to know about Donexia</h2>
@@ -996,25 +1035,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 <!-- FAQ section end -->
 <!-- cta section start  -->
-<section class="cta pos-rel pt-130 pb-135" data-bg-color="#ffff">
+<section class="cta donexia-final-cta pos-rel" aria-labelledby="donexia-final-cta-title">
 <div class="container">
-<div class="row justify-content-center">
-<div class="col-lg-7">
-<div class="hd-cta text-center">
-<div class="sec-title--two sec-title--four">
-<div class="sub-title wow fadeInUp" data-wow-duration="600ms"><img width="19" height="20" loading="lazy" decoding="async" alt="" src="assets/img/icon/cross-x.svg"/>Helping Hand for NGOs</div>
-<h2 class="title wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">Ready to simplify donor management and donation receipts?</h2>
+<div class="donexia-final-cta-card wow fadeInUp" data-wow-duration="600ms">
+<div>
+<span>Ready to simplify donor management?</span>
+<h2 id="donexia-final-cta-title">Bring donor records, donations and receipts into one organised workspace.</h2>
 </div>
-<div class="xb-btn text-center mt-45 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
-<a class="thm-btn thm-btn--three" href="signup">Start your free trial
-                                    <span>
-<img width="15" height="16" loading="lazy" decoding="async" alt="" class="img--one" src="assets/img/icon/arrow-black.png"/>
-<img width="15" height="16" loading="lazy" decoding="async" alt="" class="img--two" src="assets/img/icon/arrow-black.png"/>
-</span>
-</a>
-</div>
-</div>
-</div>
+<a class="donexia-final-cta-button" href="signup">Start your free trial <i class="far fa-arrow-right" aria-hidden="true"></i></a>
 </div>
 </div>
 </section>
@@ -1045,12 +1073,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="footer-widget">
 <span class="xb-item--sub-title">Our Services</span>
 <ul class="xb-item--holder list-unstyled">
-<li class="xb-item--list">Software Development</li>
-<li class="xb-item--list">CRM | ERP | Billing Software</li>
-<li class="xb-item--list">Bulk Message</li>
-<li class="xb-item--list">Manpower</li>
-<li class="xb-item--list">Website Design &amp; Development</li>
-<li class="xb-item--list">Domain &amp; Server</li>
+<li class="xb-item--list"><a href="software-development">Software Development</a></li>
+<li class="xb-item--list"><a href="website-design">Website Design &amp; Development</a></li>
+<li class="xb-item--list"><a href="mobile-app-development">Mobile App Development</a></li>
+<li class="xb-item--list"><a href="digital-marketing">Digital Marketing</a></li>
+<li class="xb-item--list"><a href="ngo-crm-software">NGO CRM Software</a></li>
+<li class="xb-item--list"><a href="bulk-sms">Bulk SMS</a></li>
+<li class="xb-item--list"><a href="bulk-whatsapp-message">Bulk WhatsApp Messaging</a></li>
+<li class="xb-item--list"><a href="bulk-email">Bulk Email</a></li>
+<li class="xb-item--list"><a href="web-hosting-server">Web Hosting</a></li>
+<li class="xb-item--list"><a href="linux-server">Linux Server Management</a></li>
+<li class="xb-item--list"><a href="windows-server">Windows Server Management</a></li>
 </ul>
 </div>
 <div class="footer-widget">

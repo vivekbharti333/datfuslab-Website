@@ -109,16 +109,31 @@
 			$(this).closest('.menu-item').find('> .sub-menu').slideToggle();
 		}
 	});
-	$(".xb-nav-mobile").on('click', function () {
-		$(this).toggleClass('active');
-		$('.xb-header-menu').toggleClass('active');
-		$('body').toggleClass('body-overflow');
+	function setMobileMenu(open) {
+		$('.xb-header-menu').toggleClass('active', open);
+		$('.xb-nav-mobile')
+			.toggleClass('active', open)
+			.attr('aria-expanded', open ? 'true' : 'false')
+			.attr('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+		$('body').toggleClass('body-overflow', open);
+	}
+
+	// Use delegated events because the sticky header is cloned at runtime.
+	$(document).on('click', '.xb-nav-mobile', function (e) {
+		e.preventDefault();
+		e.stopPropagation();
+		setMobileMenu(!$('.xb-header-menu').hasClass('active'));
 	});
 
-	$(".xb-menu-close, .xb-header-menu-backdrop").on('click', function () {
-		$(this).removeClass('active');
-		$('.xb-header-menu').removeClass('active');
-		$('body').removeClass('body-overflow');
+	$(document).on('click', '.xb-menu-close, .xb-header-menu-backdrop', function (e) {
+		e.preventDefault();
+		setMobileMenu(false);
+	});
+
+	$(document).on('keydown', function (e) {
+		if (e.key === 'Escape' && $('.xb-header-menu').hasClass('active')) {
+			setMobileMenu(false);
+		}
 	});
 
 	/*------------------------------------------
@@ -1092,5 +1107,4 @@
     });
 
 })(jQuery);
-
 

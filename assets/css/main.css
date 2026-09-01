@@ -5164,7 +5164,9 @@ body[data-aos-easing=ease] [data-aos] {
     @media (max-width: 991px) {
       .xb-brand-item img {
         max-width: 100px;
-        max-height: 70px; } }
+        max-height: 70px;
+        width: auto;
+        height: auto; } }
   .xb-brand-item--big {
     border-left: 1px solid #2F3037;
     border-right: 1px solid #2F3037; }
@@ -14648,7 +14650,10 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
 
 .xb-nav-mobile {
   font-size: 26px;
-  color: var(--color-primary-two); }
+  color: var(--color-primary-two);
+  border: 0;
+  padding: 0;
+  background: transparent; }
   .xb-nav-mobile:hover {
     color: var(--color-primary-two); }
 
@@ -14952,7 +14957,7 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     margin-bottom: 15px;
     display: inline-block;
     text-transform: capitalize; }
-  .footer-widget .xb-item--list {
+.footer-widget .xb-item--list {
     font-weight: 300;
     font-size: 20px;
     line-height: 37px;
@@ -14962,6 +14967,15 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
     -o-transition: 0.3s;
     transition: 0.3s;
     font-family: var(--font-heading); }
+
+/* Keep Industries and Services footer links clear and visually lightweight. */
+.footer-style-two .footer-widget:not(.sa-newslatter) .xb-item--list,
+.footer-style-two .footer-widget:not(.sa-newslatter) .xb-item--list a {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 29px;
+}
     @media (max-width: 1199px) {
       .footer-widget .xb-item--list {
         font-size: 18px; } }
@@ -16058,3 +16072,60 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::before, body .mfp-w
 }
 
 /*# sourceMappingURL=main.css.map */
+/* Nested Bulk Message service flyout */
+@media (min-width: 1200px) {
+  .main-menu .submenu .bulk-message-menu,
+  .main-menu .submenu .server-service-menu {
+    position: relative;
+  }
+
+  .main-menu .submenu .bulk-message-menu > a,
+  .main-menu .submenu .server-service-menu > a {
+    position: relative;
+    padding-right: 44px;
+    font-weight: 700;
+  }
+
+  .main-menu .submenu .bulk-message-menu > a span::after,
+  .main-menu .submenu .server-service-menu > a span::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .main-menu .submenu .bulk-message-menu > a::after,
+  .main-menu .submenu .server-service-menu > a::after {
+    content: "›";
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    color: currentColor;
+    font-size: 21px;
+    font-weight: 900;
+    line-height: 1;
+    transform: translateY(-52%);
+  }
+
+  .main-menu .submenu .bulk-message-menu > .submenu,
+  .main-menu .submenu .server-service-menu > .submenu {
+    top: 0 !important;
+    left: calc(100% + 8px) !important;
+    min-width: 215px;
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 18px 45px rgba(17, 24, 39, 0.13);
+  }
+}
+
+@media (max-width: 1199px) {
+  .xb-menu-primary .bulk-message-menu > .sub-menu,
+  .xb-menu-primary .server-service-menu > .sub-menu {
+    margin-left: 14px;
+    padding-left: 12px;
+    border-left: 2px solid rgba(var(--color-primary-two-rgb), 0.18);
+  }
+
+  .xb-menu-primary .bulk-message-menu > .sub-menu > li > a,
+  .xb-menu-primary .server-service-menu > .sub-menu > li > a {
+    padding-left: 12px;
+  }
+}
