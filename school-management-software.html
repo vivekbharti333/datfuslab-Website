@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<!--========= Required meta tags =========-->
+<meta charset="utf-8"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+
+<!-- Google tag (gtag.js) -->
+<script defer src="assets/js/analytics.js"></script>
+<link href="assets/img/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<!-- css include -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/css/fontawesome.css" rel="stylesheet"/>
+<link href="assets/css/animate.css" rel="stylesheet"/>
+<link href="assets/css/swiper.min.css" rel="stylesheet"/>
+<link href="assets/css/slick.css" rel="stylesheet"/>
+<link href="assets/css/odometer.css" rel="stylesheet"/>
+<link href="assets/css/nice-select.css" rel="stylesheet"/>
+<link href="assets/css/magnific-popup.css" rel="stylesheet"/>
+<link href="assets/css/custom-font.css" rel="stylesheet"/>
+<link href="assets/css/main.css" rel="stylesheet"/>
+
+<style>
+.school-page { color:#172335; background:#fff; }
+.school-page h1,.school-page h2,.school-page h3 { color:#142237; letter-spacing:-.035em; }
+.school-hero { padding:90px 0 70px; background:radial-gradient(ellipse at 90% 10%,#ffebd9,transparent 55%),#fffaf6; }
+.school-grid { display:grid; grid-template-columns:1.05fr 1fr; gap:56px; align-items:center; }
+.school-kicker { display:block; color:#bd4309; font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:16px; }
+.school-page h1 { font-size:clamp(36px,4.4vw,60px); line-height:1.08; margin-bottom:22px; }
+.school-page h1 em { color:#d44a00; font-style:normal; }
+.school-page p { color:#627084; line-height:1.7; font-size:16px; }
+.school-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+.school-button { display:inline-flex; justify-content:center; align-items:center; padding:13px 23px; border-radius:9px; background:#d44a00; color:#fff; font-size:14px; font-weight:700; border:1px solid #d44a00; }
+.school-button:hover { background:#b93e00; color:#fff; }
+.school-button.secondary { background:#fff; color:#26344a; border-color:#dce1e8; }
+.school-button:focus-visible { outline:3px solid #26344a; outline-offset:3px; }
+.school-preview { padding:25px; border:1px solid #e4e7ed; border-radius:20px; background:#fff; box-shadow:0 24px 65px #33231612; }
+.school-preview-head { display:flex; justify-content:space-between; align-items:center; gap:16px; padding-bottom:20px; border-bottom:1px solid #edf0f3; }
+.school-preview-head strong { font-size:18px; }.school-preview-head span { font-size:11px; background:#fff1e6; color:#ad400e; border-radius:20px; padding:5px 10px; }
+.school-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:20px 0; }.school-stat { border-radius:12px; padding:14px 10px; background:#f6f8fb; }.school-stat b { display:block; font-size:24px; color:#24334b; }.school-stat small { font-size:11px; color:#637085; }
+.school-task { display:flex; align-items:center; gap:12px; padding:13px 0; border-bottom:1px solid #edf0f3; font-size:13px; }.school-task i { color:#d44a00; width:20px; }.school-task span { margin-left:auto; color:#327554; font-size:11px; }.school-preview .sample { font-size:11px; margin:16px 0 0; }
+.school-section { padding:68px 0; }.school-section h2 { font-size:clamp(28px,3vw,40px); margin-bottom:14px; }.school-intro { max-width:680px; margin-bottom:30px; }
+.school-features { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }.school-feature { padding:25px; border:1px solid #e6e9ee; border-radius:14px; }.school-feature i { color:#d44a00; font-size:23px; margin-bottom:18px; }.school-feature h3 { font-size:19px; margin-bottom:10px; }.school-feature p { font-size:14px; margin:0; }
+.school-workflow { background:#f7f9fb; }.school-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:30px; }.school-steps b { display:block; color:#d44a00; font-size:14px; margin-bottom:12px; }.school-steps h3 { font-size:20px; }.school-steps p { font-size:14px; }
+.school-faq { max-width:860px; margin:auto; }.school-faq details { border-bottom:1px solid #e5e9ef; padding:17px 0; }.school-faq summary { cursor:pointer; color:#26344a; font-weight:600; font-size:16px; }.school-faq p { font-size:14px; margin:12px 0 0; }
+.school-cta { padding:36px; border-radius:18px; background:#fff2e8; display:flex; align-items:center; justify-content:space-between; gap:30px; }.school-cta h2 { font-size:30px; }.school-cta p { margin:0; }.school-cta .school-button { flex-shrink:0; }
+@media(max-width:991px){.school-grid{grid-template-columns:1fr;gap:30px}.school-hero{padding:55px 0}.school-features{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:575px){.school-features,.school-steps{grid-template-columns:1fr}.school-section{padding:44px 0}.school-cta{flex-direction:column;align-items:flex-start;padding:25px}.school-preview{padding:18px}.school-stat b{font-size:21px}}
+/* School product layout */
+.school-page .container { max-width:1200px; }
+.school-hero { padding:72px 0 58px; background:linear-gradient(120deg,#fff 38%,#fff8f1); border-bottom:1px solid #f0e9e2; }
+.school-grid { grid-template-columns:.95fr 1.05fr; gap:48px; }
+.school-page h1 { font-size:clamp(34px,3.6vw,48px); line-height:1.14; letter-spacing:-1.8px; max-width:520px; }
+.school-hero > .container > div > p { max-width:470px; font-size:15px; line-height:1.75; }
+.school-kicker { font-size:11px; letter-spacing:.1em; }
+.school-actions { margin-top:24px; }
+.school-button { padding:11px 19px; font-size:13px; }
+.school-preview { padding:0; overflow:hidden; border-radius:14px; border:1px solid #dfe5ec; box-shadow:0 20px 55px #1d344014; transform:rotate(-1deg); }
+.school-app-bar { display:flex; align-items:center; gap:6px; padding:12px 16px; background:#fafbfc; border-bottom:1px solid #e7ebf0; }
+.school-app-bar i { width:6px; height:6px; background:#d0d8e3; border-radius:50%; }.school-app-bar span { margin-left:auto; color:#8390a0; font-size:9px; letter-spacing:.08em; text-transform:uppercase; }
+.school-app { display:grid; grid-template-columns:108px 1fr; min-height:330px; }
+.school-sidebar { background:#172b40; padding:22px 12px; color:#bdcbd8; font-size:10px; }.school-sidebar strong { display:block; color:white; margin:0 0 28px; font-size:12px; }.school-sidebar div { padding:9px 8px; margin-bottom:5px; border-radius:5px; }.school-sidebar .active { background:#ffffff16; color:#fff; box-shadow:inset 2px 0 #fb8b42; }
+.school-app-content { padding:22px 18px; background:#f8fafc; min-width:0; }.school-app-content h3 { font-size:17px; letter-spacing:-.4px; margin:0 0 4px; }.school-app-content > p { font-size:10px; margin-bottom:17px; }
+.school-stats { gap:7px; margin:0 0 15px; }.school-stat { padding:12px 9px; background:white; border:1px solid #e6ebf1; border-radius:7px; }.school-stat b { font-size:21px; line-height:1.4; }.school-stat small { font-size:9px; }.school-stat:first-child { background:#fff2e7; border-color:#ffe1c8; }
+.school-chart { padding:14px; background:white; border:1px solid #e6ebf1; border-radius:8px; }.school-chart-head { display:flex; justify-content:space-between; font-size:10px; color:#293b4f; }.school-chart-head span { color:#8390a0; font-size:9px; }
+.school-bars { height:91px; display:flex; gap:18px; align-items:flex-end; padding:12px 6px 0; border-bottom:1px solid #e9edf2; }.school-bars i { flex:1; height:var(--bar); border-radius:4px 4px 0 0; background:#b8c9d8; }.school-bars i:last-child { background:#e16b26; }.school-chart-days { display:flex; justify-content:space-around; padding-top:7px; font-size:9px; color:#8390a0; }
+.school-preview .sample { margin:0; padding:9px 15px; font-size:9px; background:#fff; border-top:1px solid #e7ebf0; text-align:right; }
+.school-section { padding:54px 0; }.school-section h2 { font-size:clamp(27px,2.7vw,34px); }.school-intro p { font-size:14px; }.school-feature { padding:23px; background:linear-gradient(145deg,#fff,#fafbfd); }.school-feature i { background:#fff1e6; width:42px; height:42px; display:grid; place-items:center; border-radius:10px; font-size:18px; }.school-feature h3 { font-size:18px; }.school-feature p { font-size:13px; }
+@media(max-width:991px){.school-grid{grid-template-columns:1fr;gap:32px}.school-preview{transform:none;max-width:620px;width:100%}.school-hero{padding:45px 0}.school-page h1{max-width:600px}}
+@media(max-width:575px){.school-app{grid-template-columns:78px 1fr;min-height:300px}.school-sidebar{padding:18px 6px;font-size:9px}.school-sidebar strong{font-size:10px}.school-app-content{padding:17px 10px}.school-stat b{font-size:17px}.school-stat small{font-size:8px}.school-bars{gap:12px}.school-page h1{letter-spacing:-1px}}
+
+/* Reference-inspired school product presentation in Datfuslab colors. */
+.sr-page .container{max-width:1320px}.sr-hero{padding:50px 0 28px;background:radial-gradient(ellipse at 95% 10%,#ffe2c8,transparent 53%),linear-gradient(120deg,#fff 20%,#fff8f2);overflow:hidden}.sr-hero-grid{display:grid;grid-template-columns:.93fr 1.07fr;gap:34px;align-items:center}.sr-badge{display:inline-block;border-radius:30px;background:#fff0e4;color:#b54208;padding:6px 13px;font-size:12px;margin-bottom:18px}.sr-copy h1{font-size:clamp(31px,3vw,43px);letter-spacing:-1.4px;line-height:1.16;max-width:none;margin-bottom:17px}.sr-copy h1 em{display:inline-block;color:#d44a00}.sr-copy>p{font-size:15px;line-height:1.7;max-width:530px}.sr-benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin:26px 0}.sr-benefits i{display:grid;place-items:center;width:38px;height:38px;background:linear-gradient(145deg,#ff974f,#d44a00);color:white;border-radius:10px;font-size:18px;margin-bottom:10px;box-shadow:0 5px 12px #d44a0018}.sr-benefits strong{display:block;font-size:11px;color:#233043;line-height:1.5}.sr-benefits small{display:block;color:#728094;font-size:10px;line-height:1.5;margin-top:3px}.sr-copy .school-actions{margin-top:28px}.sr-devices{position:relative;padding:14px 35px 35px 0;min-width:0}.sr-laptop{border:2px solid #4a5055;border-radius:17px 17px 3px 3px;background:#172027;padding:13px 8px 9px;box-shadow:0 24px 40px #21344520}.sr-camera{width:4px;height:4px;border-radius:50%;background:#526f83;margin:-7px auto 6px}.sr-screen{background:#f5f8fb;border-radius:4px;overflow:hidden}.sr-top{display:flex;justify-content:space-between;padding:11px;background:#fff;border-bottom:1px solid #e8edf2;font-size:9px;color:#27354a}.sr-top i{color:#d44a00;margin-right:4px}.sr-top span{font-size:8px;color:#748194}.sr-app{display:grid;grid-template-columns:106px 1fr;min-height:290px}.sr-app aside{padding:12px 7px;background:#fff;border-right:1px solid #edf0f4;font-size:8px;color:#48566a}.sr-app aside b{display:block;background:#e96722;color:#fff;border-radius:4px;padding:7px 5px;margin-bottom:7px}.sr-app aside div{padding:7px 5px}.sr-app aside i{width:17px;color:#4a596f}.sr-content{padding:14px 11px;min-width:0}.sr-welcome h3{font-size:14px;margin-bottom:2px}.sr-welcome small{font-size:8px;color:#7c8899}.sr-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:12px 0}.sr-metrics>div{background:#fff0e4;padding:9px;border-radius:6px}.sr-metrics>div:nth-child(2){background:#eaf2f6}.sr-metrics>div:nth-child(3){background:#eef5ee}.sr-metrics small{display:block;font-size:7px;color:#596779}.sr-metrics b{font-size:17px;color:#27364b;line-height:1.4}.sr-panels{display:grid;grid-template-columns:1fr 1fr;gap:8px}.sr-panels>div{background:#fff;border:1px solid #eef0f4;border-radius:6px;padding:10px}.sr-panels strong{font-size:8px;display:block;color:#263649}.sr-donut{width:84px;height:84px;background:conic-gradient(#e77735 0 92%,#ffe7d5 92%);border-radius:50%;display:grid;place-items:center;margin:10px auto}.sr-donut>div{background:#fff;border-radius:50%;width:65px;height:65px;display:grid;align-content:center;text-align:center}.sr-donut b{font-size:20px;color:#25364b;line-height:1.2}.sr-donut small,.sr-attendance>small{font-size:7px}.sr-attendance>small{display:block;color:#be541c;text-align:center}.sr-attendance>small span{color:#a3acb7}.sr-activity p{position:relative;font-size:7px;line-height:1.5;margin:11px 0;padding-left:18px;color:#40506a}.sr-activity i{position:absolute;left:0;top:3px;color:#d86625;font-size:11px}.sr-activity small{display:block;font-size:6px;color:#8b95a2}.sr-screen-banner{margin-top:10px;background:#ffeede;border-radius:5px;padding:12px;display:flex;align-items:center;gap:10px}.sr-screen-banner>i{font-size:26px;color:#a94613}.sr-screen-banner strong{font-size:9px;display:block;color:#29394c}.sr-screen-banner small{font-size:7px;display:block;color:#7c746d}.sr-laptop-base{height:12px;background:linear-gradient(#aeb5ba,#576169);border-radius:0 0 50% 50%;margin:0 -17px;box-shadow:0 8px 8px #21344515}.sr-phone{position:absolute;right:0;bottom:30px;width:140px;background:#fff;border:5px solid #252e36;border-radius:24px;padding:25px 10px 16px;box-shadow:0 12px 24px #14253630;min-height:265px}.sr-notch{position:absolute;top:0;left:35px;right:35px;height:10px;background:#252e36;border-radius:0 0 9px 9px}.sr-phone-top{font-size:7px;color:#c35419;font-weight:700;margin-bottom:16px}.sr-phone h3{font-size:12px;line-height:1.35;letter-spacing:-.3px;margin-bottom:5px}.sr-phone>small{font-size:7px;color:#748195}.sr-phone-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:13px 0}.sr-phone-grid>div{background:#fff3e9;border-radius:6px;display:grid;justify-items:center;gap:6px;padding:10px 3px;font-size:6px;color:#455066}.sr-phone-grid i{color:#d66324;font-size:15px}.sr-phone-bottom{font-size:5px;color:#7b8798;text-align:center;border-top:1px solid #eef0f3;padding-top:10px}.sr-demo-note{font-size:9px!important;margin:14px 0 0!important;text-align:center;color:#8a929b!important}.sr-feature-section{padding:16px 0 22px}.sr-feature-box{padding:25px;border-radius:18px;background:#fff8f2;border:1px solid #fff0e3}.sr-feature-heading{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:20px}.sr-feature-heading h2{font-size:25px;margin-bottom:5px}.sr-feature-heading p{font-size:13px;margin:0}.sr-feature-heading>a{font-size:12px;color:#c64a09;white-space:nowrap}.sr-tiles{display:grid;grid-template-columns:repeat(8,1fr);gap:9px}.sr-tile{background:#fff;border-radius:10px;padding:17px 5px;text-align:center;display:grid;justify-items:center;gap:11px;border:1px solid #f2eae4;transition:transform .2s}.sr-tile:hover{transform:translateY(-3px);border-color:#e8ab85}.sr-tile i{font-size:23px;color:#d6692a}.sr-tile:nth-child(even) i{color:#596e80}.sr-tile span{font-size:10px;color:#263448}.sr-cta-section{padding:0 0 42px}.sr-cta{display:flex;gap:24px;align-items:center;padding:28px 32px;border-radius:18px;background:linear-gradient(115deg,#fff0e1,#fff9f4)}.sr-school-icon{font-size:50px;color:#ba4c10}.sr-cta h2{font-size:23px;margin-bottom:5px}.sr-cta p{font-size:13px;margin:0}.sr-cta .school-actions{margin:0 0 0 auto;flex-shrink:0}.sr-page a:focus-visible{outline:2px solid #ac460f;outline-offset:3px}
+@media(max-width:1100px){.sr-hero-grid{grid-template-columns:1fr 1fr;gap:24px}.sr-app{grid-template-columns:78px 1fr}.sr-devices{padding-right:24px}.sr-phone{width:120px}.sr-app aside{font-size:7px}.sr-benefits{gap:8px}.sr-cta{flex-wrap:wrap}.sr-cta .school-actions{margin-left:0}}
+@media(max-width:850px){.sr-hero-grid{grid-template-columns:1fr}.sr-copy{max-width:620px}.sr-devices{max-width:650px;width:100%;margin:auto}.sr-app{grid-template-columns:106px 1fr}.sr-tiles{grid-template-columns:repeat(4,1fr)}.sr-phone{width:140px}.sr-copy h1{font-size:38px}.sr-hero{padding-top:35px}}
+@media(max-width:480px){.sr-copy h1{font-size:30px}.sr-copy>p{font-size:14px}.sr-benefits{grid-template-columns:repeat(2,1fr);gap:17px}.sr-benefits strong{font-size:12px}.sr-benefits small{font-size:11px}.sr-app{grid-template-columns:65px 1fr}.sr-app aside{font-size:6px;padding:8px 3px}.sr-app aside i{width:11px}.sr-devices{padding-right:16px}.sr-phone{width:100px;min-height:215px;padding:23px 7px 10px;bottom:35px}.sr-phone h3{font-size:10px}.sr-phone-top{font-size:6px;margin-bottom:10px}.sr-phone-grid{gap:4px}.sr-phone-grid>div{padding:7px 2px}.sr-phone-bottom{font-size:4px}.sr-notch{left:22px;right:22px}.sr-content{padding:10px 6px}.sr-panels{grid-template-columns:1fr}.sr-activity{display:none}.sr-donut{width:73px;height:73px}.sr-donut>div{width:56px;height:56px}.sr-feature-box{padding:19px 14px}.sr-feature-heading{align-items:flex-start;flex-direction:column;gap:8px}.sr-feature-heading h2{font-size:22px}.sr-tiles{gap:6px}.sr-tile{padding:13px 3px}.sr-tile span{font-size:9px}.sr-cta{padding:24px;gap:17px}.sr-cta h2{font-size:22px}.sr-school-icon{font-size:36px}.sr-cta .school-actions{gap:8px}.sr-cta .school-button{font-size:12px;padding:10px 13px}}
+@media(prefers-reduced-motion:reduce){.sr-tile{transition:none}.sr-tile:hover{transform:none}}
+
+
+.sl-features{padding:32px 0 8px}.sl-heading{text-align:center;margin:0 auto 25px;max-width:800px}.sl-heading h2,.sl-why h2{font-size:clamp(25px,2.5vw,33px);line-height:1.2;margin:0 0 9px}.sr-page em{font-style:normal;color:#d44a00}.sl-heading p{font-size:14px;margin:0;color:#758094}.sl-feature-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.sl-feature{display:flex;gap:12px;padding:18px 13px;border:1px solid #eaeef2;border-radius:11px;background:#fff;box-shadow:0 3px 10px #23344a04}.sl-feature>i{flex:0 0 40px;height:44px;background:#fff0e3;color:#d46a2e;border-radius:9px;display:grid;place-items:center;font-size:21px}.sl-feature:nth-child(3n+2)>i{background:#eff3f6;color:#60768a}.sl-feature:nth-child(3n)>i{background:#f2f4ea;color:#78855c}.sl-feature h3{font-size:13px;line-height:1.4;letter-spacing:-.2px;margin:0 0 5px}.sl-feature p{font-size:11px;line-height:1.65;margin:0;color:#708095}.sl-more{text-align:right;margin:12px 0 20px}.sl-more a{color:#bc4b0d;font-size:12px}.sl-why{display:grid;grid-template-columns:1.25fr 1fr .85fr;gap:28px;align-items:center;border-radius:19px;background:linear-gradient(115deg,#fff7ed,#fffaf6 55%,#ffeddc);padding:30px;overflow:hidden}.sl-why h2{font-size:27px}.sl-intro{font-size:12px!important;margin-bottom:18px}.sl-reasons{list-style:none;padding:0;margin:0}.sl-reasons li{display:flex;gap:13px;margin:14px 0}.sl-reasons i{color:#d46626;font-size:21px;width:25px;flex-shrink:0;margin-top:3px}.sl-reasons h3{font-size:13px;margin:0 0 3px;letter-spacing:0}.sl-reasons p{font-size:11px;margin:0;line-height:1.5}.sl-focus-grid{display:grid;grid-template-columns:1fr 1fr;background:#ffffffb8;border-radius:13px;padding:14px}.sl-focus-grid>div{padding:22px 9px;text-align:center;border-bottom:1px solid #efe7df}.sl-focus-grid>div:nth-child(odd){border-right:1px solid #efe7df}.sl-focus-grid>div:nth-last-child(-n+2){border-bottom:0}.sl-focus-grid i{display:block;font-size:25px;color:#d6692b;margin-bottom:11px}.sl-focus-grid strong{display:block;font-size:15px;color:#25354a}.sl-focus-grid span{display:block;font-size:10px;color:#7d8796;line-height:1.5;margin-top:5px}.sl-illustration svg{display:block;width:100%;height:auto}.sl-illustration p{text-align:center;font-size:17px;line-height:1.5;margin:0;color:#354357;font-weight:600}.sl-teams{padding:36px 0}.sl-team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.sl-team-grid article{display:flex;gap:14px;padding:23px 20px;border:1px solid #edf0f3;border-radius:12px;box-shadow:0 4px 16px #24334a04}.sl-avatar{display:grid;place-items:center;width:44px;height:44px;flex-shrink:0;border-radius:50%;background:#fff0e3;color:#c76127;font-size:19px}.sl-team-grid h3{font-size:15px;margin:0 0 8px}.sl-team-grid p{font-size:12px;line-height:1.7;margin:0 0 12px}.sl-team-label{font-size:10px;font-weight:600;color:#ba5b23}.sr-cta-section{padding-top:8px}
+@media(max-width:1100px){.sl-feature-grid{grid-template-columns:repeat(3,1fr)}.sl-why{grid-template-columns:1.2fr 1fr}.sl-illustration{display:none}.sl-team-grid{gap:12px}.sl-team-grid article{padding:18px 14px;flex-direction:column}}
+@media(max-width:700px){.sl-feature-grid{grid-template-columns:repeat(2,1fr)}.sl-why{grid-template-columns:1fr;padding:24px}.sl-team-grid{grid-template-columns:1fr}.sl-team-grid article{flex-direction:row}.sl-heading p{font-size:12px}.sl-feature{padding:14px 10px;gap:9px}.sl-feature>i{flex-basis:32px;height:37px;font-size:17px}.sl-feature h3{font-size:12px}.sl-why h2{font-size:25px}}
+@media(max-width:380px){.sl-feature-grid{grid-template-columns:1fr}}
+
+/* Colorful feature icons inspired by the school reference. */
+.sr-benefits > div:nth-child(4n+1), .sr-tile:nth-child(6n+1), .sl-feature:nth-child(6n+1), .sl-focus-grid > div:nth-child(4n+1), .sl-reasons li:nth-child(4n+1), .sl-team-grid article:nth-child(3n+1) { --icon-color:#2385ed; --icon-bg:#eaf4ff; }
+.sr-benefits > div:nth-child(4n+2), .sr-tile:nth-child(6n+2), .sl-feature:nth-child(6n+2), .sl-focus-grid > div:nth-child(4n+2), .sl-reasons li:nth-child(4n+2), .sl-team-grid article:nth-child(3n+2) { --icon-color:#1ab975; --icon-bg:#e6f8ee; }
+.sr-benefits > div:nth-child(4n+3), .sr-tile:nth-child(6n+3), .sl-feature:nth-child(6n+3), .sl-focus-grid > div:nth-child(4n+3), .sl-reasons li:nth-child(4n+3), .sl-team-grid article:nth-child(3n+3) { --icon-color:#8649ed; --icon-bg:#f1eaff; }
+.sr-benefits > div:nth-child(4n+4), .sr-tile:nth-child(6n+4), .sl-feature:nth-child(6n+4), .sl-focus-grid > div:nth-child(4n+4), .sl-reasons li:nth-child(4n+4) { --icon-color:#ff851b; --icon-bg:#fff0e4; }
+.sr-tile:nth-child(6n+5), .sl-feature:nth-child(6n+5) { --icon-color:#ec3b83; --icon-bg:#ffeaf2; }
+.sr-tile:nth-child(6n+6), .sl-feature:nth-child(6n+6) { --icon-color:#0aafb0; --icon-bg:#e3f8f7; }
+.sr-benefits > div > i { background:var(--icon-color); color:#fff; box-shadow:0 5px 12px var(--icon-bg); }
+.sr-tile > i { display:grid; place-items:center; width:44px; height:44px; border-radius:10px; color:var(--icon-color); background:var(--icon-bg); }
+.sl-feature > i { color:var(--icon-color); background:var(--icon-bg); }
+.sl-focus-grid > div > i { color:var(--icon-color); }
+.sl-reasons li > i { color:var(--icon-color); }
+.sl-team-grid article .sl-avatar { color:var(--icon-color); background:var(--icon-bg); }
+.sr-phone-grid > div:nth-child(1) { background:#e6f8ee; }.sr-phone-grid > div:nth-child(1) i { color:#1ab975; }
+.sr-phone-grid > div:nth-child(2) { background:#eaf4ff; }.sr-phone-grid > div:nth-child(2) i { color:#2385ed; }
+.sr-phone-grid > div:nth-child(3) { background:#fff0e4; }.sr-phone-grid > div:nth-child(3) i { color:#ff851b; }
+.sr-phone-grid > div:nth-child(4) { background:#f1eaff; }.sr-phone-grid > div:nth-child(4) i { color:#8649ed; }
+/* Slightly larger text in the detailed feature and benefits sections. */
+.sl-features .sl-heading h2 { font-size:clamp(28px,2.7vw,36px); }
+.sl-features .sl-heading p { font-size:15px; }
+.sl-feature h3 { font-size:15px; }
+.sl-feature p { font-size:13px; }
+.sl-more a { font-size:14px; }
+.sl-why h2 { font-size:30px; }
+.sl-why .sl-intro { font-size:14px!important; }
+.sl-reasons h3 { font-size:15px; }
+.sl-reasons p { font-size:13px; line-height:1.65; }
+@media(max-width:700px) {
+  .sl-features .sl-heading h2, .sl-why h2 { font-size:27px; }
+  .sl-features .sl-heading p { font-size:14px; }
+  .sl-feature h3 { font-size:14px; }
+}
+/* Use the site's default typography while preserving icon fonts. */
+.school-page { font-family:var(--font-body); }
+.school-page h1, .school-page h2, .school-page h3,
+.school-page h4, .school-page h5, .school-page h6 { font-family:var(--font-heading),sans-serif; letter-spacing:normal; }
+.school-page p, .school-page a, .school-page small,
+.school-page strong, .school-page b, .school-page span,
+.school-page summary { font-family:inherit; }
+.sl-testimonials { padding:36px 0; background:linear-gradient(180deg,#fff,#fffaf6); }
+.sl-sample-label { display:inline-block; margin-top:10px; font-size:11px; color:#976038; }
+.sl-review-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.sl-review { display:flex; gap:16px; margin:0; padding:24px 20px; border:1px solid #eef0f3; border-radius:13px; background:#fff; box-shadow:0 5px 20px rgba(35,52,74,.035); }
+.sl-review-avatar { width:48px; height:48px; flex-shrink:0; display:grid; place-items:center; border-radius:50%; background:#ffe9d7; color:#ad4b16; font-size:15px; font-weight:700; }
+.sl-review:nth-child(2) .sl-review-avatar { background:#eaf3ff; color:#3972ad; }
+.sl-review:nth-child(3) .sl-review-avatar { background:#f1ebff; color:#8150bd; }
+.sl-review blockquote { font-family:var(--font-body); font-style:normal; font-size:13px; line-height:1.7; color:#65748a; margin:0 0 13px; padding:0; border:0; background:none; }
+.sl-review figcaption strong { display:block; font-size:13px; color:#25354a; }
+.sl-review figcaption span { display:block; font-size:11px; color:#758196; margin-top:3px; }
+.sl-review-stars { color:#f6aa13; font-size:18px; letter-spacing:2px; margin-top:8px; line-height:1; }
+@media(max-width:991px) { .sl-review { flex-direction:column; padding:20px 16px; } }
+@media(max-width:700px) { .sl-review-grid { grid-template-columns:1fr; gap:14px; } .sl-review { flex-direction:row; } }
+.sr-hero-art { min-width:0; } .sr-hero-art img { display:block; width:100%; height:auto; border-radius:16px; } .sr-hero-art .sr-demo-note { margin-top:8px!important; }
+.sr-cta .school-motto { flex:0 0 auto; margin:0; color:#a84713; font-family:var(--font-heading),sans-serif; font-size:20px; font-style:italic; line-height:1.35; text-align:center; transform:rotate(-5deg); }
+.sr-cta .school-motto span { display:inline-block; padding-bottom:7px; border-bottom:2px solid #ee9b65; border-radius:0 0 50% 0; }
+@media(max-width:700px) { .sr-cta .school-motto { font-size:18px; margin-top:8px; } }
+.sr-hero { padding-top:118px; }
+@media(max-width:850px) { .sr-hero { padding-top:96px; } }
+</style>
+
+
+<title>School Management Software for Schools in India | Datfuslab</title>
+<meta content="Manage student records, attendance, fees, exams and academic operations with Datfuslab school management software. Request a demo for your school." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://datfuslab.com/school-management-software" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Datfuslab Technologies" property="og:site_name"/>
+<meta content="School Management Software for Schools in India | Datfuslab" property="og:title"/>
+<meta content="Manage student records, attendance, fees, exams and academic operations with Datfuslab school management software. Request a demo for your school." property="og:description"/>
+<meta content="https://datfuslab.com/school-management-software" property="og:url"/>
+<meta content="https://datfuslab.com/school-management-hero-v2.png" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="School Management Software for Schools in India | Datfuslab" name="twitter:title"/>
+<meta content="Manage student records, attendance, fees, exams and academic operations with Datfuslab school management software. Request a demo for your school." name="twitter:description"/>
+<meta content="https://datfuslab.com/school-management-hero-v2.png" name="twitter:image"/>
+
+<link rel="stylesheet" href="assets/css/navigation-nested.css?v=20260908-footer-local">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://datfuslab.com/school-management-software#webpage","url":"https://datfuslab.com/school-management-software","name":"School Management Software for Schools in India | Datfuslab","description":"Manage student records, attendance, fees, exams and academic operations with Datfuslab school management software.","inLanguage":"en-IN","primaryImageOfPage":{"@type":"ImageObject","url":"https://datfuslab.com/school-management-hero-v2.png","width":1585,"height":992},"breadcrumb":{"@id":"https://datfuslab.com/school-management-software#breadcrumb"},"mainEntity":{"@id":"https://datfuslab.com/school-management-software#software"}},{"@type":"SoftwareApplication","@id":"https://datfuslab.com/school-management-software#software","name":"Datfuslab School Management Software","applicationCategory":"EducationalApplication","url":"https://datfuslab.com/school-management-software","description":"School management software for student records, attendance, fee tracking, receipts, classes, examinations and academic reporting.","featureList":["Student management","Attendance records","Fee tracking and receipts","Classes and academic records","Examinations and marks","School reports"],"provider":{"@type":"Organization","name":"Datfuslab Technologies","url":"https://datfuslab.com/"}},{"@type":"BreadcrumbList","@id":"https://datfuslab.com/school-management-software#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://datfuslab.com/"},{"@type":"ListItem","position":2,"name":"School Management Software","item":"https://datfuslab.com/school-management-software"}]}]}
+</script>
+<meta property="og:locale" content="en_IN">
+<meta property="og:image:alt" content="Datfuslab school management software dashboard on desktop and mobile">
+<meta name="twitter:image:alt" content="Datfuslab school management software dashboard on desktop and mobile">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://datfuslab.com/"}, {"@type": "ListItem", "position": 2, "name": "School Management Software", "item": "https://datfuslab.com/school-management-software"}]}</script>
+</head>
+<body class="sco_agency software-service-page">
+<!-- backtotop - start -->
+<div class="xb-backtotop">
+<a class="scroll" href="#">
+<i class="far fa-arrow-up"></i>
+</a>
+</div>
+<!-- backtotop - end -->
+<!-- Preloader - Start -->
+<div class="xb-loader" id="xb-loadding"><div class="xb-dual-ring"></div></div>
+<!-- Preloader - End -->
+<div class="body_wrap">
+<!-- header start -->
+<header class="header-area header-style-two header-transparent" id="xb-header-area">
+<div class="xb-header stricky">
+<div class="container">
+<div class="header__wrap ul_li_between">
+<!-- Logo -->
+<div class="header-logo">
+<a class="logo01" href="/">
+<img width="447" height="103" decoding="async" alt="Datfuslab Technologies logo" src="assets/img/logo/logo-black02.png" style="height:80px;"/>
+</a>
+<a class="logo02" href="/">
+<img width="447" height="103" decoding="async" alt="Datfuslab Technologies logo" src="assets/img/logo/logo-black02.png" style="height:80px;"/>
+</a>
+</div>
+<!-- Desktop Menu -->
+<div class="main-menu__wrap ul_li navbar navbar-expand-xl">
+<nav class="main-menu collapse navbar-collapse">
+<ul>
+<li><a href="/"><span>Home</span></a></li>
+<li class="menu-item-has-children">
+<a href="software-development"><span>Services</span></a>
+<ul class="submenu">
+<li><a href="software-development">Software Development</a></li>
+<li><a href="website-design">Website Design</a></li>
+<li><a href="mobile-app-development">Mobile App Development</a></li>
+<li><a href="digital-marketing">Digital Marketing</a></li>
+<li class="menu-item-has-children bulk-message-menu"><a href="bulk-sms"><span>Bulk Message</span></a>
+<ul class="submenu sub-menu">
+<li><a href="bulk-email">Bulk Email</a></li>
+<li><a href="bulk-sms">Bulk SMS</a></li>
+<li><a href="bulk-whatsapp-message">Bulk WhatsApp</a></li>
+</ul>
+</li>
+<li class="menu-item-has-children server-service-menu"><a href="web-hosting-server"><span>Hosting &amp; Servers</span></a>
+<ul class="submenu sub-menu">
+<li><a href="web-hosting-server">Web Hosting Server</a></li>
+<li><a href="linux-server">Linux Server</a></li>
+<li><a href="windows-server">Windows Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item-has-children">
+<a href="ngo-crm-software"><span>Our Product</span></a>
+<ul class="submenu">
+<li><a href="ngo-crm-software">NGO'S CRM</a></li>
+<li><a href="school-management-software">School Management</a></li>
+</ul>
+</li>
+<li><a href="about-us"><span>About Us</span></a></li>
+<li><a href="faq"><span>FAQ</span></a></li>
+<li><a href="contact"><span>Contact</span></a></li>
+<li><a href="blog"><span>Blog</span></a></li>
+</ul>
+</nav>
+</div>
+<!-- END Desktop Menu -->
+<!-- Mobile Menu Icon -->
+<div class="header-bar-mobile side-menu d-xl-none">
+<button class="xb-nav-mobile" type="button" aria-label="Open navigation menu">
+	<i class="far fa-bars"></i>
+</button>
+                        </div>
+<!-- Contact Button -->
+<div class="header-contact d-none d-md-block">
+<a class="thm-btn thm-btn--aso thm-btn--header-black" href="signup">
+                        Start Free Trial
+                    </a>
+</div>
+</div> <!-- header__wrap -->
+</div> <!-- container -->
+</div> <!-- xb-header -->
+<!-- MOBILE MENU (Correct Placement) -->
+<div class="xb-header-menu">
+<div class="xb-header-menu-scroll lenis lenis-smooth">
+<div class="xb-menu-close xb-hide-xl xb-close"></div>
+<div class="xb-logo-mobile xb-hide-xl">
+<a href="/"><img width="447" height="103" decoding="async" alt="Datfuslab Technologies logo" src="assets/img/logo/logo-black02.png"/></a>
+</div>
+<nav class="xb-header-nav">
+<ul class="xb-menu-primary clearfix">
+<li class="menu-item"><a href="/">Home</a></li>
+<li class="menu-item menu-item-has-children">
+<a href="software-development">Services</a>
+<ul class="sub-menu">
+<li><a href="software-development">Software Development</a></li>
+<li><a href="website-design">Website Design</a></li>
+<li><a href="mobile-app-development">Mobile App Development</a></li>
+<li><a href="digital-marketing">Digital Marketing</a></li>
+<li class="menu-item-has-children bulk-message-menu"><a href="bulk-sms"><span>Bulk Message</span></a>
+<ul class="submenu sub-menu">
+<li><a href="bulk-email">Bulk Email</a></li>
+<li><a href="bulk-sms">Bulk SMS</a></li>
+<li><a href="bulk-whatsapp-message">Bulk WhatsApp</a></li>
+</ul>
+</li>
+<li class="menu-item-has-children server-service-menu"><a href="web-hosting-server"><span>Hosting &amp; Servers</span></a>
+<ul class="submenu sub-menu">
+<li><a href="web-hosting-server">Web Hosting Server</a></li>
+<li><a href="linux-server">Linux Server</a></li>
+<li><a href="windows-server">Windows Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children">
+<a href="ngo-crm-software">Our Product</a>
+<ul class="sub-menu">
+<li><a href="ngo-crm-software">NGO'S CRM</a></li>
+<li><a href="school-management-software">School Management</a></li>
+</ul>
+</li>
+<li class="menu-item"><a href="about-us">About Us</a></li>
+<li class="menu-item"><a href="faq">FAQ</a></li>
+<li class="menu-item"><a href="contact">Contact</a></li>
+<li class="menu-item"><a href="blog">Blog</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="xb-header-menu-backdrop"></div>
+</header>
+<!-- header end -->
+<!-- main area start  -->
+<main class="school-page sr-page"><section class="sr-hero"><div class="container sr-hero-grid"><div class="sr-copy"><span class="sr-badge">School Management System</span><h1>Complete School Management Software.<br><em>Simpler. Smarter. Better.</em></h1><p>Bring your school's academics and administration together. Manage student records, attendance, fees and exams in one organised workspace—so your team can focus on students.</p><div class="sr-benefits"><div><i class="fas fa-th-large" aria-hidden="true"></i><strong>Easy to use</strong><small>Clear, organised workflows</small></div><div><i class="fas fa-cloud" aria-hidden="true"></i><strong>Connected records</strong><small>Information in one place</small></div><div><i class="fas fa-calendar-check" aria-hidden="true"></i><strong>Daily operations</strong><small>Attendance, fees & academics</small></div><div><i class="fas fa-school" aria-hidden="true"></i><strong>Your school</strong><small>Setup around your needs</small></div></div><div class="school-actions"><a class="school-button" href="contact?subject=School%20Management%20Demo#contact-form">Request a demo <span aria-hidden="true">&nbsp; →</span></a><a class="school-button secondary" href="#school-features">Explore features <span aria-hidden="true">&nbsp; ↓</span></a></div></div>
+<div class="sr-hero-art"><img src="school-management-hero-v2.png" width="1585" height="992" alt="School management dashboard shown on a laptop and phone, with student records, attendance and fee information" fetchpriority="high" decoding="async"><p class="sr-demo-note">Illustrative dashboard · Sample data</p></div></div></section>
+<section class="sr-feature-section" id="school-features"><div class="container"><div class="sr-feature-box"><div class="sr-feature-heading"><div><h2>Everything your school needs.</h2><p>A connected approach to your school's everyday operations.</p></div><a href="contact?subject=School%20Management%20Demo#contact-form">Explore in a demo <span aria-hidden="true">→</span></a></div><div class="sr-tiles"><a href="contact?subject=School%20Management%20Demo#contact-form" class="sr-tile"><i class="fas fa-user-graduate" aria-hidden="true"></i><span>Students</span></a><a href="contact?subject=School%20Management%20Demo#contact-form" class="sr-tile"><i class="fas fa-file-alt" aria-hidden="true"></i><span>Admissions</span></a><a href="contact?subject=School%20Management%20Demo#contact-form" class="sr-tile"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span>Academics</span></a><a href="contact?subject=School%20Management%20Demo#contact-form" class="sr-tile"><i class="fas fa-calendar-check" aria-hidden="true"></i><span>Attendance</span></a><a href="contact?subject=School%20Management%20Demo#contact-form" class="sr-tile"><i class="fas fa-clipboard-list" aria-hidden="true"></i><span>Examinations</span></a><a href="contact?subject=School%20Management%20Demo#contact-form" class="sr-tile"><i class="fas fa-rupee-sign" aria-hidden="true"></i><span>Fees & receipts</span></a><a href="contact?subject=School%20Management%20Demo#contact-form" class="sr-tile"><i class="fas fa-chart-bar" aria-hidden="true"></i><span>Reports</span></a><a href="contact?subject=School%20Management%20Demo#contact-form" class="sr-tile"><i class="fas fa-users" aria-hidden="true"></i><span>School teams</span></a></div></div></div></section>
+<section class="sl-features" id="school-detailed-features" aria-labelledby="sl-features-title"><div class="container"><div class="sl-heading"><h2 id="sl-features-title">Powerful features for <em>modern schools.</em></h2><p>Keep the essentials connected, from student records to everyday administration.</p></div><div class="sl-feature-grid"><article class="sl-feature"><i class="fas fa-users" aria-hidden="true"></i><div><h3>Student management</h3><p>Keep student profiles, admission details and academic history organised.</p></div></article><article class="sl-feature"><i class="fas fa-file-alt" aria-hidden="true"></i><div><h3>Admissions</h3><p>Bring admission information into clear, accessible student records.</p></div></article><article class="sl-feature"><i class="fas fa-graduation-cap" aria-hidden="true"></i><div><h3>Academics</h3><p>Organise classes, grades and academic records across the school year.</p></div></article><article class="sl-feature"><i class="fas fa-calendar-check" aria-hidden="true"></i><div><h3>Attendance</h3><p>Maintain student attendance and review class-wise records.</p></div></article><article class="sl-feature"><i class="fas fa-clipboard-list" aria-hidden="true"></i><div><h3>Examinations</h3><p>Manage exams and marks for a clearer view of student progress.</p></div></article><article class="sl-feature"><i class="fas fa-rupee-sign" aria-hidden="true"></i><div><h3>Fees & payments</h3><p>Track fee collection, outstanding balances and payment records.</p></div></article><article class="sl-feature"><i class="fas fa-file-invoice" aria-hidden="true"></i><div><h3>Receipts</h3><p>Generate receipts and find previous fee transactions easily.</p></div></article><article class="sl-feature"><i class="fas fa-book-open" aria-hidden="true"></i><div><h3>Class records</h3><p>Keep class and student information connected for daily administration.</p></div></article><article class="sl-feature"><i class="fas fa-chart-bar" aria-hidden="true"></i><div><h3>Reports & insights</h3><p>Review attendance, academic and fee information in one workflow.</p></div></article><article class="sl-feature"><i class="fas fa-cogs" aria-hidden="true"></i><div><h3>School setup</h3><p>Discuss a configuration that fits your school and its requirements.</p></div></article></div><div class="sl-more"><a href="contact?subject=School%20Management%20Demo#contact-form">Explore the workflows in a demo <span aria-hidden="true">→</span></a></div></div></section>
+<section class="sl-why-section" aria-labelledby="sl-why-title"><div class="container"><div class="sl-why"><div><h2 id="sl-why-title">Why choose <em>Datfuslab?</em></h2><p class="sl-intro">A practical approach to better-organised school operations.</p><ul class="sl-reasons"><li><i class="fas fa-route" aria-hidden="true"></i><div><h3>Practical implementation</h3><p>Plan your configuration and rollout around your daily routine.</p></div></li><li><i class="fas fa-headset" aria-hidden="true"></i><div><h3>Guidance for your team</h3><p>Discuss onboarding and support needs before you get started.</p></div></li><li><i class="fas fa-layer-group" aria-hidden="true"></i><div><h3>Connected workflows</h3><p>Bring attendance, academic records and fees closer together.</p></div></li><li><i class="fas fa-expand-arrows-alt" aria-hidden="true"></i><div><h3>Room to grow</h3><p>Review the right scope for your student strength and operations.</p></div></li></ul></div><div class="sl-focus-grid"><div><i class="fas fa-user-graduate" aria-hidden="true"></i><strong>Students</strong><span>Connected records</span></div><div><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i><strong>Teachers</strong><span>Clear academic information</span></div><div><i class="fas fa-file-invoice" aria-hidden="true"></i><strong>Accounts</strong><span>Organised fee tracking</span></div><div><i class="fas fa-school" aria-hidden="true"></i><strong>School leaders</strong><span>A clearer operational view</span></div></div><div class="sl-illustration"><svg viewBox="0 0 280 250" role="img" aria-label="School building illustration"><circle cx="140" cy="132" r="112" fill="#ffe8d3"/><path d="M34 222h216" stroke="#daaa84" stroke-width="3"/><path d="M64 112h152v109H64z" fill="#fff" stroke="#a64a17" stroke-width="3"/><path d="m52 112 88-65 88 65" fill="#f9c292" stroke="#a64a17" stroke-width="3" stroke-linejoin="round"/><path d="M140 47V18m0 0h38l-9 11 9 11h-38" fill="#e8752b" stroke="#a64a17" stroke-width="3"/><path d="M116 221v-49a24 24 0 0 1 48 0v49" fill="#f7d7bc" stroke="#a64a17" stroke-width="3"/><circle cx="140" cy="113" r="17" fill="#fff" stroke="#a64a17" stroke-width="3"/><path d="M140 102v12l8 5" fill="none" stroke="#a64a17" stroke-width="3"/><g fill="#e9f0f5" stroke="#788b9c" stroke-width="2"><path d="M78 135h21v25H78zM181 135h21v25h-21zM78 176h21v25H78zM181 176h21v25h-21z"/></g><path d="M35 218v-46m210 46v-46" stroke="#9b653d" stroke-width="4"/><g fill="#92a791"><ellipse cx="35" cy="167" rx="16" ry="29"/><ellipse cx="245" cy="167" rx="16" ry="29"/></g></svg><p>Better organised schools.<br><em>Brighter possibilities.</em></p></div></div></div></section>
+<section data-nosnippet class="sl-testimonials" aria-labelledby="school-reviews-title"><div class="container"><div class="sl-heading"><h2 id="school-reviews-title">What <em>school leaders</em> say</h2><p>Everyday experiences with a more connected school workspace.</p><span class="sl-sample-label">Sample testimonials · Fictional names and schools · Replace before launch</span></div><div class="sl-review-grid">
+<figure class="sl-review"><div class="sl-review-avatar" aria-hidden="true">MI</div><div><blockquote>“Managing our school records feels much simpler. Our team can find student information quickly and spend less time on repetitive paperwork.”</blockquote><figcaption><strong>Meena Iyer</strong><span>Principal, Sunrise Example School</span></figcaption><div class="sl-review-stars" aria-label="Sample rating: 5 out of 5 stars">★★★★★</div></div></figure>
+<figure class="sl-review"><div class="sl-review-avatar" aria-hidden="true">RK</div><div><blockquote>“From attendance to fee records, having everything organised in one workspace makes our daily administration easier to manage.”</blockquote><figcaption><strong>Rajesh Kumar</strong><span>Director, Greenfield Example School</span></figcaption><div class="sl-review-stars" aria-label="Sample rating: 5 out of 5 stars">★★★★★</div></div></figure>
+<figure class="sl-review"><div class="sl-review-avatar" aria-hidden="true">AV</div><div><blockquote>“The clear workflows help our staff stay organised. It is easier to review academic information and keep everyday tasks moving.”</blockquote><figcaption><strong>Anita Verma</strong><span>Principal, Bright Future Example School</span></figcaption><div class="sl-review-stars" aria-label="Sample rating: 5 out of 5 stars">★★★★★</div></div></figure>
+</div></div></section>
+<section class="sr-cta-section"><div class="container"><div class="sr-cta"><i class="fas fa-school sr-school-icon" aria-hidden="true"></i><div><h2>Ready to transform your school?</h2><p>Let's discuss the right setup for your school.</p></div><div class="school-actions"><a class="school-button" href="contact?subject=School%20Management%20Demo#contact-form">Request a demo →</a><a class="school-button secondary" href="contact">Contact sales</a></div><p class="school-motto">Smarter Schools,<br><span>Brighter Futures.</span></p></div></div></section></main></div>
+
+<!-- main area end  -->
+<!-- footer strt -->
+<footer class="footer footer-style-two bg_img pos-rel" data-bg-color="#111112">
+            <div class="container">
+                <div class="xb-footer pt-5">
+                    <div class="footer-inner mt-10 mb-50 ul_li_between align-items-start">
+                        <div class="sa-newslatter footer-widget">
+                            <div class="icon icon--two"><img width="447" height="103" loading="lazy" decoding="async" alt="Datfuslab Technologies" src="assets/img/logo/logo-footer.webp"
+                                    style="height: 80px; width: auto;" /></div><br />
+                            <p class="xb-item--content clr-white">At Datfuslab Technologies, innovation is ingrained in
+                                our DNA. We're dedicated to crafting impactful online experiences that drive your
+                                brand's success in the digital sphere. With a team of adept professionals passionate
+                                about technology, we strive to transform ideas into reality, leveraging the latest tools
+                                and methodologies.</p>
+                        </div>
+                        <div class="footer-widget">
+                            <span class="xb-item--sub-title">Our Industries</span>
+                            <ul class="xb-item--holder list-unstyled">
+                                <li class="xb-item--list">NGO</li>
+                                <li class="xb-item--list">Real estate</li>
+                                <li class="xb-item--list">Insurance</li>
+                                <li class="xb-item--list">Tour &amp; Travel</li>
+                                <li class="xb-item--list">Finance</li>
+                                <li class="xb-item--list">Healthcare</li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget">
+                            <span class="xb-item--sub-title">Our Services</span>
+                            <ul class="xb-item--holder list-unstyled">
+                                <li class="xb-item--list"><a href="software-development">Software Development</a></li>
+                                <li class="xb-item--list"><a href="website-design">Website Design &amp; Development</a></li>
+                                <li class="xb-item--list"><a href="mobile-app-development">Mobile App Development</a></li>
+                                <li class="xb-item--list"><a href="digital-marketing">Digital Marketing</a></li>
+                                <li class="xb-item--list"><a href="ngo-crm-software">NGO CRM Software</a></li>
+                                <li class="xb-item--list"><a href="bulk-sms">Bulk SMS</a></li>
+                                <li class="xb-item--list"><a href="bulk-whatsapp-message">Bulk WhatsApp Messaging</a></li>
+                                <li class="xb-item--list"><a href="bulk-email">Bulk Email</a></li>
+                                <li class="xb-item--list"><a href="web-hosting-server">Web Hosting</a></li>
+                                <li class="xb-item--list"><a href="linux-server">Linux Server Management</a></li>
+                                <li class="xb-item--list"><a href="windows-server">Windows Server Management</a></li>
+                                <li class="xb-item--list"><a href="blog">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget">
+                            <span class="xb-item--sub-title">Our Certificate</span>
+                            <ul class="xb-item--holder list-unstyled">
+                                <li><img width="866" height="288" loading="lazy" decoding="async" alt="DPIIT recognition certificate" src="assets/img/footer/DPIIT-header.webp" style="height: 100px; width: auto;" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-copyright mt-70 ul_li_between">
+                        <p class="copyright">Copyright © 2026 <a href="">Datfuslab Technologies Pvt. Ltd.</a>
+                            All rights reserved.</p>
+                        <ul class="footer-link ul_li">
+                            <li><a href="terms-conditions"><span>Term &amp; Conditions </span></a></li>
+                            <li><span> | </span></li>
+                            <li><a href="privacy-policy"><span>Privacy Policy </span></a></li>
+                            <li><span> | </span></li>
+                            <li><a href="refund-policy"><span>Refund Policy </span></a></li>
+                            <!--<li><span> | </span></li>
+                        <li><span>Follow us :</span></li>
+                        <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+<!-- <?php include 'footer.html'; ?> -->
+<!-- footer end -->
+
+<!-- jquery include -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/gsap.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/parallaxie.js"></script>
+<script src="assets/js/parallax-scroll.js"></script>
+<script src="assets/js/odometer.min.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/easing.min.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/jquery.marquee.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
+
+
+

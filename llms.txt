@@ -26,6 +26,14 @@
 - [Donexia NGO CRM](https://datfuslab.com/ngo-crm-software): Donor and donation management, 80G receipts, campaigns, communication, reporting, integrations, and annual pricing plans for Indian NGOs.
 - [Create a Donexia account](https://datfuslab.com/signup): Donexia signup and trial request.
 
+## Blog
+
+- [Blog](https://datfuslab.com/blog): Articles and guides from Datfuslab Technologies.
+- [Bulk SMS cost in India](https://datfuslab.com/blog-bulk-sms-cost-india): Guide to bulk SMS pricing and cost factors in India.
+- [80G donation receipts for NGOs](https://datfuslab.com/blog-80g-donation-receipts-ngo): How Indian NGOs can issue compliant 80G donation receipts.
+- [How to choose a website design company](https://datfuslab.com/blog-choose-website-design-company): Checklist for selecting a website design partner.
+- [Digital marketing checklist for small business](https://datfuslab.com/blog-digital-marketing-checklist-small-business): Practical digital marketing checklist for small businesses.
+
 ## Help and policies
 
 - [Frequently asked questions](https://datfuslab.com/fqa)

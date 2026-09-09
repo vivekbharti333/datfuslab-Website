@@ -2,12 +2,16 @@ RewriteEngine On
 
 ErrorDocument 404 /404.html
 
-# Keep one canonical hostname and homepage URL.
+# Keep one canonical scheme and hostname: force HTTPS and non-www.
+RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.datfuslab\.com$ [NC]
 RewriteRule ^ https://datfuslab.com%{REQUEST_URI} [R=301,L]
 
 RewriteCond %{THE_REQUEST} \s/+index(?:\.html)?(?:[\s?]) [NC]
 RewriteRule ^index(?:\.html)?$ / [R=301,L]
+
+# Redirect legacy /fqa and /fqa.html URLs to /faq.
+RewriteRule ^fqa(?:\.html)?$ /faq [R=301,L,NC]
 
 # Redirect directly requested .html URLs to their canonical extensionless URL.
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html(?:[\s?]) [NC]

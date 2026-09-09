@@ -22,9 +22,75 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link href="assets/css/animate.css" rel="stylesheet"/>
 <link href="assets/css/custom-font.css" rel="stylesheet"/>
 <link href="assets/css/main.css" rel="stylesheet"/>
-<link href="assets/css/navigation-nested.css" rel="stylesheet"/>
+
 <link href="assets/css/price.css" rel="stylesheet"/>
 <link href="assets/css/ngo-crm-page.css?v=20260816-1" rel="stylesheet"/>
+<style>
+#faq.donexia-faq-section { padding-top: 48px; padding-bottom: 64px; }
+#faq .donexia-faq-heading { max-width: 760px; margin-bottom: 26px; }
+#faq .donexia-faq-label { font-size: 14px; margin-bottom: 12px; gap: 7px; }
+#faq .donexia-faq-label i { font-size: 17px; }
+#faq .donexia-faq-heading h2 { font-size: clamp(26px, 3vw, 38px); letter-spacing: -.6px; }
+#faq .donexia-faq-heading p { font-size: 14px; line-height: 1.6; margin-top: 12px; }
+#faq .donexia-faq-list { max-width: 880px; border-radius: 14px; }
+#faq .donexia-faq-item summary { min-height: 58px; padding: 15px 60px 15px 20px; font-size: 16px; }
+#faq .donexia-faq-icon { width: 28px; height: 28px; right: 20px; }
+#faq .donexia-faq-icon::before, #faq .donexia-faq-icon::after { width: 11px; }
+#faq .donexia-faq-answer { padding: 0 60px 18px 20px; font-size: 14px; line-height: 1.65; }
+#faq .donexia-faq-answer p { font-size: inherit; line-height: inherit; }
+@media (max-width: 575px) {
+  #faq .donexia-faq-item summary { padding-left: 16px; padding-right: 52px; font-size: 15px; }
+  #faq .donexia-faq-icon { right: 16px; }
+  #faq .donexia-faq-answer { padding-left: 16px; padding-right: 20px; }
+}
+/* Compact pricing cards with aligned feature rows. */
+.pricing-section .billing-controls { text-align: center; margin: -8px 0 24px; }
+.pricing-section .billing-switch { display: inline-flex; gap: 4px; padding: 5px; border: 1px solid #e3e7ed; border-radius: 999px; background: #f1f3f6; }
+.pricing-section .billing-switch button { border: 0; border-radius: 999px; padding: 9px 24px; background: transparent; color: #596579; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+.pricing-section .billing-switch button[aria-pressed="true"] { background: #fff; color: #c94300; box-shadow: 0 2px 8px rgba(16,21,33,.1); }
+.pricing-section .billing-switch button:focus-visible { outline: 2px solid #c94300; outline-offset: 2px; }
+.pricing-section .billing-note { margin: 10px 0 0; color: #657184; font-size: 12px; line-height: 1.5; }
+.pricing-section .trial-note { min-height: 17px; margin: 8px 0 0; text-align: center; color: #657184; font-size: 11px; line-height: 17px; }
+.pricing-section .plan-card:not(:has(.trial-note))::after { content: ""; display: block; flex-shrink: 0; height: 17px; margin-top: 8px; }
+.pricing-section .mobile-cards { gap: 18px; padding-top: 12px; }
+.pricing-section .plan-card { padding: 22px 18px 16px; border: 1px solid #e3e7ed; border-radius: 16px; box-shadow: 0 6px 22px rgba(16,21,33,.045); }
+.pricing-section .plan-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(16,21,33,.08); }
+.pricing-section .plan-card { cursor: pointer; }
+.pricing-section .plan-card--professional { border-width: 1px; }
+.pricing-section .plan-card:not(.is-selected) { border-color: #e3e7ed !important; background: #fff !important; box-shadow: 0 6px 22px rgba(16,21,33,.045); }
+.pricing-section .plan-card--professional::before { display: none; }
+.pricing-section .plan-card.is-selected { border-color: var(--donexia-orange) !important; background: linear-gradient(180deg, #fff7f1, #fff 42%) !important; box-shadow: 0 0 0 1px var(--donexia-orange), 0 10px 28px rgba(232,75,0,.09); }
+.pricing-section .plan-card:not(.is-selected) .btn { background: #fff; color: #c94300; border-color: #d44a00; box-shadow: none; }
+.pricing-section .plan-card.is-selected .btn { background: linear-gradient(135deg, #ff6a00, #d44a00); color: #fff; border-color: #d44a00; }
+.pricing-section .plan-choice { margin-left: auto; flex: 0 0 16px; width: 16px; height: 16px; accent-color: #d44a00; cursor: pointer; }
+.pricing-section .plan-choice:focus-visible { outline: 2px solid #28374b; outline-offset: 3px; }
+.pricing-section .plan-popular { position: absolute; top: -12px; right: 16px; margin: 0; padding: 4px 11px; border-radius: 20px; font-size: 10px; line-height: 16px; letter-spacing: .03em; }
+.pricing-section .plan-card { --plan-accent: #536779; --plan-tint: #f3f6f9; }
+.pricing-section .plan-card--professional { --plan-accent: #dc4a00; --plan-tint: #fff3e9; }
+.pricing-section .plan-card--premium { --plan-accent: #7544c5; --plan-tint: #f6f1ff; }
+.pricing-section .plan-card--enterprise { --plan-accent: #285ca0; --plan-tint: #eff5fd; }
+.pricing-section .plan-card-top { min-height: 68px; margin: -6px -6px 14px; padding: 10px 8px; gap: 12px; border-radius: 11px; background: linear-gradient(110deg, var(--plan-tint), transparent); }
+.pricing-section .plan-symbol { width: 36px; height: 36px; flex-basis: 36px; border: 0; border-radius: 10px; color: var(--plan-accent); background: #fff; box-shadow: 0 2px 8px rgba(16,21,33,.06); }
+.pricing-section .plan-symbol svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.pricing-section .plan-title { font-size: 19px; font-weight: 700; line-height: 1.2; letter-spacing: -.5px; margin-bottom: 5px; }
+.pricing-section .plan-subtitle { color: #657184; font-size: 11.5px; line-height: 1.4; }
+.pricing-section .price { min-height: 36px; margin-bottom: 14px; gap: 7px; }
+.pricing-section .price-amount { font-size: clamp(22px, 1.8vw, 26px); font-weight: 800; letter-spacing: -.6px; font-variant-numeric: tabular-nums; }
+.pricing-section .price-period { font-size: 12px; color: #596579; }
+.pricing-section .plan-divider { margin-bottom: 6px; background: #e8ebef; }
+.pricing-section .plan-features-label { min-height: 32px; font-size: 10px; letter-spacing: .025em; color: #596579; }
+.pricing-section .feature { min-height: 34px; padding: 5px 0 !important; font-size: 12.5px; gap: 8px; }
+.pricing-section .feature span:last-child { font-variant-numeric: tabular-nums; }
+.pricing-section .feature .yes, .pricing-section .feature .no { width: 20px; height: 20px; font-size: 12px; }
+.pricing-section .feature .no { color: #c83e47 !important; background: #fff0f1; }
+.pricing-section .feature:last-of-type { margin-bottom: 12px; }
+.pricing-section .btn { margin-top: auto; padding: 10px 13px; border-radius: 9px; font-size: 13px; line-height: 20px; }
+.pricing-section .btn:focus-visible { outline: 3px solid #28374b; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .pricing-section .plan-card, .pricing-section .btn { transition: none; }
+  .pricing-section .plan-card:hover, .pricing-section .btn:hover { transform: none; }
+}
+</style>
 
 
 <title>NGO CRM Software for Donations &amp; 80G Receipts | Donexia</title>
@@ -167,6 +233,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   ]
 }</script>
+<link rel="stylesheet" href="assets/css/navigation-nested.css?v=20260908-footer-local">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://datfuslab.com/"}, {"@type": "ListItem", "position": 2, "name": "NGO CRM Software", "item": "https://datfuslab.com/ngo-crm-software"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Donexia NGO CRM", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "provider": {"@type": "Organization", "name": "Datfuslab Technologies", "url": "https://datfuslab.com/"}, "areaServed": "IN", "url": "https://datfuslab.com/ngo-crm-software", "description": "Manage donors and donations, generate 80G receipts, automate communication and track campaigns with Donexia NGO CRM software for Indian NGOs."}</script>
 </head>
 <body class="help_desk">
 <!-- Google Tag Manager (noscript) -->
@@ -190,18 +259,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="header__wrap ul_li_between">
 <!-- Logo -->
 <div class="header-logo">
-<a class="logo01" href="index">
-<img width="447" height="103" decoding="async" alt="logo" src="assets/img/logo/logo-black02.png" style="height:80px;"/>
+<a class="logo01" href="/">
+<img width="447" height="103" decoding="async" alt="Datfuslab Technologies logo" src="assets/img/logo/logo-black02.png" style="height:80px;"/>
 </a>
-<a class="logo02" href="index">
-<img width="447" height="103" decoding="async" alt="logo" src="assets/img/logo/logo-black02.png" style="height:80px;"/>
+<a class="logo02" href="/">
+<img width="447" height="103" decoding="async" alt="Datfuslab Technologies logo" src="assets/img/logo/logo-black02.png" style="height:80px;"/>
 </a>
 </div>
 <!-- Desktop Menu -->
 <div class="main-menu__wrap ul_li navbar navbar-expand-xl">
 <nav class="main-menu collapse navbar-collapse">
 <ul>
-<li><a href="index"><span>Home</span></a></li>
+<li><a href="/"><span>Home</span></a></li>
 <li class="menu-item-has-children">
 <a href="software-development"><span>Services</span></a>
 <ul class="submenu">
@@ -226,14 +295,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </li>
 <li class="menu-item-has-children">
-<a href="software-development"><span>Our Product</span></a>
+<a href="ngo-crm-software"><span>Our Product</span></a>
 <ul class="submenu">
 <li><a href="ngo-crm-software">NGO'S CRM</a></li>
+<li><a href="school-management-software">School Management</a></li>
 </ul>
 </li>
 <li><a href="about-us"><span>About Us</span></a></li>
-<li><a href="#faq"><span>FAQ</span></a></li>
+<li><a href="faq"><span>FAQ</span></a></li>
 <li><a href="contact"><span>Contact</span></a></li>
+<li><a href="blog"><span>Blog</span></a></li>
 </ul>
 </nav>
 </div>
@@ -258,17 +329,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="xb-header-menu-scroll lenis lenis-smooth">
 <div class="xb-menu-close xb-hide-xl xb-close"></div>
 <div class="xb-logo-mobile xb-hide-xl">
-<a href="index"><img width="447" height="103" decoding="async" alt="" src="assets/img/logo/logo-black02.png"/></a>
+<a href="/"><img width="447" height="103" decoding="async" alt="Datfuslab Technologies logo" src="assets/img/logo/logo-black02.png"/></a>
 </div>
 <nav class="xb-header-nav">
 <ul class="xb-menu-primary clearfix">
-<li class="menu-item"><a href="index">Home</a></li>
+<li class="menu-item"><a href="/">Home</a></li>
 <li class="menu-item menu-item-has-children">
 <a href="software-development">Services</a>
 <ul class="sub-menu">
 <li><a href="software-development">Software Development</a></li>
 <li><a href="website-design">Website Design</a></li>
-<li><a href="mobile-app-development">Mobile Application Development</a></li>
+<li><a href="mobile-app-development">Mobile App Development</a></li>
 <li><a href="digital-marketing">Digital Marketing</a></li>
 <li class="menu-item-has-children bulk-message-menu"><a href="bulk-sms"><span>Bulk Message</span></a>
 <ul class="submenu sub-menu">
@@ -287,14 +358,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </ul>
 </li>
 <li class="menu-item menu-item-has-children">
-<a href="software-development">Our Product</a>
+<a href="ngo-crm-software">Our Product</a>
 <ul class="sub-menu">
 <li><a href="ngo-crm-software">NGO'S CRM</a></li>
+<li><a href="school-management-software">School Management</a></li>
 </ul>
 </li>
 <li class="menu-item"><a href="about-us">About Us</a></li>
-<li class="menu-item"><a href="#faq">FAQ</a></li>
+<li class="menu-item"><a href="faq">FAQ</a></li>
 <li class="menu-item"><a href="contact">Contact</a></li>
+<li class="menu-item"><a href="blog">Blog</a></li>
 </ul>
 </nav>
 </div>
@@ -346,12 +419,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         <span>Trusted by 200+ NGO's</span>
                     </div>
                     <div class="brand-wrap marquee-left">
-                        <div class="brand-logo"><img width="142" height="28" loading="lazy" decoding="async" src="assets/img/brand/xb-brand01.png" alt=""></div>
-                        <div class="brand-logo"><img width="136" height="29" loading="lazy" decoding="async" src="assets/img/brand/xb-brand02.png" alt=""></div>
-                        <div class="brand-logo"><img width="156" height="30" loading="lazy" decoding="async" src="assets/img/brand/xb-brand03.png" alt=""></div>
-                        <div class="brand-logo"><img width="156" height="28" loading="lazy" decoding="async" src="assets/img/brand/xb-brand04.png" alt=""></div>
-                        <div class="brand-logo"><img width="130" height="30" loading="lazy" decoding="async" src="assets/img/brand/xb-brand05.png" alt=""></div>
-                        <div class="brand-logo"><img width="145" height="27" loading="lazy" decoding="async" src="assets/img/brand/xb-brand06.png" alt=""></div>
+                        <div class="brand-logo"><img width="142" height="28" loading="lazy" decoding="async" src="assets/img/brand/xb-brand01.png" alt="Trusted NGO client logo"></div>
+                        <div class="brand-logo"><img width="136" height="29" loading="lazy" decoding="async" src="assets/img/brand/xb-brand02.png" alt="Trusted NGO client logo"></div>
+                        <div class="brand-logo"><img width="156" height="30" loading="lazy" decoding="async" src="assets/img/brand/xb-brand03.png" alt="Trusted NGO client logo"></div>
+                        <div class="brand-logo"><img width="156" height="28" loading="lazy" decoding="async" src="assets/img/brand/xb-brand04.png" alt="Trusted NGO client logo"></div>
+                        <div class="brand-logo"><img width="130" height="30" loading="lazy" decoding="async" src="assets/img/brand/xb-brand05.png" alt="Trusted NGO client logo"></div>
+                        <div class="brand-logo"><img width="145" height="27" loading="lazy" decoding="async" src="assets/img/brand/xb-brand06.png" alt="Trusted NGO client logo"></div>
                     </div>
                 </div>
             </div>
@@ -441,32 +514,32 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="donexia-content-grid">
 <article class="donexia-content-card">
-<span class="donexia-card-icon"><img loading="lazy" decoding="async" src="assets/img/icon/people.png" alt=""/></span>
+<span class="donexia-card-icon"><img width="35" height="35" loading="lazy" decoding="async" src="assets/img/icon/people.png" alt="Charitable trusts icon"/></span>
 <h3>Charitable trusts</h3>
 <p>Organise individual and institutional donor records, donation history, receipts and campaign activity in one place.</p>
 </article>
 <article class="donexia-content-card">
-<span class="donexia-card-icon"><img loading="lazy" decoding="async" src="assets/img/icon/company-icon.svg" alt=""/></span>
+<span class="donexia-card-icon"><img width="18" height="18" loading="lazy" decoding="async" src="assets/img/icon/company-icon.svg" alt="Societies and foundations icon"/></span>
 <h3>Societies and foundations</h3>
 <p>Give authorised staff controlled access to the information they need for fundraising, administration and reporting.</p>
 </article>
 <article class="donexia-content-card">
-<span class="donexia-card-icon"><img loading="lazy" decoding="async" src="assets/img/icon/building.svg" alt=""/></span>
+<span class="donexia-card-icon"><img width="20" height="20" loading="lazy" decoding="async" src="assets/img/icon/building.svg" alt="Religious organisations icon"/></span>
 <h3>Religious organisations</h3>
 <p>Record contributions consistently, maintain supporter histories and generate clear receipts for completed donations.</p>
 </article>
 <article class="donexia-content-card">
-<span class="donexia-card-icon"><img loading="lazy" decoding="async" src="assets/img/icon/location.svg" alt=""/></span>
+<span class="donexia-card-icon"><img width="24" height="24" loading="lazy" decoding="async" src="assets/img/icon/location.svg" alt="Multi-branch NGOs icon"/></span>
 <h3>Multi-branch NGOs</h3>
 <p>Manage branch-level activity and consolidated records according to the controls available in the selected plan.</p>
 </article>
 <article class="donexia-content-card">
-<span class="donexia-card-icon"><img loading="lazy" decoding="async" src="assets/img/icon/messages.svg" alt=""/></span>
+<span class="donexia-card-icon"><img width="20" height="18" loading="lazy" decoding="async" src="assets/img/icon/messages.svg" alt="Fundraising teams icon"/></span>
 <h3>Fundraising teams</h3>
 <p>Track campaigns, donor communication and donation status so follow-ups are timely and better informed.</p>
 </article>
 <article class="donexia-content-card">
-<span class="donexia-card-icon"><img loading="lazy" decoding="async" src="assets/img/icon/analyze-icon.png" alt=""/></span>
+<span class="donexia-card-icon"><img width="48" height="49" loading="lazy" decoding="async" src="assets/img/icon/analyze-icon.png" alt="Leadership and finance teams icon"/></span>
 <h3>Leadership and finance teams</h3>
 <p>Use structured reports to review donation activity, campaign progress and operational performance.</p>
 </article>
@@ -485,13 +558,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>Start with the tools your team needs today and move to a higher plan as your donor records, users and workflows expand.</p>
 </div>
 <!-- DESKTOP TABLE -->
+<div class="billing-controls" hidden id="billing-controls">
+<div class="billing-switch" role="group" aria-label="Pricing period">
+<button type="button" data-billing="monthly" aria-pressed="false">Monthly</button>
+<button type="button" data-billing="yearly" aria-pressed="true">Yearly</button>
+</div>
+<p class="billing-note" id="billing-note" aria-live="polite">Annual pricing. Free and Enterprise plans stay the same.</p>
+</div>
 <div style="overflow-x:auto;" hidden>
 <table class="pricing-table">
 <thead>
 <tr>
 <th style="background:#d44a00;">Feature / Plan</th>
-<th style="background:#f2b399;">Starter<br/>₹15,000/Year</th>
-<th style="background:#f2d699;">Professional<br/>₹35,000/Year</th>
+<th style="background:#f2b399;">Free Plan<br/>₹0</th>
+<th style="background:#f2d699;">Pro<br/>₹35,000/Year</th>
 <th style="background:#c399f2;">Premium<br/>₹50,000/Year</th>
 <th style="background:#f2a94d;">Enterprise<br/>Custom</th>
 </tr>
@@ -499,15 +579,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <tbody>
 <tr>
 <td><b>Records Limit</b></td>
-<td>5,000</td>
+<td>50/month</td>
 <td>25,000</td>
 <td>30,000</td>
 <td>No Limit</td>
 </tr>
 <tr>
 <td><b>User Limit</b></td>
-<td>5</td>
+<td>3</td>
 <td>15</td>
+<td>20</td>
+<td>No Limit</td>
+</tr>
+<tr>
+<td><b>Projects</b></td>
+<td>2</td>
+<td>10</td>
 <td>20</td>
 <td>No Limit</td>
 </tr>
@@ -521,6 +608,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <tr>
 <td>Generate Receipts</td>
 <td class="yes">✔</td>
+<td class="yes">✔</td>
+<td class="yes">✔</td>
+<td class="yes">✔</td>
+</tr>
+<tr>
+<td>Campaign Management</td>
+<td class="no">✖</td>
 <td class="yes">✔</td>
 <td class="yes">✔</td>
 <td class="yes">✔</td>
@@ -586,68 +680,76 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <!-- MOBILE CARDS -->
 <div class="mobile-cards">
-<!-- Starter -->
+<!-- Free Plan -->
 <article class="plan-card plan-card--starter">
 <div class="plan-card-top">
-<span class="plan-symbol" aria-hidden="true">S</span>
-<div><h3 class="plan-title">Starter</h3><p class="plan-subtitle">For small NGO teams</p></div>
+<span class="plan-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20v-8M12 15C5 15 4 10 4 5c6 0 8 3 8 7M12 17c0-7 3-10 8-10 0 6-2 10-8 10"/></svg></span>
+<div><h3 class="plan-title">Free Plan</h3><p class="plan-subtitle">For small NGO teams</p></div>
 </div>
-<div class="price"><span class="price-amount">₹15,000</span><span class="price-period">/ year</span></div>
+<div class="price"><span class="price-amount">₹0</span></div>
 <div class="plan-divider"></div>
 <p class="plan-features-label">Plan includes</p>
-<div class="feature"><span>Records Limit</span><span>5,000</span></div>
-<div class="feature"><span>User Limit</span><span>5</span></div>
+<div class="feature"><span>Records Limit</span><span>50/month</span></div>
+<div class="feature"><span>User Limit</span><span>3</span></div>
+<div class="feature"><span>Projects</span><span>2</span></div>
 <div class="feature"><span>Add Donation Records</span><span class="yes">✔</span></div>
 <div class="feature"><span>Generate Receipts</span><span class="yes">✔</span></div>
+<div class="feature"><span>Campaign Management</span><span class="no">✖</span></div>
 <div class="feature"><span>Auto Send Receipt</span><span class="no">✖</span></div>
 <div class="feature"><span>Analytics</span><span class="no">✖</span></div>
 <div class="feature"><span>Multi Currency</span><span class="no">✖</span></div>
 <div class="feature"><span>API Access</span><span class="no">✖</span></div>
-<a class="btn" href="signup">Start Free Trial</a>
+<a class="btn" href="signup">Get Started Free</a>
 </article>
-<!-- Professional -->
-<article class="plan-card plan-card--professional">
+<!-- Pro -->
+<article class="plan-card plan-card--professional is-selected">
 <span class="plan-popular">Most popular</span>
 <div class="plan-card-top">
-<span class="plan-symbol" aria-hidden="true">P</span>
-<div><h3 class="plan-title">Professional</h3><p class="plan-subtitle">For growing organisations</p></div>
+<span class="plan-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 3-8 11h6l-1 7 9-12h-7l1-6Z"/></svg></span>
+<div><h3 class="plan-title">Pro</h3><p class="plan-subtitle">For growing organisations</p></div>
 </div>
 <div class="price"><span class="price-amount">₹35,000</span><span class="price-period">/ year</span></div>
 <div class="plan-divider"></div>
-<p class="plan-features-label">Everything in Starter, plus</p>
+<p class="plan-features-label">Everything in Free Plan, plus</p>
 <div class="feature"><span>Records Limit</span><span>25,000</span></div>
 <div class="feature"><span>User Limit</span><span>15</span></div>
+<div class="feature"><span>Projects</span><span>10</span></div>
 <div class="feature"><span>Add Donation Records</span><span class="yes">✔</span></div>
 <div class="feature"><span>Generate Receipts</span><span class="yes">✔</span></div>
+<div class="feature"><span>Campaign Management</span><span class="yes">✔</span></div>
 <div class="feature"><span>Auto Send Receipt</span><span class="yes">✔</span></div>
 <div class="feature"><span>Analytics</span><span class="yes">✔</span></div>
 <div class="feature"><span>Multi Currency</span><span class="no">✖</span></div>
 <div class="feature"><span>API Access</span><span class="no">✖</span></div>
 <a class="btn" href="signup">Start Free Trial</a>
+<p class="trial-note">No credit card required</p>
 </article>
 <!-- Premium -->
 <article class="plan-card plan-card--premium">
 <div class="plan-card-top">
-<span class="plan-symbol" aria-hidden="true">P</span>
+<span class="plan-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 9 7-9 11L3 10l9-7ZM3 10h18M12 3l-4 7 4 11 4-11-4-7Z"/></svg></span>
 <div><h3 class="plan-title">Premium</h3><p class="plan-subtitle">For advanced operations</p></div>
 </div>
 <div class="price"><span class="price-amount">₹50,000</span><span class="price-period">/ year</span></div>
 <div class="plan-divider"></div>
-<p class="plan-features-label">Everything in Professional, plus</p>
+<p class="plan-features-label">Everything in Pro, plus</p>
 <div class="feature"><span>Records Limit</span><span>30,000</span></div>
 <div class="feature"><span>User Limit</span><span>20</span></div>
+<div class="feature"><span>Projects</span><span>20</span></div>
 <div class="feature"><span>Add Donation Records</span><span class="yes">✔</span></div>
 <div class="feature"><span>Generate Receipts</span><span class="yes">✔</span></div>
+<div class="feature"><span>Campaign Management</span><span class="yes">✔</span></div>
 <div class="feature"><span>Auto Send Receipt</span><span class="yes">✔</span></div>
 <div class="feature"><span>Analytics</span><span class="yes">✔</span></div>
 <div class="feature"><span>Multi Currency</span><span class="yes">✔</span></div>
 <div class="feature"><span>API Access</span><span class="no">✖</span></div>
 <a class="btn" href="signup">Start Free Trial</a>
+<p class="trial-note">No credit card required</p>
 </article>
 <!-- Enterprise -->
 <article class="plan-card plan-card--enterprise">
 <div class="plan-card-top">
-<span class="plan-symbol" aria-hidden="true">E</span>
+<span class="plan-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 21V4h10v17M15 10h4v11M3 21h18M8 8h4M8 12h4M8 16h4"/></svg></span>
 <div><h3 class="plan-title">Enterprise</h3><p class="plan-subtitle">For tailored requirements</p></div>
 </div>
 <div class="price"><span class="price-amount">Custom</span><span class="price-period">pricing</span></div>
@@ -655,8 +757,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p class="plan-features-label">A flexible plan with</p>
 <div class="feature"><span>Records Limit</span><span>No Limit</span></div>
 <div class="feature"><span>User Limit</span><span>No Limit</span></div>
+<div class="feature"><span>Projects</span><span>No Limit</span></div>
 <div class="feature"><span>Add Donation Records</span><span class="yes">✔</span></div>
 <div class="feature"><span>Generate Receipts</span><span class="yes">✔</span></div>
+<div class="feature"><span>Campaign Management</span><span class="yes">✔</span></div>
 <div class="feature"><span>Auto Send Receipt</span><span class="yes">✔</span></div>
 <div class="feature"><span>Analytics</span><span class="yes">✔</span></div>
 <div class="feature"><span>Multi Currency</span><span class="yes">✔</span></div>
@@ -669,7 +773,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="donexia-pricing-benefits">
 <div class="donexia-pricing-benefit benefit-orange">
 <div class="donexia-pricing-benefit-icon">
-<img loading="lazy" decoding="async" src="assets/img/icon/finger-scan.svg" alt=""/>
+<img width="28" height="28" loading="lazy" decoding="async" src="assets/img/icon/finger-scan.svg" alt="Controlled Access icon"/>
 </div>
 <div>
 <h4>Controlled Access</h4>
@@ -678,7 +782,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="donexia-pricing-benefit benefit-purple">
 <div class="donexia-pricing-benefit-icon">
-<img loading="lazy" decoding="async" src="assets/img/icon/cloud-add.svg" alt=""/>
+<img width="28" height="28" loading="lazy" decoding="async" src="assets/img/icon/cloud-add.svg" alt="Cloud Based icon"/>
 </div>
 <div>
 <h4>Cloud Based</h4>
@@ -687,7 +791,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="donexia-pricing-benefit benefit-green">
 <div class="donexia-pricing-benefit-icon">
-<img loading="lazy" decoding="async" src="assets/img/icon/messages.svg" alt=""/>
+<img width="20" height="18" loading="lazy" decoding="async" src="assets/img/icon/messages.svg" alt="Guided Support icon"/>
 </div>
 <div>
 <h4>Guided Support</h4>
@@ -696,7 +800,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="donexia-pricing-benefit benefit-pink">
 <div class="donexia-pricing-benefit-icon">
-<img loading="lazy" decoding="async" src="assets/img/icon/clock-icon.svg" alt=""/>
+<img width="22" height="22" loading="lazy" decoding="async" src="assets/img/icon/clock-icon.svg" alt="Backup Processes icon"/>
 </div>
 <div>
 <h4>Backup Processes</h4>
@@ -705,7 +809,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 <div class="donexia-pricing-benefit benefit-blue">
 <div class="donexia-pricing-benefit-icon">
-<img loading="lazy" decoding="async" src="assets/img/icon/dollar-circle.png" alt=""/>
+<img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/dollar-circle.png" alt="Payment Integrations icon"/>
 </div>
 <div>
 <h4>Payment Integrations</h4>
@@ -749,21 +853,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="xb-fanfact-item wow fadeInLeft" data-wow-delay="000ms" data-wow-duration="600ms">
 <div class="xb-item--holder mb-25 ul_li_between">
 <h2 class="xb-item--number">Centralised</h2>
-<span><img width="47" height="47" loading="lazy" decoding="async" alt="" src="assets/img/icon/chart-icon02.png"/></span>
+<span><img width="47" height="47" loading="lazy" decoding="async" alt="Centralised donor records icon" src="assets/img/icon/chart-icon02.png"/></span>
 </div>
 <p class="xb-item--content">Keep donor, donation, receipt and campaign information in one organised workspace.</p>
 </div>
 <div class="xb-fanfact-item xb-fanfact-item--two wow fadeInLeft" data-wow-delay="150ms" data-wow-duration="600ms">
 <div class="xb-item--holder mb-25 ul_li_between">
 <h2 class="xb-item--number">Automated</h2>
-<span><img width="45" height="47" loading="lazy" decoding="async" alt="" src="assets/img/icon/receipt-icon.png"/></span>
+<span><img width="45" height="47" loading="lazy" decoding="async" alt="Automated 80G receipts icon" src="assets/img/icon/receipt-icon.png"/></span>
 </div>
 <p class="xb-item--content">Reduce repetitive receipt and communication steps through supported workflows.</p>
 </div>
 <div class="xb-fanfact-item xb-fanfact-item--three wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="600ms">
 <div class="xb-item--holder mb-25 ul_li_between">
 <h2 class="xb-item--number">Reportable</h2>
-<span><img width="47" height="47" loading="lazy" decoding="async" alt="" src="assets/img/icon/wallet.png"/></span>
+<span><img width="47" height="47" loading="lazy" decoding="async" alt="Reportable NGO finances icon" src="assets/img/icon/wallet.png"/></span>
 </div>
 <p class="xb-item--content">Turn structured donor and donation records into clearer operational reports.</p>
 </div>
@@ -780,55 +884,55 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="intgration-item--one pos-rel">
                                 <div class="integration-inner marquee-first">
                                      <div class="integration-item">
-                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon01.png" alt=""></div>
+                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon01.png" alt="Google Analytics integration"></div>
                                         <span class="xb-title">Google Analytics</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon02.png" alt=""></div>
+                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon02.png" alt="Omnisend integration"></div>
                                         <span class="xb-title">Omnisend</span>
                                     </div> 
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon03.png" alt=""></div>
+                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon03.png" alt="Mailchimp integration"></div>
                                         <span class="xb-title">Mailchimp</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="42" height="42" loading="lazy" decoding="async" src="assets/img/icon/int-icon04.png" alt=""></div>
+                                        <div class="xb-icon"><img width="42" height="42" loading="lazy" decoding="async" src="assets/img/icon/int-icon04.png" alt="Hubspot integration"></div>
                                         <span class="xb-title">Hubspot</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon01.png" alt=""></div>
+                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon01.png" alt="Google Analytics integration"></div>
                                         <span class="xb-title">Google Analytics</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon02.png" alt=""></div>
+                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon02.png" alt="Omnisend integration"></div>
                                         <span class="xb-title">Omnisend</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon03.png" alt=""></div>
+                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon03.png" alt="Mailchimp integration"></div>
                                         <span class="xb-title">Mailchimp</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="42" height="42" loading="lazy" decoding="async" src="assets/img/icon/int-icon04.png" alt=""></div>
+                                        <div class="xb-icon"><img width="42" height="42" loading="lazy" decoding="async" src="assets/img/icon/int-icon04.png" alt="Hubspot integration"></div>
                                         <span class="xb-title">Hubspot</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon01.png" alt=""></div>
+                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon01.png" alt="Google Analytics integration"></div>
                                         <span class="xb-title">Google Analytics</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon02.png" alt=""></div>
+                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon02.png" alt="Omnisend integration"></div>
                                         <span class="xb-title">Omnisend</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="42" height="42" loading="lazy" decoding="async" src="assets/img/icon/int-icon04.png" alt=""></div>
+                                        <div class="xb-icon"><img width="42" height="42" loading="lazy" decoding="async" src="assets/img/icon/int-icon04.png" alt="Hubspot integration"></div>
                                         <span class="xb-title">Hubspot</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon01.png" alt=""></div>
+                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon01.png" alt="Google Analytics integration"></div>
                                         <span class="xb-title">Google Analytics</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon02.png" alt=""></div>
+                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon02.png" alt="Omnisend integration"></div>
                                         <span class="xb-title">Omnisend</span>
                                     </div> 
                                 </div>
@@ -836,7 +940,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="intgration-item--two pos-rel">
                                 <div class="integration-inner marquee-2">
                                      <div class="integration-item">
-                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon02.png" alt=""></div>
+                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon02.png" alt="Zendesk integration"></div>
                                         <span class="xb-title">Zendesk</span>
                                     </div>
                                     <div class="integration-item">
@@ -844,7 +948,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <span class="xb-title">Cashfree</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon03.png" alt=""></div>
+                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon03.png" alt="Messenger integration"></div>
                                         <span class="xb-title">Messenger</span>
                                     </div>
                                     <div class="integration-item">
@@ -856,11 +960,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                                         <span class="xb-title">PhonePe</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon01.png" alt=""></div>
+                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon01.png" alt="Instagram integration"></div>
                                         <span class="xb-title">Instagram</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon03.png" alt=""></div>
+                                        <div class="xb-icon"><img width="36" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon03.png" alt="Messenger integration"></div>
                                         <span class="xb-title">Messenger</span>
                                     </div>
                                 </div>
@@ -890,39 +994,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="intgration-item--two pos-rel">
                                 <div class="integration-inner marquee-first">
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="35" height="34" loading="lazy" decoding="async" src="assets/img/icon/int-icon08.png" alt=""></div>
+                                        <div class="xb-icon"><img width="35" height="34" loading="lazy" decoding="async" src="assets/img/icon/int-icon08.png" alt="Slack integration"></div>
                                         <span class="xb-title">Slack</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon09.png" alt=""></div>
+                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon09.png" alt="Tidio OpenAPI integration"></div>
                                         <span class="xb-title">Tidio OpenAPI</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="37" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon10.png" alt=""></div>
+                                        <div class="xb-icon"><img width="37" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon10.png" alt="Loom integration"></div>
                                         <span class="xb-title">Loom</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="35" height="34" loading="lazy" decoding="async" src="assets/img/icon/int-icon08.png" alt=""></div>
+                                        <div class="xb-icon"><img width="35" height="34" loading="lazy" decoding="async" src="assets/img/icon/int-icon08.png" alt="Slack integration"></div>
                                         <span class="xb-title">Slack</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon09.png" alt=""></div>
+                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon09.png" alt="Tidio OpenAPI integration"></div>
                                         <span class="xb-title">Tidio OpenAPI</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="37" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon10.png" alt=""></div>
+                                        <div class="xb-icon"><img width="37" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon10.png" alt="Loom integration"></div>
                                         <span class="xb-title">Loom</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="35" height="34" loading="lazy" decoding="async" src="assets/img/icon/int-icon08.png" alt=""></div>
+                                        <div class="xb-icon"><img width="35" height="34" loading="lazy" decoding="async" src="assets/img/icon/int-icon08.png" alt="Slack integration"></div>
                                         <span class="xb-title">Slack</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon09.png" alt=""></div>
+                                        <div class="xb-icon"><img width="40" height="40" loading="lazy" decoding="async" src="assets/img/icon/int-icon09.png" alt="Tidio OpenAPI integration"></div>
                                         <span class="xb-title">Tidio OpenAPI</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="37" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon10.png" alt=""></div>
+                                        <div class="xb-icon"><img width="37" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon10.png" alt="Loom integration"></div>
                                         <span class="xb-title">Loom</span>
                                     </div>
                                 </div>
@@ -930,51 +1034,51 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                             <div class="intgration-item--one pos-rel">
                                 <div class="integration-inner marquee-2">
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="44" height="44" loading="lazy" decoding="async" src="assets/img/icon/int-icon11.png" alt=""></div>
+                                        <div class="xb-icon"><img width="44" height="44" loading="lazy" decoding="async" src="assets/img/icon/int-icon11.png" alt="Active Campaign integration"></div>
                                         <span class="xb-title">Active Campaign</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="31" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon12.png" alt=""></div>
+                                        <div class="xb-icon"><img width="31" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon12.png" alt="Shopify integration"></div>
                                         <span class="xb-title">Shopify</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="41" height="41" loading="lazy" decoding="async" src="assets/img/icon/int-icon13.png" alt=""></div>
+                                        <div class="xb-icon"><img width="41" height="41" loading="lazy" decoding="async" src="assets/img/icon/int-icon13.png" alt="WhatsApp integration"></div>
                                         <span class="xb-title">WhatsApp</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="42" height="35" loading="lazy" decoding="async" src="assets/img/icon/int-icon14.png" alt=""></div>
+                                        <div class="xb-icon"><img width="42" height="35" loading="lazy" decoding="async" src="assets/img/icon/int-icon14.png" alt="Airtable integration"></div>
                                         <span class="xb-title">Airtable</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="44" height="44" loading="lazy" decoding="async" src="assets/img/icon/int-icon11.png" alt=""></div>
+                                        <div class="xb-icon"><img width="44" height="44" loading="lazy" decoding="async" src="assets/img/icon/int-icon11.png" alt="Active Campaign integration"></div>
                                         <span class="xb-title">Active Campaign</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="31" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon12.png" alt=""></div>
+                                        <div class="xb-icon"><img width="31" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon12.png" alt="Shopify integration"></div>
                                         <span class="xb-title">Shopify</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="41" height="41" loading="lazy" decoding="async" src="assets/img/icon/int-icon13.png" alt=""></div>
+                                        <div class="xb-icon"><img width="41" height="41" loading="lazy" decoding="async" src="assets/img/icon/int-icon13.png" alt="WhatsApp integration"></div>
                                         <span class="xb-title">WhatsApp</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="42" height="35" loading="lazy" decoding="async" src="assets/img/icon/int-icon14.png" alt=""></div>
+                                        <div class="xb-icon"><img width="42" height="35" loading="lazy" decoding="async" src="assets/img/icon/int-icon14.png" alt="Airtable integration"></div>
                                         <span class="xb-title">Airtable</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="44" height="44" loading="lazy" decoding="async" src="assets/img/icon/int-icon11.png" alt=""></div>
+                                        <div class="xb-icon"><img width="44" height="44" loading="lazy" decoding="async" src="assets/img/icon/int-icon11.png" alt="Active Campaign integration"></div>
                                         <span class="xb-title">Active Campaign</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="31" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon12.png" alt=""></div>
+                                        <div class="xb-icon"><img width="31" height="36" loading="lazy" decoding="async" src="assets/img/icon/int-icon12.png" alt="Shopify integration"></div>
                                         <span class="xb-title">Shopify</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="41" height="41" loading="lazy" decoding="async" src="assets/img/icon/int-icon13.png" alt=""></div>
+                                        <div class="xb-icon"><img width="41" height="41" loading="lazy" decoding="async" src="assets/img/icon/int-icon13.png" alt="WhatsApp integration"></div>
                                         <span class="xb-title">WhatsApp</span>
                                     </div>
                                     <div class="integration-item">
-                                        <div class="xb-icon"><img width="42" height="35" loading="lazy" decoding="async" src="assets/img/icon/int-icon14.png" alt=""></div>
+                                        <div class="xb-icon"><img width="42" height="35" loading="lazy" decoding="async" src="assets/img/icon/int-icon14.png" alt="Airtable integration"></div>
                                         <span class="xb-title">Airtable</span>
                                     </div>
                                     
@@ -1048,69 +1152,76 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </section>
 <!-- cta section end  -->
 
-</div></section></main>
+</main>
 <!-- main area end  -->
 <!-- footer strt -->
 <footer class="footer footer-style-two bg_img pos-rel" data-bg-color="#111112">
-<div class="container">
-<div class="xb-footer pt-5">
-<div class="footer-inner mt-10 mb-50 ul_li_between align-items-start">
-<div class="sa-newslatter footer-widget">
-<div class="icon icon--two"><img width="447" height="103" decoding="async" alt="logo" src="assets/img/logo/logo-footer.png" style="height: 80px;"/></div><br/>
-<p class="xb-item--content clr-white">At Datfuslab Technologies, innovation is ingrained in our DNA. We're dedicated to crafting impactful online experiences that drive your brand's success in the digital sphere. With a team of adept professionals passionate about technology, we strive to transform ideas into reality, leveraging the latest tools and methodologies.</p>
-</div>
-<div class="footer-widget">
-<span class="xb-item--sub-title">Our Industries</span>
-<ul class="xb-item--holder list-unstyled">
-<li class="xb-item--list">NGO</li>
-<li class="xb-item--list">Real estate</li>
-<li class="xb-item--list">Insurance</li>
-<li class="xb-item--list">Tour &amp; Travel</li>
-<li class="xb-item--list">Finance</li>
-<li class="xb-item--list">Healthcare</li>
-</ul>
-</div>
-<div class="footer-widget">
-<span class="xb-item--sub-title">Our Services</span>
-<ul class="xb-item--holder list-unstyled">
-<li class="xb-item--list"><a href="software-development">Software Development</a></li>
-<li class="xb-item--list"><a href="website-design">Website Design &amp; Development</a></li>
-<li class="xb-item--list"><a href="mobile-app-development">Mobile App Development</a></li>
-<li class="xb-item--list"><a href="digital-marketing">Digital Marketing</a></li>
-<li class="xb-item--list"><a href="ngo-crm-software">NGO CRM Software</a></li>
-<li class="xb-item--list"><a href="bulk-sms">Bulk SMS</a></li>
-<li class="xb-item--list"><a href="bulk-whatsapp-message">Bulk WhatsApp Messaging</a></li>
-<li class="xb-item--list"><a href="bulk-email">Bulk Email</a></li>
-<li class="xb-item--list"><a href="web-hosting-server">Web Hosting</a></li>
-<li class="xb-item--list"><a href="linux-server">Linux Server Management</a></li>
-<li class="xb-item--list"><a href="windows-server">Windows Server Management</a></li>
-</ul>
-</div>
-<div class="footer-widget">
-<span class="xb-item--sub-title">Our Certificate</span>
-<ul class="xb-item--holder list-unstyled">
-<img width="866" height="288" loading="lazy" decoding="async" alt="logo" src="assets/img/footer/DPIIT-header.png" style="height: 100px;"/>
-</ul>
-</div>
-</div>
-<div class="footer-copyright mt-70 ul_li_between">
-<p class="copyright">Copyright © 2026 <a href="index">Datfuslab Technologies Pvt. Ltd.</a> All rights reserved.</p>
-<ul class="footer-link ul_li">
-<li><a href="terms-conditions"><span>Term &amp; Conditions </span></a></li>
-<li><span> | </span></li>
-<li><a href="privacy-policy"><span>Privacy Policy </span></a></li>
-<li><span> | </span></li>
-<li><a href="refund-policy"><span>Refund Policy </span></a></li>
-<!--<li><span> | </span></li>
+            <div class="container">
+                <div class="xb-footer pt-5">
+                    <div class="footer-inner mt-10 mb-50 ul_li_between align-items-start">
+                        <div class="sa-newslatter footer-widget">
+                            <div class="icon icon--two"><img width="447" height="103" loading="lazy" decoding="async" alt="Datfuslab Technologies" src="assets/img/logo/logo-footer.webp"
+                                    style="height: 80px; width: auto;" /></div><br />
+                            <p class="xb-item--content clr-white">At Datfuslab Technologies, innovation is ingrained in
+                                our DNA. We're dedicated to crafting impactful online experiences that drive your
+                                brand's success in the digital sphere. With a team of adept professionals passionate
+                                about technology, we strive to transform ideas into reality, leveraging the latest tools
+                                and methodologies.</p>
+                        </div>
+                        <div class="footer-widget">
+                            <span class="xb-item--sub-title">Our Industries</span>
+                            <ul class="xb-item--holder list-unstyled">
+                                <li class="xb-item--list">NGO</li>
+                                <li class="xb-item--list">Real estate</li>
+                                <li class="xb-item--list">Insurance</li>
+                                <li class="xb-item--list">Tour &amp; Travel</li>
+                                <li class="xb-item--list">Finance</li>
+                                <li class="xb-item--list">Healthcare</li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget">
+                            <span class="xb-item--sub-title">Our Services</span>
+                            <ul class="xb-item--holder list-unstyled">
+                                <li class="xb-item--list"><a href="software-development">Software Development</a></li>
+                                <li class="xb-item--list"><a href="website-design">Website Design &amp; Development</a></li>
+                                <li class="xb-item--list"><a href="mobile-app-development">Mobile App Development</a></li>
+                                <li class="xb-item--list"><a href="digital-marketing">Digital Marketing</a></li>
+                                <li class="xb-item--list"><a href="ngo-crm-software">NGO CRM Software</a></li>
+                                <li class="xb-item--list"><a href="bulk-sms">Bulk SMS</a></li>
+                                <li class="xb-item--list"><a href="bulk-whatsapp-message">Bulk WhatsApp Messaging</a></li>
+                                <li class="xb-item--list"><a href="bulk-email">Bulk Email</a></li>
+                                <li class="xb-item--list"><a href="web-hosting-server">Web Hosting</a></li>
+                                <li class="xb-item--list"><a href="linux-server">Linux Server Management</a></li>
+                                <li class="xb-item--list"><a href="windows-server">Windows Server Management</a></li>
+                                <li class="xb-item--list"><a href="blog">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget">
+                            <span class="xb-item--sub-title">Our Certificate</span>
+                            <ul class="xb-item--holder list-unstyled">
+                                <li><img width="866" height="288" loading="lazy" decoding="async" alt="DPIIT recognition certificate" src="assets/img/footer/DPIIT-header.webp" style="height: 100px; width: auto;" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-copyright mt-70 ul_li_between">
+                        <p class="copyright">Copyright © 2026 <a href="">Datfuslab Technologies Pvt. Ltd.</a>
+                            All rights reserved.</p>
+                        <ul class="footer-link ul_li">
+                            <li><a href="terms-conditions"><span>Term &amp; Conditions </span></a></li>
+                            <li><span> | </span></li>
+                            <li><a href="privacy-policy"><span>Privacy Policy </span></a></li>
+                            <li><span> | </span></li>
+                            <li><a href="refund-policy"><span>Refund Policy </span></a></li>
+                            <!--<li><span> | </span></li>
                         <li><span>Follow us :</span></li>
                         <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
                         <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
                         <li><a href="#!"><i class="fab fa-instagram"></i></a></li> -->
-</ul>
-</div>
-</div>
-</div>
-</footer>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
 <!-- footer end -->
 </div>
 <!-- jquery include -->
@@ -1126,6 +1237,61 @@ document.querySelectorAll(".donexia-faq-item").forEach(function (item) {
         });
     });
 });
+</script>
+<script>
+(function () {
+    const pricing = document.getElementById('pricing');
+    const cards = Array.from(pricing.querySelectorAll('.plan-card'));
+    function selectPlan(selected) {
+        cards.forEach(function (card) {
+            const active = card === selected;
+            card.classList.toggle('is-selected', active);
+            card.querySelector('.plan-choice').checked = active;
+        });
+    }
+    cards.forEach(function (card) {
+        const choice = document.createElement('input');
+        choice.type = 'radio';
+        choice.name = 'pricing-plan';
+        choice.className = 'plan-choice';
+        choice.value = card.querySelector('.plan-title').textContent;
+        choice.setAttribute('aria-label', 'Select ' + choice.value + ' plan');
+        choice.checked = card.classList.contains('is-selected');
+        card.querySelector('.plan-card-top').appendChild(choice);
+        choice.addEventListener('change', function () { selectPlan(card); });
+        card.addEventListener('click', function (event) {
+            selectPlan(card);
+            if (!event.target.closest('a, input')) choice.focus();
+        });
+    });
+    const controls = document.getElementById('billing-controls');
+    const note = document.getElementById('billing-note');
+    const plans = [
+        { selector: '.plan-card--professional', annual: 35000, monthly: 3500, column: 2, name: 'Pro' },
+        { selector: '.plan-card--premium', annual: 50000, monthly: 5000, column: 3, name: 'Premium' }
+    ];
+    const format = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 2 });
+    controls.hidden = false;
+    controls.querySelectorAll('button').forEach(function (button) {
+        button.addEventListener('click', function () {
+            const monthly = button.dataset.billing === 'monthly';
+            controls.querySelectorAll('button').forEach(function (option) {
+                option.setAttribute('aria-pressed', String(option === button));
+            });
+            plans.forEach(function (plan) {
+                const card = pricing.querySelector(plan.selector);
+                const amount = '₹' + format.format(monthly ? plan.monthly : plan.annual);
+                card.querySelector('.price-amount').textContent = amount;
+                card.querySelector('.price-period').textContent = monthly ? '/ month' : '/ year';
+                const heading = pricing.querySelectorAll('.pricing-table th')[plan.column];
+                heading.replaceChildren(document.createTextNode(plan.name), document.createElement('br'), document.createTextNode(amount + (monthly ? '/Month' : '/Year')));
+            });
+            note.textContent = monthly
+                ? 'Billed monthly. Free and Enterprise plans stay the same.'
+                : 'Annual pricing. Free and Enterprise plans stay the same.';
+        });
+    });
+})();
 </script>
 </body>
 </html>
