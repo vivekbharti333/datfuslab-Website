@@ -2,6 +2,10 @@
     "use strict";
 
     const GA_MEASUREMENT_ID = "G-ES38YM2KS3";
+    const analyticsScript = document.currentScript;
+    const tagManagerId = analyticsScript?.dataset.tagManager || "";
+    const deferAnalytics = analyticsScript?.dataset.deferAnalytics === "true";
+    const workerAnalytics = analyticsScript?.dataset.workerAnalytics === "true" && "serviceWorker" in navigator;
 
     // Optional advertising IDs. Leave blank until the corresponding account
     // has been configured. Keeping them here avoids scattering IDs across pages.
@@ -18,15 +22,41 @@
         window.dataLayer.push(arguments);
     };
 
-    if (!document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}"]`)) {
-        const googleScript = document.createElement("script");
-        googleScript.async = true;
-        googleScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-        document.head.appendChild(googleScript);
+    let analyticsStarted = false;
+    function startAnalytics() {
+        if (analyticsStarted) return;
+        analyticsStarted = true;
+        const url = tagManagerId
+            ? `https://www.googletagmanager.com/gtm.js?id=${tagManagerId}`
+            : `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+        if (!Array.from(document.scripts).some(script => script.src === url)) {
+            const googleScript = document.createElement("script");
+            googleScript.async = true;
+            if (workerAnalytics) googleScript.type = "text/partytown";
+            googleScript.src = url;
+            document.head.appendChild(googleScript);
+            if (workerAnalytics) window.dispatchEvent(new CustomEvent("ptupdate"));
+        }
     }
 
-    window.gtag("js", new Date());
-    window.gtag("config", GA_MEASUREMENT_ID);
+    if (tagManagerId) {
+        // Let the existing GTM container configure GA once; do not load it twice.
+        window.dataLayer.push({"gtm.start": Date.now(), event: "gtm.js"});
+    } else {
+        window.gtag("js", new Date());
+        window.gtag("config", GA_MEASUREMENT_ID);
+    }
+    if (deferAnalytics) {
+        const scheduleAnalytics = () => {
+            if ("requestIdleCallback" in window) requestIdleCallback(startAnalytics, {timeout:1500});
+            else setTimeout(startAnalytics, 0);
+        };
+        if (document.readyState === "complete") scheduleAnalytics();
+        else window.addEventListener("load", scheduleAnalytics, {once:true});
+        // Early interactions flush queued events even if the page is still loading.
+        document.addEventListener("pointerdown", startAnalytics, {once:true, passive:true});
+        document.addEventListener("keydown", startAnalytics, {once:true});
+    } else startAnalytics();
 
     if (META_PIXEL_ID && typeof window.fbq !== "function") {
         const fbq = window.fbq = function () {

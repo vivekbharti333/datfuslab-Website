@@ -1,0 +1,65 @@
+
+#faq.donexia-faq-section { padding-top: 48px; padding-bottom: 64px; }
+#faq .donexia-faq-heading { max-width: 760px; margin-bottom: 26px; }
+#faq .donexia-faq-label { font-size: 14px; margin-bottom: 12px; gap: 7px; }
+#faq .donexia-faq-label i { font-size: 17px; }
+#faq .donexia-faq-heading h2 { font-size: clamp(26px, 3vw, 38px); letter-spacing: -.6px; }
+#faq .donexia-faq-heading p { font-size: 14px; line-height: 1.6; margin-top: 12px; }
+#faq .donexia-faq-list { max-width: 880px; border-radius: 14px; }
+#faq .donexia-faq-item summary { min-height: 58px; padding: 15px 60px 15px 20px; font-size: 16px; }
+#faq .donexia-faq-icon { width: 28px; height: 28px; right: 20px; }
+#faq .donexia-faq-icon::before, #faq .donexia-faq-icon::after { width: 11px; }
+#faq .donexia-faq-answer { padding: 0 60px 18px 20px; font-size: 14px; line-height: 1.65; }
+#faq .donexia-faq-answer p { font-size: inherit; line-height: inherit; }
+@media (max-width: 575px) {
+  #faq .donexia-faq-item summary { padding-left: 16px; padding-right: 52px; font-size: 15px; }
+  #faq .donexia-faq-icon { right: 16px; }
+  #faq .donexia-faq-answer { padding-left: 16px; padding-right: 20px; }
+}
+/* Compact pricing cards with aligned feature rows. */
+.pricing-section .billing-controls { text-align: center; margin: -8px 0 24px; }
+.pricing-section .billing-switch { display: inline-flex; gap: 4px; padding: 5px; border: 1px solid #e3e7ed; border-radius: 999px; background: #f1f3f6; }
+.pricing-section .billing-switch button { border: 0; border-radius: 999px; padding: 9px 24px; background: transparent; color: #596579; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+.pricing-section .billing-switch button[aria-pressed="true"] { background: #fff; color: #c94300; box-shadow: 0 2px 8px rgba(16,21,33,.1); }
+.pricing-section .billing-switch button:focus-visible { outline: 2px solid #c94300; outline-offset: 2px; }
+.pricing-section .billing-note { margin: 10px 0 0; color: #657184; font-size: 12px; line-height: 1.5; }
+.pricing-section .trial-note { min-height: 17px; margin: 8px 0 0; text-align: center; color: #657184; font-size: 11px; line-height: 17px; }
+.pricing-section .plan-card:not(:has(.trial-note))::after { content: ""; display: block; flex-shrink: 0; height: 17px; margin-top: 8px; }
+.pricing-section .mobile-cards { gap: 18px; padding-top: 12px; }
+.pricing-section .plan-card { padding: 22px 18px 16px; border: 1px solid #e3e7ed; border-radius: 16px; box-shadow: 0 6px 22px rgba(16,21,33,.045); }
+.pricing-section .plan-card:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(16,21,33,.08); }
+.pricing-section .plan-card { cursor: pointer; }
+.pricing-section .plan-card--professional { border-width: 1px; }
+.pricing-section .plan-card:not(.is-selected) { border-color: #e3e7ed !important; background: #fff !important; box-shadow: 0 6px 22px rgba(16,21,33,.045); }
+.pricing-section .plan-card--professional::before { display: none; }
+.pricing-section .plan-card.is-selected { border-color: var(--donexia-orange) !important; background: linear-gradient(180deg, #fff7f1, #fff 42%) !important; box-shadow: 0 0 0 1px var(--donexia-orange), 0 10px 28px rgba(232,75,0,.09); }
+.pricing-section .plan-card:not(.is-selected) .btn { background: #fff; color: #c94300; border-color: #d44a00; box-shadow: none; }
+.pricing-section .plan-card.is-selected .btn { background: linear-gradient(135deg, #ff6a00, #d44a00); color: #fff; border-color: #d44a00; }
+.pricing-section .plan-choice { margin-left: auto; flex: 0 0 16px; width: 16px; height: 16px; accent-color: #d44a00; cursor: pointer; }
+.pricing-section .plan-choice:focus-visible { outline: 2px solid #28374b; outline-offset: 3px; }
+.pricing-section .plan-popular { position: absolute; top: -12px; right: 16px; margin: 0; padding: 4px 11px; border-radius: 20px; font-size: 10px; line-height: 16px; letter-spacing: .03em; }
+.pricing-section .plan-card { --plan-accent: #536779; --plan-tint: #f3f6f9; }
+.pricing-section .plan-card--professional { --plan-accent: #dc4a00; --plan-tint: #fff3e9; }
+.pricing-section .plan-card--premium { --plan-accent: #7544c5; --plan-tint: #f6f1ff; }
+.pricing-section .plan-card--enterprise { --plan-accent: #285ca0; --plan-tint: #eff5fd; }
+.pricing-section .plan-card-top { min-height: 68px; margin: -6px -6px 14px; padding: 10px 8px; gap: 12px; border-radius: 11px; background: linear-gradient(110deg, var(--plan-tint), transparent); }
+.pricing-section .plan-symbol { width: 36px; height: 36px; flex-basis: 36px; border: 0; border-radius: 10px; color: var(--plan-accent); background: #fff; box-shadow: 0 2px 8px rgba(16,21,33,.06); }
+.pricing-section .plan-symbol svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.pricing-section .plan-title { font-size: 19px; font-weight: 700; line-height: 1.2; letter-spacing: -.5px; margin-bottom: 5px; }
+.pricing-section .plan-subtitle { color: #657184; font-size: 11.5px; line-height: 1.4; }
+.pricing-section .price { min-height: 36px; margin-bottom: 14px; gap: 7px; }
+.pricing-section .price-amount { font-size: clamp(22px, 1.8vw, 26px); font-weight: 800; letter-spacing: -.6px; font-variant-numeric: tabular-nums; }
+.pricing-section .price-period { font-size: 12px; color: #596579; }
+.pricing-section .plan-divider { margin-bottom: 6px; background: #e8ebef; }
+.pricing-section .plan-features-label { min-height: 32px; font-size: 10px; letter-spacing: .025em; color: #596579; }
+.pricing-section .feature { min-height: 34px; padding: 5px 0 !important; font-size: 12.5px; gap: 8px; }
+.pricing-section .feature span:last-child { font-variant-numeric: tabular-nums; }
+.pricing-section .feature .yes, .pricing-section .feature .no { width: 20px; height: 20px; font-size: 12px; }
+.pricing-section .feature .no { color: #c83e47 !important; background: #fff0f1; }
+.pricing-section .feature:last-of-type { margin-bottom: 12px; }
+.pricing-section .btn { margin-top: auto; padding: 10px 13px; border-radius: 9px; font-size: 13px; line-height: 20px; }
+.pricing-section .btn:focus-visible { outline: 3px solid #28374b; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  .pricing-section .plan-card, .pricing-section .btn { transition: none; }
+  .pricing-section .plan-card:hover, .pricing-section .btn:hover { transform: none; }
+}

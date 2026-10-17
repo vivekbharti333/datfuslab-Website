@@ -3,7 +3,9 @@
 <html lang="en-IN">
 
 <head>
-    <script defer src="assets/js/analytics.js"></script>
+<script>window.partytown={lib:"/assets/partytown/",forward:["dataLayer.push"]};</script>
+<script defer src="assets/partytown/partytown.js"></script>
+    <script defer src="assets/js/analytics.js?v=20261017-perf1" data-defer-analytics="true" data-worker-analytics="true"></script>
     <!--========= Required meta tags =========-->
     <meta charset="utf-8" />
     <meta content="ie=edge" http-equiv="x-ua-compatible" />
@@ -11,24 +13,13 @@
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
 
     <link rel="preload" as="image" href="assets/img/bg/hero-bg01.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="assets/img/hero/hero-img01.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="assets/img/hero/hero-img01-perf.webp" imagesrcset="assets/img/hero/hero-img01-perf-320.webp 320w, assets/img/hero/hero-img01-perf-480.webp 480w, assets/img/hero/hero-img01-perf.webp 635w" imagesizes="(max-width: 767px) 95vw, 45vw" fetchpriority="high" />
 
     <link href="assets/img/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <!-- css include -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/fontawesome.css" rel="stylesheet" />
-    <link href="assets/css/animate.css" rel="stylesheet" media="print" onload="this.media='all'" />
-    <link href="assets/css/swiper.min.css" rel="stylesheet" media="print" onload="this.media='all'" />
-    <link href="assets/css/slick.css" rel="stylesheet" media="print" onload="this.media='all'" />
-    <link href="assets/css/odometer.css" rel="stylesheet" media="print" onload="this.media='all'" />
-    <link href="assets/css/nice-select.css" rel="stylesheet" media="print" onload="this.media='all'" />
-    <link href="assets/css/magnific-popup.css" rel="stylesheet" media="print" onload="this.media='all'" />
-    <link href="assets/css/custom-font.css" rel="stylesheet" />
-    <link href="assets/css/main.css" rel="stylesheet" />
-
 
    <!-- Primary SEO -->
-<title>Datfuslab Technologies | Software & Digital Solutions</title>
+<title>Custom Software &amp; Web Development | Datfuslab Technologies</title>
 <meta name="description" content="Datfuslab Technologies builds custom software, websites, mobile apps, NGO CRM solutions, messaging systems and managed infrastructure for Indian organisations." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://datfuslab.com/" />
@@ -36,28 +27,31 @@
 <!-- Open Graph / Facebook / LinkedIn -->
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Datfuslab Technologies" />
-<meta property="og:title" content="Datfuslab Technologies | Custom Software & Web Development Company in India" />
-<meta property="og:description" content="Custom software, websites, mobile apps, NGO CRM solutions, messaging systems and managed infrastructure for Indian organisations." />
+<meta property="og:title" content="Custom Software &amp; Web Development | Datfuslab Technologies" />
+<meta property="og:description" content="Datfuslab Technologies builds custom software, websites, mobile apps, NGO CRM solutions, messaging systems and managed infrastructure for Indian organisations." />
 <meta property="og:url" content="https://datfuslab.com/" />
-<meta property="og:image" content="https://datfuslab.com/assets/img/og-preview.jpg" />
+<meta property="og:image" content="https://datfuslab.com/assets/img/home-og-preview.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="632" />
+<meta property="og:image:alt" content="Datfuslab Technologies — custom software and digital solutions" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Datfuslab Technologies | Custom Software & Web Development Company in India" />
-<meta name="twitter:description" content="Custom software, websites, mobile apps, NGO CRM solutions, messaging systems and managed infrastructure for Indian organisations." />
-<meta name="twitter:image" content="https://datfuslab.com/assets/img/og-preview.jpg" />
+<meta name="twitter:title" content="Custom Software &amp; Web Development | Datfuslab Technologies" />
+<meta name="twitter:description" content="Datfuslab Technologies builds custom software, websites, mobile apps, NGO CRM solutions, messaging systems and managed infrastructure for Indian organisations." />
+<meta name="twitter:image" content="https://datfuslab.com/assets/img/home-og-preview.jpg" />
+<meta name="twitter:image:alt" content="Datfuslab Technologies — custom software and digital solutions" />
 
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": ["Organization", "ProfessionalService"],
       "@id": "https://datfuslab.com/#organization",
       "name": "Datfuslab Technologies Pvt. Ltd.",
       "url": "https://datfuslab.com/",
       "logo": "https://datfuslab.com/assets/img/logo/logo-black02.webp",
-      "image": "https://datfuslab.com/assets/img/og-preview.jpg",
+      "image": "https://datfuslab.com/assets/img/home-og-preview.jpg",
       "telephone": ["+91-120-3161977", "+91-7004063385"],
       "email": "info@datfuslab.com",
       "priceRange": "₹₹",
@@ -101,8 +95,12 @@
       "@type": "WebPage",
       "@id": "https://datfuslab.com/#webpage",
       "url": "https://datfuslab.com/",
-      "name": "Datfuslab Technologies | Software, Web, Mobile App & NGO CRM Solutions",
-      "description": "Datfuslab Technologies delivers custom software, responsive websites, mobile apps, digital marketing and Donexia NGO CRM solutions for businesses and NGOs in India.",
+      "name": "Custom Software & Web Development | Datfuslab Technologies",
+      "description": "Datfuslab Technologies builds custom software, websites, mobile apps, NGO CRM solutions, messaging systems and managed infrastructure for Indian organisations.",
+      "inLanguage": "en-IN",
+      "mainEntity": {
+        "@id": "https://datfuslab.com/#organization"
+      },
       "isPartOf": {
         "@id": "https://datfuslab.com/#website"
       },
@@ -112,7 +110,10 @@
     }
   ]
 }</script>
-<link rel="stylesheet" href="assets/css/navigation-nested.css?v=20260908-footer-local">
+
+<link rel="stylesheet" href="assets/css/home-page.min.css?v=20261017-perf1"/>
+<link rel="preload" href="assets/fonts/Aeonik-Bold.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="assets/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin/>
 </head>
 
 <body class="it-services">
@@ -252,9 +253,9 @@
         <!-- main area start  -->
         <main>
             <!-- hero section start  -->
-            <section class="hero hero-style-one pos-rel bg_img" data-background="assets/img/bg/hero-bg01.webp">
+            <section class="hero hero-style-one pos-rel bg_img" data-background="assets/img/bg/hero-bg01.webp" style="background-image:url('assets/img/bg/hero-bg01.webp')">
                 <div class="hero-shape">
-                    <div class="shape shape--one bg_img" data-background="assets/img/shape/hero-glassisom.webp"></div>
+                    <div class="shape shape--one bg_img" data-background="assets/img/shape/hero-glassisom-perf-960.webp" style="background-image:url('assets/img/shape/hero-glassisom-perf-960.webp')"></div>
                     <div class="shape shape--two"><img width="185" height="129" decoding="async" alt="" src="assets/img/shape/hero-shape01.png" /></div>
                     <div class="shape shape--three"><img width="185" height="129" decoding="async" alt="" src="assets/img/shape/hero-shape04.png" /></div>
                 </div>
@@ -284,7 +285,7 @@
                             <div class="col-md-6">
                                 <div class="hero-right_img">
                                     <img width="635" height="809" decoding="async" fetchpriority="high" alt="Datfuslab custom software and digital solutions specialist" class="wow skewIn" data-wow-duration="800ms"
-                                        src="assets/img/hero/hero-img01.webp" />
+                                        src="assets/img/hero/hero-img01-perf.webp" srcset="assets/img/hero/hero-img01-perf-320.webp 320w, assets/img/hero/hero-img01-perf-480.webp 480w, assets/img/hero/hero-img01-perf.webp 635w" sizes="(max-width: 767px) 95vw, 45vw" />
                                 </div>
                             </div>
                         </div>
@@ -1264,7 +1265,7 @@
                             <div class="contact-info mt-30 wow fadeInRight" data-delay="100ms"
                                 data-wow-duration="600ms">
                                 <div class="xb-item--img">
-                                    <img width="3000" height="2002" loading="lazy" decoding="async" alt="Contact Datfuslab Technologies" src="assets/img/contact/cont_img01.webp" />
+                                    <img width="3000" height="2002" loading="lazy" decoding="async" alt="Contact Datfuslab Technologies" src="assets/img/contact/cont_img01-perf-960.webp" srcset="assets/img/contact/cont_img01-perf-640.webp 640w, assets/img/contact/cont_img01-perf-960.webp 960w" sizes="(max-width: 991px) 90vw, 45vw" />
                                 </div>
                                 <ul class="social-icon list-unstyled ul_li">
                                     <li><span><svg fill="none" height="29" viewbox="0 0 29 29" width="29"
@@ -1335,6 +1336,7 @@
                             <span class="xb-item--sub-title">Our Industries</span>
                             <ul class="xb-item--holder list-unstyled">
                                 <li class="xb-item--list">NGO</li>
+                                <li class="xb-item--list">Schools &amp; Educational Institutions</li>
                                 <li class="xb-item--list">Real estate</li>
                                 <li class="xb-item--list">Insurance</li>
                                 <li class="xb-item--list">Tour &amp; Travel</li>
@@ -1367,7 +1369,7 @@
                         </div>
                     </div>
                     <div class="footer-copyright mt-70 ul_li_between">
-                        <p class="copyright">Copyright © 2026 <a href="">Datfuslab Technologies Pvt. Ltd.</a>
+                        <p class="copyright">Copyright © 2026 <a href="/">Datfuslab Technologies Pvt. Ltd.</a>
                             All rights reserved.</p>
                         <ul class="footer-link ul_li">
                             <li><a href="terms-conditions"><span>Term &amp; Conditions </span></a></li>
@@ -1389,29 +1391,11 @@
         <!-- footer end -->
     </div>
     <!-- jquery include -->
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/swiper.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/appear.js"></script>
-    <script src="assets/js/parallaxie.js"></script>
-    <script src="assets/js/parallax-scroll.js"></script>
-    <script src="assets/js/odometer.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/easing.min.js"></script>
-    <script src="assets/js/scrollspy.js"></script>
-    <script src="assets/js/jquery.nice-select.min.js"></script>
-    <script src="assets/js/jquery.marquee.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/contact.js"></script>
+
+<script defer src="assets/js/site-shell.js?v=20261017-perf1"></script>
+<script defer src="assets/js/home-page.js?v=20261017-perf1"></script>
+<script defer src="assets/js/contact.js?v=20261017-perf1"></script>
 </body>
 
 </html>
-
-
-
-
 
