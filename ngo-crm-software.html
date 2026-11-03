@@ -67,7 +67,10 @@
       }
     },
     {
-      "@type": ["SoftwareApplication", "Product"],
+      "@type": [
+        "SoftwareApplication",
+        "Product"
+      ],
       "@id": "https://datfuslab.com/ngo-crm-software#software",
       "name": "Donexia",
       "url": "https://datfuslab.com/ngo-crm-software",
@@ -94,55 +97,31 @@
         },
         {
           "@type": "Offer",
-          "name": "Pro — monthly billing",
-          "url": "https://datfuslab.com/ngo-crm-software#pricing",
-          "price": "999",
-          "priceCurrency": "INR",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "999",
-            "priceCurrency": "INR",
-            "billingDuration": "P1M"
-          }
-        },
-        {
-          "@type": "Offer",
           "name": "Pro — yearly billing",
           "url": "https://datfuslab.com/ngo-crm-software#pricing",
-          "price": "10000",
+          "price": "3000",
           "priceCurrency": "INR",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
-            "price": "10000",
+            "price": "3000",
             "priceCurrency": "INR",
             "billingDuration": "P1Y"
-          }
-        },
-        {
-          "@type": "Offer",
-          "name": "Premium — monthly billing",
-          "url": "https://datfuslab.com/ngo-crm-software#pricing",
-          "price": "2800",
-          "priceCurrency": "INR",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "2800",
-            "priceCurrency": "INR",
-            "billingDuration": "P1M"
-          }
+          },
+          "description": "₹250 per month, billed ₹3,000 yearly upfront."
         },
         {
           "@type": "Offer",
           "name": "Premium — yearly billing",
           "url": "https://datfuslab.com/ngo-crm-software#pricing",
-          "price": "30000",
+          "price": "9999",
           "priceCurrency": "INR",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
-            "price": "30000",
+            "price": "9999",
             "priceCurrency": "INR",
             "billingDuration": "P1Y"
-          }
+          },
+          "description": "Approximately ₹833.25 per month, billed ₹9,999 yearly upfront."
         }
       ],
       "disambiguatingDescription": "Enterprise has custom pricing available on request. Published prices exclude applicable taxes."
@@ -220,10 +199,42 @@
   ]
 }</script>
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://datfuslab.com/"}, {"@type": "ListItem", "position": 2, "name": "NGO CRM Software", "item": "https://datfuslab.com/ngo-crm-software"}]}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://datfuslab.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "NGO CRM Software",
+      "item": "https://datfuslab.com/ngo-crm-software"
+    }
+  ]
+}</script>
 <link rel="stylesheet" href="assets/css/ngo-page.min.css?v=20261017-perf1"/>
 <link rel="preload" href="assets/fonts/Aeonik-Bold.woff2" as="font" type="font/woff2" crossorigin/>
 <link rel="preload" href="assets/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="stylesheet" href="assets/css/ngo-demo-hero.css?v=20261103-workflow-size"/>
+<link rel="stylesheet" href="/assets/css/site-navigation.css?v=20261103"/>
+<style>#pricing .plan-annual-note{margin:8px 0 18px;color:#b93e00;font-size:13px;font-weight:600;line-height:1.5}#pricing>.billing-note{margin:0 0 24px;text-align:center;color:#667085;font-size:13px;line-height:1.6}</style>
+<style>#pricing .plan-tax-note{margin:8px 0 16px;color:#667085;font-size:12px;line-height:1.5}#pricing .plan-annual-note{margin-bottom:4px}</style>
+<style>
+/* Compact pricing cards and quiet billing details. */
+main.ngo-crm-page #pricing .plan-card{padding:16px 16px 14px}
+main.ngo-crm-page #pricing .plan-card-top{min-height:60px;padding:9px 8px;margin-bottom:10px}
+main.ngo-crm-page #pricing .price{min-height:0;margin-bottom:4px;line-height:1.2}
+main.ngo-crm-page #pricing .plan-annual-note{font-size:12px!important;line-height:1.4!important;font-weight:500;margin:5px 0 2px!important}
+main.ngo-crm-page #pricing .plan-tax-note{font-size:10px!important;line-height:1.4!important;font-weight:400;margin:3px 0 10px!important}
+main.ngo-crm-page #pricing .plan-divider{margin:4px 0 10px}
+main.ngo-crm-page #pricing .plan-features-label{margin-bottom:9px}
+main.ngo-crm-page #pricing .feature{padding-top:7px;padding-bottom:7px;min-height:0}
+</style>
 </head>
 <body class="help_desk">
 <!-- Google Tag Manager (noscript) -->
@@ -366,39 +377,43 @@
 <!-- main area start -->
 <main class="ngo-crm-page">
 <!-- hero section start -->
-<section class="hero hero-style-four ngo-product-hero pos-rel pt-120" aria-labelledby="ngo-hero-title">
-<div class="container">
-<div class="hero_wrap pt-90">
-<div class="row align-items-center mt-none-30">
-<div class="col-xl-7 col-lg-6 mt-30 ngo-hero-copy">
-<div class="xb-hero">
-<span class="ngo-hero-kicker wow fadeInUp" data-wow-duration="600ms"><i class="far fa-heart" aria-hidden="true"></i> Donexia for All Types of NGOs</span>
-<h1 id="ngo-hero-title" class="xb-item--title ngo-hero-title wow fadeInUp" data-wow-duration="600ms">NGO CRM for <span>Donors, Donations<br/>&amp; 80G Receipts</span></h1>
-<p class="xb-item--content wow fadeInUp" data-wow-delay="150ms" data-wow-duration="600ms">Manage donors, donations, receipts, campaigns, volunteers and reports in one simple system built for Indian NGOs.</p>
-<ul class="xb-item--item list-unstyled wow fadeInUp" data-wow-delay="300ms" data-wow-duration="600ms">
-<li><span><i class="fas fa-users" aria-hidden="true"></i></span> Track donors and donations</li>
-<li><span><i class="fas fa-file-invoice" aria-hidden="true"></i></span> Generate and share 80G receipts</li>
-<li><span><i class="fas fa-bullhorn" aria-hidden="true"></i></span> Manage campaigns and volunteers</li>
-<li><span><i class="fas fa-chart-bar" aria-hidden="true"></i></span> Get detailed reports and insights</li>
+<section class="hero ngo-product-hero ngo-demo-hero" aria-labelledby="ngo-hero-title">
+<div class="container"><div class="ngo-demo-grid"><div class="ngo-demo-intro">
+<div class="ngo-hero-copy"><div class="xb-hero">
+<span class="ngo-hero-kicker" data-wow-duration="600ms"><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg> Donexia for NGOs</span>
+<h1 id="ngo-hero-title" class="xb-item--title ngo-hero-title" data-wow-duration="600ms">NGO CRM for <span>Donors, Donations<br/>&amp; 80G Receipts</span></h1>
+<p class="xb-item--content" data-wow-delay="150ms" data-wow-duration="600ms">Manage donors, donations, receipts, campaigns, volunteers and reports in one simple system built for Indian NGOs.</p>
+<ul class="xb-item--item list-unstyled" data-wow-delay="300ms" data-wow-duration="600ms">
+<li><span><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span> Track donors and donations</li>
+<li><span><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span> Generate and share 80G receipts</li>
+<li><span><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span> Manage campaigns and volunteers</li>
+<li><span><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3v18h18M8 17v-5M13 17V7M18 17v-8"/></svg></span> Get detailed reports and insights</li>
 </ul>
-<div class="xb-btn ngo-hero-action wow fadeInUp" data-wow-delay="450ms" data-wow-duration="600ms">
-<a href="contact" class="thm-btn thm-btn--three">Start Free Trial <i class="far fa-arrow-right" aria-hidden="true"></i></a>
+<div class="xb-btn ngo-hero-action" data-wow-delay="450ms" data-wow-duration="600ms">
+<a href="#contact-form" class="thm-btn thm-btn--three">Start Free Trial <svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
 <a class="ngo-hero-secondary" href="#pricing">View Pricing</a>
 </div>
-<ul class="ngo-hero-trust list-unstyled"><li><i class="fas fa-check-circle" aria-hidden="true"></i> Quick setup</li><li><i class="fas fa-check-circle" aria-hidden="true"></i> Guided onboarding</li><li><i class="fas fa-check-circle" aria-hidden="true"></i> Dedicated support</li></ul>
+<ul class="ngo-hero-trust list-unstyled"><li><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg> Quick setup</li><li><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg> Guided onboarding</li><li><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg> Dedicated support</li></ul>
 </div>
+</div><div class="ngo-demo-art"><img src="assets/img/hero/donexia-crm-dashboard-v2.png" alt="Donexia CRM dashboard for managing donors, donations and receipts" fetchpriority="high" decoding="async"/></div>
 </div>
-<div class="col-xl-5 col-lg-6 mt-30 ngo-hero-art">
-<div class="hero-right_img pos-rel">
-<div class="hero-right-image">
-<img width="1540" height="1021" decoding="async" fetchpriority="high" alt="Donexia dashboard with donor and donation reports, campaign progress and an 80G receipt, alongside children supported by NGO campaigns" src="assets/img/hero/donexia-hero-reference-v3.webp" srcset="assets/img/hero/donexia-hero-reference-v3-640.webp 640w, assets/img/hero/donexia-hero-reference-v3-960.webp 960w, assets/img/hero/donexia-hero-reference-v3-1280.webp 1280w, assets/img/hero/donexia-hero-reference-v3.webp 1540w" sizes="(max-width: 991px) 85vw, 55vw"/>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+<aside class="ngo-demo-card" aria-labelledby="ngo-demo-heading">
+<div class="ngo-demo-heading"><span><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18M3 5h18v17H3ZM8 14h2M14 14h2M8 18h2"/></svg></span><div><h2 id="ngo-demo-heading">Book Your Free Demo</h2><p>See how Donexia can simplify your NGO operations and donation management.</p></div></div>
+<form id="contact-form" method="post">
+<label class="ngo-demo-field" for="fullName"><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a7 7 0 0 0-14 0v2M17 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/></svg><span class="ngo-demo-sr">Your Full Name (required)</span><input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Your Full Name *" required/></label>
+<label class="ngo-demo-field" for="organization"><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V5h10v16M14 10h6v11M8 9h2M8 13h2M8 17h2M2 21h20"/></svg><span class="ngo-demo-sr">NGO / Organization Name (required)</span><input id="organization" name="organization" type="text" autocomplete="organization" placeholder="NGO / Organization Name *" required/></label>
+<label class="ngo-demo-field" for="phone"><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3l2 5-2 2a16 16 0 0 0 6 6l2-2Z"/></svg><span class="ngo-demo-sr">Mobile Number (required)</span><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Mobile Number *" required/></label>
+<label class="ngo-demo-field" for="email"><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v14H3ZM3 6l9 7 9-7"/></svg><span class="ngo-demo-sr">Email Address (required)</span><input id="email" name="email" type="email" autocomplete="email" placeholder="Email Address *" required/></label>
+<div class="ngo-demo-field ngo-demo-interest"><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v12H9l-6 4ZM7 9h10M7 13h6"/></svg><select id="enquiryInterest" name="enquiryInterest" required aria-label="I'm interested in (required)"><option value="" disabled selected>Select your interest *</option><option value="Book a free demo">Book a free demo</option><option value="Learn more about Donexia">Learn more about Donexia</option><option value="Explore pricing and plans">Explore pricing and plans</option><option value="Get help choosing the right setup">Help me choose the right setup</option></select></div>
+<input id="subject" name="subject" type="hidden" value="Donexia Demo"/>
+<label class="ngo-demo-field ngo-demo-message" for="message"><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11a9 9 0 0 1-9 9H3l2-5a9 9 0 1 1 16-4Z"/></svg><span class="ngo-demo-sr">Message (required)</span><textarea id="message" name="message" rows="2" placeholder="Tell us about your NGO and requirements *" required></textarea></label>
+<button class="ngo-demo-submit" type="submit">Book My Free Demo <svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg></button>
+<div id="contactMessage" aria-live="polite"></div>
+</form>
+<div class="ngo-demo-assurances"><span><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-13h-8Z"/></svg>No obligation</span><span><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h18v5H3ZM5 13v8h14v-8M12 8v13M12 8H8a3 3 0 1 1 3-3ZM12 8h4a3 3 0 1 0-3-3Z"/></svg>Free demo</span><span><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6Zm-4 10 3 3 5-6"/></svg>Quick response</span></div>
+</aside></div>
+<div class="ngo-demo-proof"><div><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span><strong>Built for NGOs</strong>Across India</span></div><div><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 4v6c0 5-9 10-9 10S3 17 3 12V6Zm-4 10 3 3 5-6"/></svg><span><strong>80G Ready</strong>Generate compliant receipts</span></div><div><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-13h-8Z"/></svg><span><strong>Quick Setup</strong>Get started in minutes</span></div><div><svg class="ngo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 14v-3a9 9 0 0 1 18 0v6c0 3-3 5-7 5M3 12h4v7H3ZM17 12h4v7h-4Z"/></svg><span><strong>Ongoing Support</strong>By our product team</span></div></div>
+</div></section>
 <!-- hero section end -->
 <!-- brand section start -->
 <!--<section class="brand pt-110 pb-130">
@@ -427,7 +442,7 @@
 <div class="col-lg-6 mt-30">
 <div class="feature-left-item pos-rel">
 <div class="donexia-lifecycle-visual">
-<img width="1484" height="1060" loading="lazy" decoding="async" src="assets/img/feature/donation-lifecycle-v3.webp" srcset="assets/img/feature/donation-lifecycle-v3-512.webp 512w, assets/img/feature/donation-lifecycle-v3-768.webp 768w, assets/img/feature/donation-lifecycle-v3-1024.webp 1024w, assets/img/feature/donation-lifecycle-v3.webp 1484w" sizes="(max-width: 991px) 90vw, 53vw" alt="Five connected NGO workflows: donor management, donation management, campaigns, messages, and reports surrounding NGO impact"/>
+<img width="1484" height="1060" loading="lazy" decoding="async" src="assets/img/feature/donation-lifecycle-simple-v4.png" alt="Five simple connected NGO workflows: donors, donations, campaigns, messages, and reports"/>
 </div>
 </div>
 </div>
@@ -526,26 +541,27 @@
 
 <section class="pricing-section" id="pricing" aria-labelledby="pricing-plans-title">
 <div class="pricing-section-heading"><span class="pricing-eyebrow">Pricing Plans</span><h2 id="pricing-plans-title">NGO CRM Pricing. <span>Plans for Every Stage.</span></h2><p>Start free — no credit card required. Compare Donexia plans for donation management, digital receipts, donors, volunteers, campaigns and reports. Prices exclude applicable taxes.</p></div>
-<div class="billing-controls" id="billing-controls"><div class="billing-switch" role="group" aria-label="Pricing period"><button type="button" data-billing="monthly" aria-pressed="true">Monthly</button><button type="button" data-billing="yearly" aria-pressed="false">Yearly</button></div><p class="billing-note" id="billing-note" aria-live="polite">Billed monthly. Free and Enterprise plans stay the same.</p></div>
+<p class="billing-note" id="billing-note">Pro and Premium are billed yearly upfront. Monthly amounts are shown for comparison. Prices exclude applicable taxes.</p>
 <div class="mobile-cards"><article class="plan-card plan-card--starter">
 
  <div class="plan-card-top"><span class="plan-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20v-8M12 15C5 15 4 10 4 5c6 0 8 3 8 7M12 17c0-7 3-10 8-10 0 6-2 10-8 10"/></svg></span><div><h3 class="plan-title">Free Plan</h3><p class="plan-subtitle">For small NGO teams</p></div></div>
- <div class="price"><span class="price-amount">₹0</span></div>
+ <div class="price"><span class="price-amount">₹0</span></div><p class="plan-tax-note">Excludes 18% GST</p>
  <div class="plan-divider"></div><p class="plan-features-label">Plan includes</p>
 <div class="feature"><span>User Limit</span><span>2</span></div>
 <div class="feature"><span>Projects</span><span>1</span></div>
-<div class="feature"><span>Add Donation Records</span><span class="yes" aria-label="Included">✓</span></div>
+<div class="feature"><span>Add Donation Records (50/month)</span><span class="yes" aria-label="Included">✓</span></div>
 <div class="feature"><span>Generate Receipts</span><span class="yes" aria-label="Included">✓</span></div>
 <div class="feature"><span>Auto Send Receipt</span><span class="no" aria-label="Not included">✗</span></div>
 <div class="feature"><span>Analytics</span><span class="no" aria-label="Not included">✗</span></div>
 <div class="feature"><span>Campaign Management</span><span class="no" aria-label="Not included">✗</span></div>
+<div class="feature"><span>Payment Gateway</span><span class="no" aria-label="Not included">✗</span></div>
 <div class="feature"><span>Multi Currency</span><span class="no" aria-label="Not included">✗</span></div>
 <div class="feature"><span>API Access</span><span class="no" aria-label="Not included">✗</span></div>
  <a class="btn" href="contact?subject=Donexia%20Free%20Plan#contact-form">Contact Us</a><p class="trial-note">No credit card required</p></article>
 <article class="plan-card plan-card--professional is-selected">
  <span class="plan-popular">Most popular</span>
  <div class="plan-card-top"><span class="plan-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 3-8 11h6l-1 7 9-12h-7l1-6Z"/></svg></span><div><h3 class="plan-title">Pro</h3><p class="plan-subtitle">For growing organisations</p></div></div>
- <div class="price"><span class="price-amount">₹999</span><span class="price-period">/ month</span></div>
+ <div class="price"><span class="price-amount">₹250</span><span class="price-period">/ month</span></div><p class="plan-annual-note">₹3,000 billed yearly</p><p class="plan-tax-note">Excludes 18% GST</p>
  <div class="plan-divider"></div><p class="plan-features-label">Everything in Free Plan, plus</p>
 <div class="feature"><span>User Limit</span><span>10</span></div>
 <div class="feature"><span>Projects</span><span>10</span></div>
@@ -554,13 +570,14 @@
 <div class="feature"><span>Auto Send Receipt</span><span class="yes" aria-label="Included">✓</span></div>
 <div class="feature"><span>Analytics</span><span class="yes" aria-label="Included">✓</span></div>
 <div class="feature"><span>Campaign Management</span><span class="no" aria-label="Not included">✗</span></div>
+<div class="feature"><span>Payment Gateway</span><span class="no" aria-label="Not included">✗</span></div>
 <div class="feature"><span>Multi Currency</span><span class="no" aria-label="Not included">✗</span></div>
 <div class="feature"><span>API Access</span><span class="no" aria-label="Not included">✗</span></div>
  <a class="btn" href="contact?subject=Donexia%20Pro#contact-form">Contact Us</a><p class="trial-note">No credit card required</p></article>
 <article class="plan-card plan-card--premium">
 
  <div class="plan-card-top"><span class="plan-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 9 7-9 11L3 10l9-7ZM3 10h18M12 3l-4 7 4 11 4-11-4-7Z"/></svg></span><div><h3 class="plan-title">Premium</h3><p class="plan-subtitle">For advanced operations</p></div></div>
- <div class="price"><span class="price-amount">₹2,800</span><span class="price-period">/ month</span></div>
+ <div class="price"><span class="price-amount">₹833.25</span><span class="price-period">/ month</span></div><p class="plan-annual-note">₹9,999 billed yearly</p><p class="plan-tax-note">Excludes 18% GST</p>
  <div class="plan-divider"></div><p class="plan-features-label">Everything in Pro, plus</p>
 <div class="feature"><span>User Limit</span><span>35</span></div>
 <div class="feature"><span>Projects</span><span>25</span></div>
@@ -569,13 +586,14 @@
 <div class="feature"><span>Auto Send Receipt</span><span class="yes" aria-label="Included">✓</span></div>
 <div class="feature"><span>Analytics</span><span class="yes" aria-label="Included">✓</span></div>
 <div class="feature"><span>Campaign Management</span><span class="yes" aria-label="Included">✓</span></div>
+<div class="feature"><span>Payment Gateway</span><span class="yes" aria-label="Included">✓</span></div>
 <div class="feature"><span>Multi Currency</span><span class="no" aria-label="Not included">✗</span></div>
 <div class="feature"><span>API Access</span><span class="no" aria-label="Not included">✗</span></div>
  <a class="btn" href="contact?subject=Donexia%20Premium#contact-form">Contact Us</a><p class="trial-note">No credit card required</p></article>
 <article class="plan-card plan-card--enterprise">
 
  <div class="plan-card-top"><span class="plan-symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 21V4h10v17M15 10h4v11M3 21h18M8 8h4M8 12h4M8 16h4"/></svg></span><div><h3 class="plan-title">Enterprise</h3><p class="plan-subtitle">For tailored requirements</p></div></div>
- <div class="price"><span class="price-amount">Custom</span><span class="price-period">pricing</span></div>
+ <div class="price"><span class="price-amount">Custom</span><span class="price-period">pricing</span></div><p class="plan-tax-note">Excludes 18% GST</p>
  <div class="plan-divider"></div><p class="plan-features-label">A flexible plan with</p>
 <div class="feature"><span>User Limit</span><span>No Limit</span></div>
 <div class="feature"><span>Projects</span><span>No Limit</span></div>
@@ -584,6 +602,7 @@
 <div class="feature"><span>Auto Send Receipt</span><span class="yes" aria-label="Included">✓</span></div>
 <div class="feature"><span>Analytics</span><span class="yes" aria-label="Included">✓</span></div>
 <div class="feature"><span>Campaign Management</span><span class="yes" aria-label="Included">✓</span></div>
+<div class="feature"><span>Payment Gateway</span><span class="yes" aria-label="Included">✓</span></div>
 <div class="feature"><span>Multi Currency</span><span class="yes" aria-label="Included">✓</span></div>
 <div class="feature"><span>API Access</span><span class="yes" aria-label="Included">✓</span></div>
  <a class="btn" href="contact?subject=Donexia%20Enterprise#contact-form">Request Demo</a><p class="trial-note">Custom SLA, migration &amp; onboarding</p></article></div>
@@ -1089,7 +1108,10 @@
 <!-- jquery include -->
 
 <script defer src="assets/js/site-shell.js?v=20261017-perf1"></script>
-<script defer src="assets/js/ngo-page.js?v=20261017-perf1"></script>
+<script defer src="assets/js/ngo-page.js?v=20261103-annual"></script>
 <script defer src="assets/js/donexia-testimonials.js?v=20261017-perf1"></script>
+<script defer src="assets/js/contact.js?v=20261103-confirmation"></script>
+<script defer src="/assets/js/site-navigation.js?v=20261103"></script>
+<script defer src="assets/js/ngo-interest-picker.js?v=20261103"></script>
 </body>
 </html>

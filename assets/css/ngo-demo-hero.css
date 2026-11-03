@@ -1,0 +1,164 @@
+/* Hero uses the school management page's primary and hover oranges. */
+:root { --donexia-orange:#d44a00; --donexia-orange-dark:#b93e00; }
+.ngo-demo-hero { padding:132px 0 28px!important; background:linear-gradient(120deg,#fff,#fffaf6)!important; }
+.ngo-demo-hero::before { display:none; }
+.ngo-demo-hero>.container { max-width:1600px; }
+.ngo-demo-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(340px,430px); gap:30px; align-items:center; }
+.ngo-demo-intro { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:12px; min-width:0; }
+.ngo-demo-hero .ngo-hero-copy { min-width:0; }
+.ngo-demo-hero .xb-hero .ngo-hero-title { font-size:clamp(30px,2.8vw,48px); line-height:1.12; margin:24px 0 16px; }
+.ngo-demo-hero .ngo-hero-title span { color:#d44a00!important; }
+.ngo-demo-hero .xb-hero .xb-item--content { font-size:16px; line-height:1.6; margin:0 0 20px; }
+.ngo-demo-hero .xb-item--item { margin:0; }
+.ngo-demo-hero .xb-item--item li { display:flex; align-items:center; gap:10px; font-size:14px; margin:10px 0; }
+.ngo-demo-hero .xb-item--item li span { color:#d44a00; flex-shrink:0; }
+.ngo-demo-hero .ngo-hero-action { flex-wrap:wrap; margin-top:24px; gap:12px; }
+.ngo-demo-hero .ngo-hero-action a { padding:15px 21px; font-size:14px; border-radius:12px; }
+.ngo-demo-hero .ngo-hero-secondary { border:1px solid #d44a00; color:#142237; }
+.ngo-demo-hero .ngo-hero-trust { display:flex; flex-wrap:wrap; gap:12px; margin:20px 0 0; font-size:11px; }
+.ngo-demo-hero .ngo-hero-trust i { color:#d44a00; }
+.ngo-demo-art img { display:block; width:100%; height:auto; }
+.ngo-demo-card { padding:26px; border:1px solid #e7e8ec; border-radius:26px; background:#fff; box-shadow:0 16px 42px #1422370b; min-width:0; scroll-margin-top:110px; }
+.ngo-demo-heading { display:flex; gap:15px; margin-bottom:20px; align-items:flex-start; }
+.ngo-demo-heading>span { display:grid; place-items:center; width:52px; height:52px; flex-shrink:0; border-radius:50%; background:#fff0e4; color:#d44a00; font-size:25px; }
+.ngo-demo-heading h2 { font-size:27px; line-height:1.2; color:#142237; margin:0 0 8px; }
+.ngo-demo-heading p { font-size:14px; color:#536176; line-height:1.5; margin:0; }
+.ngo-demo-field { display:flex; align-items:center; gap:12px; border:1px solid #d9dfe8; border-radius:11px; padding:0 14px; margin:0 0 11px; color:#142237; }
+.ngo-demo-field:focus-within { outline:2px solid #d44a00; outline-offset:2px; }
+.ngo-demo-card .ngo-demo-field :is(input,select,textarea) { width:100%; min-width:0; height:43px; padding:10px 0; border:0; border-radius:0; background:transparent; color:#34445d; font:inherit; font-size:14px; outline:none; box-shadow:none; }
+.ngo-demo-card .ngo-demo-field textarea { height:auto; resize:vertical; }
+.ngo-demo-field input::placeholder,.ngo-demo-field textarea::placeholder { color:#536176; opacity:1; }
+.ngo-demo-submit { width:100%; padding:15px 12px; border:0; border-radius:12px; background:#d44a00; color:#fff; font-size:18px; font-weight:700; display:flex; align-items:center; justify-content:center; gap:12px; }
+.ngo-demo-submit:hover { background:#b93e00; }
+.ngo-demo-submit:disabled { opacity:.65; cursor:wait; }
+.ngo-demo-submit:focus-visible { outline:3px solid #142237; outline-offset:3px; }
+.ngo-demo-assurances { display:grid; grid-template-columns:repeat(3,1fr); border-radius:15px; padding:14px 4px; background:#fff6ef; margin-top:16px; }
+.ngo-demo-assurances span { text-align:center; color:#142237; font-size:11px; font-weight:600; }
+.ngo-demo-assurances i { display:block; color:#d44a00; font-size:21px; margin-bottom:7px; }
+.ngo-demo-proof { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; margin-top:38px; padding:24px 28px; border-radius:24px; background:#fff3ea; }
+.ngo-demo-proof>div { display:flex; align-items:center; justify-content:center; gap:17px; }
+.ngo-demo-proof>div+div { border-left:1px solid #e1d8d0; }
+.ngo-demo-proof i { color:#d44a00; font-size:30px; }
+.ngo-demo-proof span { font-size:13px; color:#536176; }
+.ngo-demo-proof strong { display:block; font-size:17px; color:#142237; }
+.ngo-demo-sr { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+#contact-form { scroll-margin-top:120px; }
+#contactMessage:not(:empty) { margin-top:15px; }
+@media(max-width:1199px) { .ngo-demo-intro { grid-template-columns:1fr; } .ngo-demo-art { max-width:420px; margin:auto; } .ngo-demo-hero .xb-hero .ngo-hero-title { font-size:38px; } }
+@media(max-width:767px) { .ngo-demo-hero { padding-top:110px!important; } .ngo-demo-grid { grid-template-columns:1fr; gap:28px; } .ngo-demo-card { padding:22px 18px; } .ngo-demo-heading h2 { font-size:25px; } .ngo-demo-proof { grid-template-columns:1fr 1fr; padding:22px 15px; gap:24px 14px; } .ngo-demo-proof>div { justify-content:flex-start; gap:10px; } .ngo-demo-proof>div+div { border:0; } .ngo-demo-proof i { font-size:24px; } .ngo-demo-proof strong { font-size:15px; } .ngo-demo-proof span { font-size:11px; } }
+@media(prefers-reduced-motion:reduce) { .ngo-demo-hero * { animation:none!important; transition:none!important; } }
+
+/* Explicitly reset legacy Bootstrap-column sizing inside the new grid. */
+main.ngo-crm-page .ngo-demo-hero { padding:132px 0 40px!important; }
+main.ngo-crm-page .ngo-demo-hero>.container { width:100%; max-width:1580px; padding-inline:40px; }
+.ngo-demo-grid { grid-template-columns:minmax(0,1fr) 400px; gap:36px; align-items:center; }
+.ngo-demo-intro { grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:12px; }
+main.ngo-crm-page .ngo-demo-hero .ngo-hero-copy { width:100%; max-width:none; flex:none; margin:0; }
+main.ngo-crm-page .ngo-demo-hero .xb-hero { width:100%; max-width:none; padding:0; }
+main.ngo-crm-page .ngo-demo-hero .ngo-hero-kicker { display:inline-flex; align-items:center; gap:8px; padding:7px 13px; margin:0; font-size:11px; color:#b93e00!important; }
+main.ngo-crm-page .ngo-demo-hero .ngo-hero-title { width:100%; max-width:none; font-size:clamp(32px,2.75vw,46px)!important; line-height:1.12!important; font-weight:700; letter-spacing:-.035em!important; margin:22px 0 16px; overflow-wrap:normal; }
+main.ngo-crm-page .ngo-demo-hero .ngo-hero-title>span { display:block; }
+main.ngo-crm-page .ngo-demo-hero .xb-item--content { max-width:440px; font-size:16px!important; line-height:1.65; margin:0 0 22px; }
+main.ngo-crm-page .ngo-demo-hero .xb-item--item { display:grid; gap:11px; margin:0; padding:0; }
+main.ngo-crm-page .ngo-demo-hero .xb-item--item li { display:flex; align-items:center; gap:10px; margin:0!important; padding:0; font-size:14px!important; line-height:1.5; }
+main.ngo-crm-page .ngo-demo-hero .xb-item--item li>span { display:grid; place-items:center; flex:0 0 20px; width:20px; height:20px; margin:0; border-radius:50%; background:#e9f6e6; color:#438d38; }
+.ngo-demo-hero .ngo-icon { display:inline-block; flex-shrink:0; width:20px; height:20px; vertical-align:middle; }
+.ngo-demo-hero .xb-item--item .ngo-icon { width:14px; height:14px; stroke-width:2.5; }
+main.ngo-crm-page .ngo-demo-hero .ngo-hero-action { display:flex; flex-direction:row; align-items:center; gap:12px; margin:26px 0 0; }
+main.ngo-crm-page .ngo-demo-hero .ngo-hero-action a { display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:14px 19px; min-height:48px; font-size:14px!important; line-height:1.25; background:#d44a00!important; color:#fff!important; box-shadow:none; }
+main.ngo-crm-page .ngo-demo-hero .ngo-hero-action .ngo-hero-secondary { background:#fff!important; color:#142237!important; }
+main.ngo-crm-page .ngo-demo-hero .ngo-hero-trust { gap:8px 15px; margin:18px 0 0; line-height:1.5; }
+.ngo-demo-hero .ngo-hero-trust li { display:inline-flex; align-items:center; gap:5px; }
+.ngo-demo-hero .ngo-hero-trust .ngo-icon { width:13px; height:13px; color:#d44a00; }
+.ngo-demo-art { width:100%; max-width:none; margin:0; }
+.ngo-demo-card { padding:26px; border-radius:24px; box-shadow:0 16px 50px #14223708; }
+.ngo-demo-heading { gap:12px; margin-bottom:22px; }
+.ngo-demo-heading>span { width:44px; height:44px; }
+.ngo-demo-heading>span .ngo-icon { width:25px; height:25px; }
+main.ngo-crm-page .ngo-demo-heading h2 { font-size:26px!important; line-height:1.15!important; letter-spacing:-.025em!important; margin:0 0 10px; }
+.ngo-demo-heading p { font-size:13px; line-height:1.6; }
+.ngo-demo-field>.ngo-icon { width:18px; height:18px; color:#65748a; }
+.ngo-demo-card .ngo-demo-field :is(input,select,textarea) { font-size:14px; height:46px; }
+.ngo-demo-card .ngo-demo-field textarea { height:64px; }
+.ngo-demo-submit { min-height:50px; font-size:16px; }
+.ngo-demo-assurances span { display:flex; flex-direction:column; align-items:center; gap:7px; font-size:10px; }
+.ngo-demo-assurances .ngo-icon { color:#d44a00; }
+.ngo-demo-proof { margin-top:36px; padding:23px; border-radius:18px; }
+.ngo-demo-proof>div>.ngo-icon { width:29px; height:29px; color:#d44a00; }
+@media(max-width:1399px) {
+ .ngo-demo-grid { grid-template-columns:minmax(0,1fr) 370px; gap:26px; }
+ .ngo-demo-intro { grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); }
+ main.ngo-crm-page .ngo-demo-hero>.container { padding-inline:28px; }
+ main.ngo-crm-page .ngo-demo-hero .ngo-hero-title { font-size:36px!important; }
+ .ngo-demo-card { padding:22px; }
+}
+@media(max-width:1199px) {
+ .ngo-demo-grid { grid-template-columns:minmax(0,1fr) 370px; align-items:start; gap:35px; }
+ .ngo-demo-intro { grid-template-columns:1fr; gap:20px; }
+ .ngo-demo-art { max-width:380px; justify-self:center; }
+ main.ngo-crm-page .ngo-demo-hero .ngo-hero-title { font-size:38px!important; }
+}
+@media(max-width:991px) {
+ main.ngo-crm-page .ngo-demo-hero { padding-top:116px!important; }
+ .ngo-demo-grid { grid-template-columns:minmax(0,1fr) 340px; gap:26px; }
+ .ngo-demo-card { padding:20px; }
+ .ngo-demo-heading>span { display:none; }
+ main.ngo-crm-page .ngo-demo-heading h2 { font-size:26px!important; }
+ main.ngo-crm-page .ngo-demo-hero .ngo-hero-title { font-size:34px!important; }
+ .ngo-demo-proof { grid-template-columns:1fr 1fr; gap:24px; }
+ .ngo-demo-proof>div { justify-content:flex-start; border:0!important; }
+}
+@media(max-width:767px) {
+ main.ngo-crm-page .ngo-demo-hero { padding:106px 0 28px!important; }
+ main.ngo-crm-page .ngo-demo-hero>.container { padding-inline:22px; }
+ .ngo-demo-grid { grid-template-columns:minmax(0,1fr); gap:30px; }
+ .ngo-demo-intro { gap:20px; }
+ main.ngo-crm-page .ngo-demo-hero .ngo-hero-title { font-size:clamp(32px,7vw,42px)!important; max-width:560px; }
+ main.ngo-crm-page .ngo-demo-hero .xb-item--content { max-width:560px; }
+ .ngo-demo-art { width:85%; max-width:350px; }
+ .ngo-demo-card { width:100%; max-width:540px; justify-self:center; padding:24px; }
+ .ngo-demo-heading>span { display:grid; }
+ .ngo-demo-card .ngo-demo-field :is(input,select,textarea) { font-size:16px; }
+ .ngo-demo-proof { gap:22px 14px; padding:20px 16px; margin-top:28px; }
+ .ngo-demo-proof strong { font-size:14px; }
+}
+@media(max-width:380px) {
+ main.ngo-crm-page .ngo-demo-hero>.container { padding-inline:16px; }
+ .ngo-demo-card { padding:20px 16px; }
+ .ngo-demo-heading>span { display:none; }
+ main.ngo-crm-page .ngo-demo-hero .ngo-hero-action a { padding:13px 15px; }
+ .ngo-demo-proof>div { gap:8px; }
+ .ngo-demo-proof>div>.ngo-icon { width:23px; height:23px; }
+}
+
+/* Native interest picker retains keyboard and mobile platform controls. */
+.ngo-demo-interest-label { display:block; margin:3px 0 7px; color:#34445d; font-size:12px; font-weight:600; }
+.ngo-demo-interest { background:#fffaf6; border-color:#ead8cb; position:relative; }
+.ngo-demo-card .ngo-demo-interest select { appearance:none; -webkit-appearance:none; padding-right:25px; cursor:pointer; background:none; }
+.ngo-demo-interest::after { content:""; position:absolute; right:16px; top:18px; width:8px; height:8px; border-right:1.5px solid #d44a00; border-bottom:1.5px solid #d44a00; transform:rotate(45deg); pointer-events:none; }
+.ngo-demo-card .ngo-demo-interest select:invalid { color:#65748a; }
+.ngo-demo-card .ngo-demo-interest option { background:#fff; color:#34445d; }
+.ngo-demo-interest:hover { border-color:#d44a00; }
+
+/* Styled, keyboard-accessible interest options. */
+.ngo-demo-interest.is-enhanced { background:#fff; isolation:isolate; }
+.ngo-demo-interest.is-enhanced.is-open { z-index:5; border-color:#d44a00; box-shadow:0 0 0 3px #d44a0010; }
+.ngo-demo-interest.is-enhanced::after { transition:transform .15s ease; }
+.ngo-demo-interest.is-open::after { transform:translateY(4px) rotate(225deg); }
+.ngo-demo-card .ngo-demo-interest .ngo-interest-native { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); pointer-events:none; }
+.ngo-interest-trigger { display:block; width:100%; min-width:0; min-height:46px; padding:10px 25px 10px 0; background:transparent; border:0; text-align:left; font:inherit; font-size:14px; line-height:1.5; color:#65748a; cursor:pointer; outline:none; }
+.ngo-interest-trigger.has-value { color:#25344b; }
+.ngo-interest-trigger[aria-invalid="true"] { color:#b42318; }
+.ngo-interest-options { position:absolute; inset:calc(100% + 8px) -1px auto; max-height:240px; overflow-y:auto; overscroll-behavior:contain; padding:6px; border:1px solid #e8e1dc; border-radius:13px; background:#fff; box-shadow:0 14px 35px #1422371a; z-index:10; }
+.ngo-interest-options[hidden] { display:none!important; }
+.ngo-interest-option { position:relative; padding:12px 35px 12px 13px; border-radius:8px; color:#34445d; font-size:14px; line-height:1.5; cursor:pointer; transition:background .12s ease; }
+.ngo-interest-option+.ngo-interest-option { margin-top:2px; }
+.ngo-interest-option:hover,.ngo-interest-option.is-active { background:#fff4ec; color:#b93e00; }
+.ngo-interest-option[aria-selected="true"] { background:#fff0e4; color:#b93e00; font-weight:600; }
+.ngo-interest-option[aria-selected="true"]::after { content:"✓"; position:absolute; top:12px; right:13px; color:#d44a00; }
+@media(max-width:767px) { .ngo-interest-trigger { font-size:16px; } .ngo-interest-option { min-height:46px; font-size:15px; } }
+@media(prefers-reduced-motion:reduce) { .ngo-interest-option,.ngo-demo-interest.is-enhanced::after { transition:none; } }
+
+/* Slightly smaller workflow illustration, centered at every screen size. */
+main.ngo-crm-page .donexia-lifecycle-section .donexia-lifecycle-visual { width:88%; max-width:780px; margin-inline:auto; }
+@media(max-width:575px) { main.ngo-crm-page .donexia-lifecycle-section .donexia-lifecycle-visual { width:94%; } }

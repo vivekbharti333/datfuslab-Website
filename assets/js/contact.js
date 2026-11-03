@@ -56,9 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     .getElementById("subject")
                     .value,
 
-                notes: document
-                    .getElementById("message")
-                    .value.trim()
+                notes: [document.getElementById("message").value.trim(), document.getElementById("enquiryInterest")?.value ? "Interested in: " + document.getElementById("enquiryInterest").value : ""].filter(Boolean).join("\n")
             }
         };
 
@@ -103,14 +101,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     value: isDemoRequest ? 1000 : 500
                 });
 
-                const successMessage =
-                    payload.respMesg ||
-                    result.responseMessage ||
-                    "Message sent successfully.";
+                const successMessage = "Our team will get back to you soon.";
 
                 messageDiv.innerHTML = `
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>Success!</strong> ${escapeHtml(successMessage)}
+                        <strong>Enquiry received.</strong><br/>${escapeHtml(successMessage)}
                         <button
                             type="button"
                             class="btn-close"
