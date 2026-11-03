@@ -35,7 +35,7 @@
 .ngo-demo-assurances { display:grid; grid-template-columns:repeat(3,1fr); border-radius:15px; padding:14px 4px; background:#fff6ef; margin-top:16px; }
 .ngo-demo-assurances span { text-align:center; color:#142237; font-size:11px; font-weight:600; }
 .ngo-demo-assurances i { display:block; color:#d44a00; font-size:21px; margin-bottom:7px; }
-.ngo-demo-proof { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; margin-top:38px; padding:24px 28px; border-radius:24px; background:#fff3ea; }
+.ngo-demo-proof { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:22px; margin-top:38px; padding:24px 28px; border-radius:24px; background:#fff3ea; }
 .ngo-demo-proof>div { display:flex; align-items:center; justify-content:center; gap:17px; }
 .ngo-demo-proof>div+div { border-left:1px solid #e1d8d0; }
 .ngo-demo-proof i { color:#d44a00; font-size:30px; }
@@ -76,15 +76,23 @@ main.ngo-crm-page .ngo-demo-hero .ngo-hero-trust { gap:8px 15px; margin:18px 0 0
 .ngo-demo-heading>span { width:44px; height:44px; }
 .ngo-demo-heading>span .ngo-icon { width:25px; height:25px; }
 main.ngo-crm-page .ngo-demo-heading h2 { font-size:26px!important; line-height:1.15!important; letter-spacing:-.025em!important; margin:0 0 10px; }
-.ngo-demo-heading p { font-size:13px; line-height:1.6; }
+.ngo-demo-heading p { font-size:12px; line-height:1.6; }
 .ngo-demo-field>.ngo-icon { width:18px; height:18px; color:#65748a; }
 .ngo-demo-card .ngo-demo-field :is(input,select,textarea) { font-size:14px; height:46px; }
 .ngo-demo-card .ngo-demo-field textarea { height:64px; }
 .ngo-demo-submit { min-height:50px; font-size:16px; }
 .ngo-demo-assurances span { display:flex; flex-direction:column; align-items:center; gap:7px; font-size:10px; }
 .ngo-demo-assurances .ngo-icon { color:#d44a00; }
-.ngo-demo-proof { margin-top:36px; padding:23px; border-radius:18px; }
-.ngo-demo-proof>div>.ngo-icon { width:29px; height:29px; color:#d44a00; }
+.ngo-demo-proof { margin-top:36px; padding:24px 12px; border-radius:18px; gap:0; }
+.ngo-demo-proof>div { justify-content:flex-start; align-items:flex-start; gap:14px; padding:4px 20px; }
+.ngo-demo-proof>div>span { min-width:0; line-height:1.5; }
+.ngo-demo-proof strong { font-size:16px; line-height:1.35; margin-bottom:5px; }
+.ngo-demo-proof>div>.ngo-icon { margin-top:3px; }
+@media(min-width:992px) and (max-width:1199px) {
+ .ngo-demo-proof { grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px 0; }
+ .ngo-demo-proof>div { border:0; }
+}
+.ngo-demo-proof>div>.ngo-icon { width:29px; height:29px; flex-shrink:0; color:#d44a00; }
 @media(max-width:1399px) {
  .ngo-demo-grid { grid-template-columns:minmax(0,1fr) 370px; gap:26px; }
  .ngo-demo-intro { grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); }
@@ -162,3 +170,8 @@ main.ngo-crm-page .ngo-demo-heading h2 { font-size:26px!important; line-height:1
 /* Slightly smaller workflow illustration, centered at every screen size. */
 main.ngo-crm-page .donexia-lifecycle-section .donexia-lifecycle-visual { width:88%; max-width:780px; margin-inline:auto; }
 @media(max-width:575px) { main.ngo-crm-page .donexia-lifecycle-section .donexia-lifecycle-visual { width:94%; } }
+
+/* Guided start call to action. */
+.donexia-onboarding-section .thm-btn--three { background:#d44a00; color:#fff; }
+.donexia-onboarding-section .thm-btn--three span { background:#ffbd8e; }
+.donexia-onboarding-section .thm-btn--three::before { background:#b93e00; }
