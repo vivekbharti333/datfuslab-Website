@@ -1,0 +1,192 @@
+.digital-reference-page{--dr-orange:#f56708;--dr-ink:#121820;--dr-muted:#58606c;color:var(--dr-ink);font-family:Inter,Arial,sans-serif;background:#fff;isolation:isolate}
+.digital-reference-page *{box-sizing:border-box}
+.digital-reference-page .dr-wrap{width:min(1240px,calc(100% - 64px));margin-inline:auto}
+.digital-reference-page h1,.digital-reference-page h2,.digital-reference-page h3,.digital-reference-page p{margin:0;font-family:inherit;color:inherit}
+.digital-reference-page h1,.digital-reference-page h2,.digital-reference-page h3{font-weight:750;letter-spacing:-.04em}
+.digital-reference-page h1{font-size:clamp(40px,4.3vw,64px);line-height:1.04;max-width:630px;margin:14px 0 22px}
+.digital-reference-page h1 span{color:#ef5d00;display:block}
+.digital-reference-page p{font-size:15px;line-height:1.65;color:var(--dr-muted)}
+.digital-reference-page .dr-icon{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.digital-reference-page .dr-symbols{position:absolute;width:0;height:0;overflow:hidden}
+.digital-reference-page .dr-eyebrow{display:block;color:#e95c00;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.digital-reference-page .dr-hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#fff 25%,#fff7f0 75%,#ffeddd);padding:146px 0 24px}
+.digital-reference-page .dr-hero:after{content:"";position:absolute;z-index:0;width:670px;height:670px;right:-220px;top:-360px;border:80px solid #ffdbb9;border-radius:46%;transform:rotate(-28deg)}
+.digital-reference-page .dr-hero-layout{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.05fr;gap:10px;align-items:center}
+.digital-reference-page .dr-hero-copy{padding-block:22px;position:relative;z-index:1}
+.digital-reference-page .dr-tag{display:inline-flex;align-items:center;gap:7px;border-radius:30px;background:#fff0e3;color:#ce5100;font-size:11px;font-weight:700;padding:6px 11px}
+.digital-reference-page .dr-tag .dr-icon{width:16px;height:16px}
+.digital-reference-page .dr-hero-copy>p{max-width:510px;font-size:16px;line-height:1.6;color:#414953}
+.digital-reference-page .dr-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:25px}
+.digital-reference-page .dr-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;border:1px solid #f16c22;border-radius:8px;padding:12px 20px;color:#fff;background:linear-gradient(135deg,#ff791a,#ee5200);font-size:13px;font-weight:750;line-height:1.3;text-decoration:none;transition:background .18s,transform .18s;box-shadow:0 6px 14px #e85a001a}
+.digital-reference-page .dr-button:hover{background:#d84b00;transform:translateY(-2px);color:#fff}
+.digital-reference-page .dr-button.secondary{background:#fff;color:#20252c;box-shadow:none;border-color:#f7b17d}
+.digital-reference-page .dr-button .dr-icon{width:18px;height:18px}
+.digital-reference-page a:focus-visible{outline:3px solid #20252c;outline-offset:5px}
+.digital-reference-page .dr-proof{display:flex;flex-wrap:wrap;gap:12px 20px;margin:23px 0 0;padding:0;list-style:none;font-size:11px;font-weight:600;color:#545861}
+.digital-reference-page .dr-proof li{display:flex;align-items:center;gap:5px}
+.digital-reference-page .dr-proof .dr-icon{width:14px;height:14px;color:#ff6a0b;stroke-width:3}
+.digital-reference-page .dr-hero-art{margin:0;position:relative;min-width:0}
+.digital-reference-page .dr-hero-art img{display:block;width:110%;max-width:none;height:auto;margin-left:-4%}
+.digital-reference-page .dr-service-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:18px;position:relative;z-index:1}
+.digital-reference-page .dr-service{display:flex;align-items:center;gap:17px;background:#fff8f2;border:1px solid #fff3e9;border-radius:14px;padding:20px 22px}
+.digital-reference-page .dr-icon-box{display:grid;place-items:center;flex-shrink:0;width:53px;height:53px;border-radius:12px;color:#f76b0b;background:#ffead7}
+.digital-reference-page .dr-service h2{font-size:17px;letter-spacing:-.025em;margin:0 0 5px}
+.digital-reference-page .dr-service p{font-size:12px;line-height:1.5}
+.digital-reference-page .dr-why{padding:47px 0 27px}
+.digital-reference-page .dr-why-grid{display:grid;grid-template-columns:1.05fr .85fr 1.1fr;gap:27px;align-items:center}
+.digital-reference-page .dr-team-photo{margin:0;position:relative;padding:6px}
+.digital-reference-page .dr-team-photo:before{content:"";position:absolute;inset:0;border:3px solid #f3782f;border-radius:45px 17px 42px 17px;transform:rotate(-2deg)}
+.digital-reference-page .dr-team-photo img{position:relative;width:100%;height:258px;object-fit:cover;object-position:50% 48%;display:block;border-radius:39px 14px 37px 14px}
+.digital-reference-page .dr-why-copy h2{font-size:29px;line-height:1.12;margin:0 0 16px}
+.digital-reference-page .dr-why-copy p{font-size:13px;line-height:1.65}
+.digital-reference-page .dr-reasons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.digital-reference-page .dr-reason{border:1px solid #f0e6df;border-radius:11px;background:#fff;box-shadow:0 3px 10px #64330c05;padding:15px 11px;display:flex;gap:10px;align-items:flex-start;min-height:106px}
+.digital-reference-page .dr-reason>.dr-icon{width:25px;height:25px;color:#f56b15}
+.digital-reference-page .dr-reason h3{font-size:12px;line-height:1.3;letter-spacing:-.01em;margin:0 0 6px}
+.digital-reference-page .dr-reason p{font-size:10px;line-height:1.5}
+.digital-reference-page .dr-section-head{text-align:center;max-width:850px;margin:0 auto 26px}
+.digital-reference-page .dr-section-head h2{font-size:34px;line-height:1.14;margin:0 0 10px}
+.digital-reference-page .dr-section-head p{font-size:13px;line-height:1.6}
+.digital-reference-page .dr-process{padding:25px 0 29px;scroll-margin-top:110px}
+.digital-reference-page .dr-process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.digital-reference-page .dr-step{position:relative;padding:23px 19px 21px 30px;border:1px solid #fff0e3;border-radius:15px;background:linear-gradient(130deg,#fff9f4,#ffecdc);min-height:155px}
+.digital-reference-page .dr-step:not(:last-child):after{content:"›";position:absolute;right:-18px;top:53%;font-size:30px;line-height:1;color:#edb18b}
+.digital-reference-page .dr-step-number{position:absolute;top:10px;left:-11px;width:27px;height:27px;display:grid;place-items:center;border-radius:50%;background:#ff750c;color:white;font-size:13px;font-weight:750;box-shadow:0 2px 6px #ee690025}
+.digital-reference-page .dr-step>.dr-icon{width:31px;height:31px;color:#f77512;margin-bottom:11px}
+.digital-reference-page .dr-step h3{font-size:14px;line-height:1.3;letter-spacing:-.02em;margin:0 0 8px}
+.digital-reference-page .dr-step p{font-size:11px;line-height:1.65}
+.digital-reference-page .dr-outcomes{padding:25px 0 31px}
+.digital-reference-page .dr-outcome-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px 20px}
+.digital-reference-page .dr-outcome{display:flex;gap:15px;align-items:flex-start;border:1px solid #f2e9e2;border-radius:13px;padding:17px;background:#fff;box-shadow:0 3px 9px #54321904}
+.digital-reference-page .dr-outcome .dr-icon-box{width:48px;height:48px;background:#fff3df;color:#ff9b00}
+.digital-reference-page .dr-outcome:nth-child(2n) .dr-icon-box{color:#ff7036;background:#fff0e7}
+.digital-reference-page .dr-outcome h3{font-size:15px;letter-spacing:-.02em;margin:0 0 5px;line-height:1.3}
+.digital-reference-page .dr-outcome p{font-size:11px;line-height:1.6}
+.digital-reference-page .dr-operations{position:relative;overflow:hidden;padding:34px 0 46px;background:linear-gradient(120deg,#fff1e1,#fffbf5 40%,#fff3e6);border-radius:55px 55px 0 0}
+.digital-reference-page .dr-operations:before,.digital-reference-page .dr-operations:after{content:"";position:absolute;pointer-events:none;width:360px;height:360px;border:48px solid #ffe2c4;border-radius:50%;opacity:.52}
+.digital-reference-page .dr-operations:before{left:-190px;top:0}.digital-reference-page .dr-operations:after{right:-180px;top:10px}
+.digital-reference-page .dr-operations .dr-wrap{position:relative;z-index:1}
+.digital-reference-page .dr-operations-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.digital-reference-page .dr-operation{background:#fff;border:1px solid #fff;border-radius:17px;padding:16px 20px 23px;box-shadow:0 8px 25px #a9651608}
+.digital-reference-page .dr-operation-art{height:94px;display:flex;align-items:center;justify-content:center;gap:14px;background:linear-gradient(110deg,#fff,#fff3e4,#fff);border-radius:12px;margin-bottom:15px}
+.digital-reference-page .dr-operation-art>.dr-icon{width:62px;height:62px;color:#f8750b;stroke-width:1.5}
+.digital-reference-page .dr-operation-art>.dr-icon:first-child{width:37px;height:37px;color:#ffb94b;transform:rotate(-8deg)}
+.digital-reference-page .dr-operation-art>.dr-icon:last-child{width:40px;height:40px;color:#ed9c50;transform:rotate(8deg)}
+.digital-reference-page .dr-operation h3{font-size:17px;line-height:1.3;letter-spacing:-.02em;margin:0 0 9px}
+.digital-reference-page .dr-operation p{font-size:12px;line-height:1.6}
+@media(min-width:1600px){.digital-reference-page .dr-hero{padding-top:160px}}
+@media(max-width:1100px){.digital-reference-page .dr-wrap{width:calc(100% - 44px)}.digital-reference-page .dr-why-grid{grid-template-columns:1fr 1fr;gap:25px}.digital-reference-page .dr-reasons{grid-column:1/-1;grid-template-columns:repeat(4,1fr)}.digital-reference-page .dr-reason{min-height:100px}.digital-reference-page .dr-service{padding:16px 13px;gap:11px}.digital-reference-page .dr-service h2{font-size:15px}.digital-reference-page .dr-service .dr-icon-box{width:43px;height:43px}.digital-reference-page .dr-step{padding-left:22px}.digital-reference-page h1{font-size:47px}}
+@media(max-width:767px){.digital-reference-page .dr-wrap{width:calc(100% - 36px)}.digital-reference-page .dr-hero{padding:110px 0 20px}.digital-reference-page .dr-hero-layout{grid-template-columns:1fr}.digital-reference-page h1{font-size:clamp(36px,9vw,53px);max-width:540px}.digital-reference-page .dr-hero-copy>p{font-size:15px}.digital-reference-page .dr-hero-art{width:100%;max-width:570px;justify-self:center}.digital-reference-page .dr-hero-art img{width:100%;margin:0}.digital-reference-page .dr-service-strip{grid-template-columns:1fr;gap:10px;margin-top:5px}.digital-reference-page .dr-service{padding:16px 18px}.digital-reference-page .dr-service h2{font-size:17px}.digital-reference-page .dr-why{padding-top:30px}.digital-reference-page .dr-why-grid{grid-template-columns:1fr}.digital-reference-page .dr-team-photo{max-width:540px;width:100%;margin:auto}.digital-reference-page .dr-team-photo img{height:auto;aspect-ratio:1.55;object-fit:cover}.digital-reference-page .dr-why-copy h2{font-size:30px}.digital-reference-page .dr-why-copy p{font-size:14px}.digital-reference-page .dr-reasons{grid-template-columns:1fr 1fr;gap:10px}.digital-reference-page .dr-reason{padding:16px 12px;min-height:120px}.digital-reference-page .dr-reason h3{font-size:13px}.digital-reference-page .dr-reason p{font-size:12px}.digital-reference-page .dr-section-head h2{font-size:29px}.digital-reference-page .dr-section-head p{font-size:13px}.digital-reference-page .dr-process-grid{grid-template-columns:1fr 1fr;gap:16px 22px;padding-left:10px}.digital-reference-page .dr-step:not(:last-child):after{display:none}.digital-reference-page .dr-step h3{font-size:14px}.digital-reference-page .dr-step p{font-size:12px}.digital-reference-page .dr-outcome-grid{grid-template-columns:1fr;gap:11px}.digital-reference-page .dr-outcome h3{font-size:16px}.digital-reference-page .dr-outcome p{font-size:13px}.digital-reference-page .dr-operations{border-radius:30px 30px 0 0;padding:30px 0}.digital-reference-page .dr-operations-grid{grid-template-columns:1fr;gap:16px}.digital-reference-page .dr-operation p{font-size:13px}}
+@media(max-width:380px){.digital-reference-page .dr-reasons,.digital-reference-page .dr-process-grid{grid-template-columns:1fr}.digital-reference-page .dr-reason{min-height:0}.digital-reference-page .dr-proof{gap:10px}.digital-reference-page .dr-button{padding:12px 14px}}
+@media(prefers-reduced-motion:reduce){.digital-reference-page *{scroll-behavior:auto!important;transition:none!important}}
+
+/* Adjust the shared visual language to the website-design reference. */
+.digital-reference-page h1{font-size:clamp(36px,3.7vw,55px);line-height:1.07;max-width:650px;letter-spacing:-.045em}
+.digital-reference-page h1 span{display:inline}
+.digital-reference-page .dr-hero-layout{grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:48px}
+.digital-reference-page .dr-hero-art img{width:100%;height:auto;margin:0}
+.digital-reference-page .dr-service-strip{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:27px}
+.digital-reference-page .dr-service{padding:17px 13px;gap:12px;background:#fffaf6;border-color:#f6ece4}
+.digital-reference-page .dr-service .dr-icon-box{width:45px;height:45px;background:#fff0db}
+.digital-reference-page .dr-service h2{font-size:13px;line-height:1.3;letter-spacing:-.02em}
+.digital-reference-page .dr-service p{font-size:11px}
+.digital-reference-page .dr-why{padding:35px 0 25px}
+.digital-reference-page .dr-why-grid{grid-template-columns:1.12fr 1fr .95fr;gap:30px}
+.digital-reference-page .dr-team-photo img{height:290px;object-position:50% 50%}
+.digital-reference-page .dr-why-copy h2{font-size:31px}
+.digital-reference-page .dr-reasons{grid-template-columns:1fr;gap:9px}
+.digital-reference-page .dr-reason{min-height:0;padding:11px 13px;gap:12px;border-radius:9px}
+.digital-reference-page .dr-reason h3{font-size:12px;margin-bottom:3px}
+.digital-reference-page .dr-reason p{font-size:10px}
+.digital-reference-page .dr-step{min-height:145px}
+.digital-reference-page .dr-step:not(:last-child):after{content:"→";right:-22px;top:50%;font-size:23px;color:#f8792f}
+.digital-reference-page .dr-features{padding:21px 0 27px}
+.digital-reference-page .dr-feature-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.digital-reference-page .dr-feature{display:flex;gap:12px;padding:17px 14px;border:1px solid #f5e9df;border-radius:12px;box-shadow:0 5px 15px #a45b1407;background:#fff;align-items:flex-start}
+.digital-reference-page .dr-feature .dr-icon-box{width:43px;height:43px;color:#ff8800;background:#fff3df}
+.digital-reference-page .dr-feature h3{font-size:13px;line-height:1.3;letter-spacing:-.02em;margin-bottom:5px}
+.digital-reference-page .dr-feature p{font-size:11px;line-height:1.55}
+.digital-reference-page .dr-work{position:relative;overflow:hidden;padding:27px 0 40px;background:linear-gradient(120deg,#fff6e9,#fffaf5 50%,#ffeadc);scroll-margin-top:110px}
+.digital-reference-page .dr-work:before{content:"";position:absolute;width:560px;height:560px;border:85px solid #ffe1c1;border-radius:50%;top:40px;left:-250px;opacity:.4}
+.digital-reference-page .dr-work>.dr-wrap{position:relative}
+.digital-reference-page .dr-work-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:23px}
+.digital-reference-page .dr-project{margin:0;text-align:center}
+.digital-reference-page .dr-project img{display:block;width:100%;height:auto;border-radius:10px;box-shadow:0 8px 18px #4b281719;background:#fff}
+.digital-reference-page .dr-project figcaption{display:inline-block;margin-top:13px;padding:5px 16px;border-radius:24px;background:#ffead2;color:#a3420a;font-size:12px;font-weight:700}
+@media(max-width:1100px){.digital-reference-page .dr-service-strip,.digital-reference-page .dr-feature-grid{grid-template-columns:1fr 1fr}.digital-reference-page .dr-why-grid{grid-template-columns:1fr 1fr}.digital-reference-page .dr-reasons{grid-column:1/-1;grid-template-columns:repeat(4,minmax(0,1fr))}.digital-reference-page .dr-service h2{font-size:15px}.digital-reference-page .dr-reason{display:block;padding:14px}.digital-reference-page .dr-reason>.dr-icon{margin-bottom:10px}.digital-reference-page .dr-hero-layout{gap:30px}.digital-reference-page .dr-work-grid{gap:15px}}
+@media(max-width:767px){.digital-reference-page .dr-hero-layout{grid-template-columns:1fr;gap:25px}.digital-reference-page h1{font-size:clamp(35px,8.5vw,50px)}.digital-reference-page .dr-hero-art{max-width:560px}.digital-reference-page .dr-service-strip{gap:10px;margin-top:15px}.digital-reference-page .dr-service{display:block;padding:14px}.digital-reference-page .dr-service .dr-icon-box{margin-bottom:12px}.digital-reference-page .dr-service h2{font-size:14px}.digital-reference-page .dr-service p{font-size:12px}.digital-reference-page .dr-why-grid{grid-template-columns:1fr;gap:24px}.digital-reference-page .dr-team-photo img{height:auto;aspect-ratio:1.5}.digital-reference-page .dr-reasons{grid-template-columns:1fr 1fr}.digital-reference-page .dr-reason{display:flex}.digital-reference-page .dr-reason h3{font-size:12px}.digital-reference-page .dr-reason p{font-size:11px}.digital-reference-page .dr-feature-grid{grid-template-columns:1fr 1fr;gap:10px}.digital-reference-page .dr-feature{display:block;padding:14px}.digital-reference-page .dr-feature .dr-icon-box{margin-bottom:12px}.digital-reference-page .dr-feature h3{font-size:14px}.digital-reference-page .dr-feature p{font-size:12px}.digital-reference-page .dr-work-grid{grid-template-columns:1fr 1fr;gap:25px 14px}.digital-reference-page .dr-project figcaption{padding-inline:11px;font-size:11px}}
+@media(max-width:380px){.digital-reference-page .dr-reasons{grid-template-columns:1fr}}
+
+/* Mobile-app reference layout. */
+.digital-reference-page h1{font-size:clamp(38px,3.8vw,57px);line-height:1.02;letter-spacing:-.045em;max-width:600px}
+.digital-reference-page h1 span{display:block;color:#f26300}
+.digital-reference-page .dr-hero-layout{gap:50px;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)}
+.digital-reference-page .dr-hero-art img{width:100%;margin:0;max-width:100%}
+.digital-reference-page .dr-hero-copy>p{max-width:490px}
+.digital-reference-page .dr-why-grid{grid-template-columns:1fr 1.08fr .98fr;gap:30px}
+.digital-reference-page .dr-team-photo img{height:270px;object-position:45% 50%}
+.digital-reference-page .dr-why-copy h2{font-size:30px}
+.digital-reference-page .dr-services{padding:20px 0 27px}
+.digital-reference-page .dr-services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.digital-reference-page .dr-app-service{display:flex;align-items:flex-start;gap:12px;padding:16px 12px;background:#fff;border:1px solid #f4e9df;border-radius:12px;box-shadow:0 4px 12px #9d581609}
+.digital-reference-page .dr-app-service .dr-icon-box{width:42px;height:42px;background:#fff1df;color:#fb7611}
+.digital-reference-page .dr-app-service:first-child .dr-icon-box{color:#75be20;background:#f3fae9}
+.digital-reference-page .dr-app-service:nth-child(2) .dr-icon-box{color:#20262e;background:#f4f4f4}
+.digital-reference-page .dr-app-service h3{font-size:13px;line-height:1.35;letter-spacing:-.02em;margin:0 0 6px}
+.digital-reference-page .dr-app-service p{font-size:11px;line-height:1.6}
+.digital-reference-page .dr-industries{position:relative;overflow:hidden;background:linear-gradient(115deg,#fff0dc,#fffaf3 50%,#ffeddb);padding:23px 0 31px}
+.digital-reference-page .dr-industries:before{content:"";position:absolute;width:470px;height:470px;border:70px solid #ffe0b6;border-radius:50%;left:-220px;top:20px;opacity:.45}
+.digital-reference-page .dr-industries>.dr-wrap{position:relative}
+.digital-reference-page .dr-industries .dr-section-head{margin-bottom:21px}
+.digital-reference-page .dr-industries-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:12px}
+.digital-reference-page .dr-industry{padding:16px 6px;background:#fff2e1;border:1px solid #ffe9ce;border-radius:12px;text-align:center}
+.digital-reference-page .dr-industry>.dr-icon{width:29px;height:29px;color:#fd810d;margin-bottom:10px}
+.digital-reference-page .dr-industry h3{font-size:11px;line-height:1.4;letter-spacing:-.01em}
+.digital-reference-page .dr-cta{position:relative;overflow:hidden;padding:25px 0;background:linear-gradient(110deg,#ff970d,#fa6600 48%,#ff8900);color:#fff}
+.digital-reference-page .dr-cta:after{content:"";position:absolute;right:-80px;bottom:-170px;width:440px;height:280px;border-radius:50%;background:#ffc84a;transform:rotate(-25deg);opacity:.5}
+.digital-reference-page .dr-cta-layout{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.digital-reference-page .dr-cta-copy{display:flex;align-items:center;gap:18px}
+.digital-reference-page .dr-cta-copy>.dr-icon{width:37px;height:37px}
+.digital-reference-page .dr-cta h2{font-size:27px;line-height:1.2;color:#fff;margin-bottom:5px}
+.digital-reference-page .dr-cta p{font-size:14px;color:#fff}
+.digital-reference-page .dr-cta .dr-button{background:#fff;color:#e75b00;border-color:#fff;box-shadow:none;font-size:13px;flex-shrink:0}
+.digital-reference-page .dr-cta .dr-button:hover{background:#fff4df;color:#b84000}
+@media(max-width:1100px){.digital-reference-page .dr-why-grid{grid-template-columns:1fr 1fr}.digital-reference-page .dr-services-grid{grid-template-columns:1fr 1fr}.digital-reference-page .dr-industries-grid{grid-template-columns:repeat(4,1fr)}.digital-reference-page .dr-industry h3{font-size:12px}}
+@media(max-width:767px){.digital-reference-page .dr-hero-layout{grid-template-columns:1fr;gap:25px}.digital-reference-page h1{font-size:clamp(37px,9vw,52px)}.digital-reference-page .dr-why-grid{grid-template-columns:1fr}.digital-reference-page .dr-why-copy h2{font-size:30px}.digital-reference-page .dr-team-photo img{height:auto;aspect-ratio:1.5}.digital-reference-page .dr-services-grid{gap:10px}.digital-reference-page .dr-app-service{display:block;padding:15px}.digital-reference-page .dr-app-service .dr-icon-box{margin-bottom:12px}.digital-reference-page .dr-app-service h3{font-size:14px}.digital-reference-page .dr-app-service p{font-size:12px}.digital-reference-page .dr-industries-grid{grid-template-columns:repeat(2,1fr);gap:10px}.digital-reference-page .dr-industry{padding:17px 10px}.digital-reference-page .dr-cta-layout{flex-direction:column;align-items:flex-start;gap:20px}.digital-reference-page .dr-cta .dr-button{align-self:stretch}.digital-reference-page .dr-cta h2{font-size:25px}}
+
+/* Digital-marketing reference: five capabilities, sample metric overlays and broad campaign artwork. */
+.digital-reference-page{--dr-ink:#080f29}
+.digital-reference-page .dr-hero{padding-bottom:26px}
+.digital-reference-page .dr-hero-layout{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:45px}
+.digital-reference-page h1{font-size:clamp(38px,3.7vw,56px);line-height:1.03}
+.digital-reference-page h1 span{position:relative;display:block;width:fit-content;color:#ff5708;padding-bottom:9px}
+.digital-reference-page h1 span:after{content:"";position:absolute;left:41%;right:4%;height:12px;border-top:4px solid #fa5d06;border-radius:50%;bottom:-6px;transform:rotate(-3deg)}
+.digital-reference-page .dr-hero-art img{width:100%;max-width:100%;margin:0}
+.digital-reference-page .dr-service-strip{grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}
+.digital-reference-page .dr-service{background:#fff;border-color:#f5eee9;box-shadow:0 4px 12px #4a231208;padding:17px 12px;align-items:flex-start;gap:10px}
+.digital-reference-page .dr-service .dr-icon-box{width:39px;height:39px;background:#fff7ee;color:#ff7700}
+.digital-reference-page .dr-service h2{font-size:13px;line-height:1.3}
+.digital-reference-page .dr-service p{font-size:11px}
+.digital-reference-page .dr-why-grid{grid-template-columns:1.12fr .8fr .96fr;gap:29px}
+.digital-reference-page .dr-team-photo img{height:290px;object-position:35% 50%}
+.digital-reference-page .dr-why-copy h2{font-size:32px;line-height:1.08}
+.digital-reference-page .dr-why-copy p{font-size:13px}
+.digital-reference-page .dr-example-traffic{position:absolute;top:26px;right:24px;padding:12px 12px 50px;width:160px;border-radius:12px;background:#fffffff2;box-shadow:0 5px 16px #2a28140e;color:#101828}
+.digital-reference-page .dr-example-traffic>span:first-child,.digital-reference-page .dr-example-leads span{display:block;font-size:10px;font-weight:700;line-height:1.4}
+.digital-reference-page .dr-example-traffic strong{display:block;color:#009b45;font-size:26px;font-weight:800;line-height:1.3;margin-block:4px}
+.digital-reference-page .dr-example-traffic small{display:block;color:#5a6471;font-size:9px;line-height:1.5}
+.digital-reference-page .dr-mini-bars{position:absolute;display:flex;align-items:flex-end;gap:5px;right:12px;bottom:10px;height:37px}
+.digital-reference-page .dr-mini-bars i{width:12px;height:9px;border-radius:2px;background:linear-gradient(#ffb500,#ff7800)}
+.digital-reference-page .dr-mini-bars i:nth-child(2){height:15px}.digital-reference-page .dr-mini-bars i:nth-child(3){height:21px}.digital-reference-page .dr-mini-bars i:nth-child(4){height:29px}.digital-reference-page .dr-mini-bars i:nth-child(5){height:37px}
+.digital-reference-page .dr-example-leads{position:absolute;right:24px;bottom:34px;display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:11px;background:#fffffff2;box-shadow:0 4px 13px #2a28140e}
+.digital-reference-page .dr-example-leads>.dr-icon{width:30px;height:30px;color:#ff8300}.digital-reference-page .dr-example-leads strong{display:block;color:#009b45;font-size:23px;line-height:1.3}
+.digital-reference-page .dr-reason{box-shadow:0 3px 10px #6d39240a}
+.digital-reference-page .dr-reason>.dr-icon{color:#ff7a00}
+.digital-reference-page .dr-app-service:first-child .dr-icon-box,.digital-reference-page .dr-app-service:nth-child(2) .dr-icon-box{background:#fff7ee;color:#ff7900}
+.digital-reference-page .dr-app-service h3{font-size:13px}
+.digital-reference-page .dr-cta-copy>.dr-icon{width:65px;height:65px;stroke-width:1.6;transform:rotate(-12deg)}
+.digital-reference-page .dr-cta h2{font-size:29px}
+.digital-reference-page .dr-cta{padding:25px 0;background:linear-gradient(100deg,#ff8e00,#ff5700 55%,#ff8b00)}
+@media(max-width:1100px){.digital-reference-page .dr-service-strip{grid-template-columns:repeat(3,minmax(0,1fr))}.digital-reference-page .dr-why-grid{grid-template-columns:1.1fr 1fr}.digital-reference-page .dr-reasons{grid-template-columns:repeat(4,minmax(0,1fr))}.digital-reference-page .dr-cta h2{font-size:25px}}
+@media(max-width:767px){.digital-reference-page .dr-hero-layout{grid-template-columns:1fr;gap:28px}.digital-reference-page h1{font-size:clamp(37px,8.7vw,52px)}.digital-reference-page .dr-service-strip{grid-template-columns:1fr 1fr;gap:10px}.digital-reference-page .dr-service{display:flex;padding:14px 10px;gap:9px}.digital-reference-page .dr-service .dr-icon-box{width:32px;height:32px;margin-bottom:0}.digital-reference-page .dr-service .dr-icon{width:24px;height:24px}.digital-reference-page .dr-service h2{font-size:13px}.digital-reference-page .dr-service p{font-size:11px}.digital-reference-page .dr-why-grid{grid-template-columns:1fr}.digital-reference-page .dr-team-photo img{height:auto;aspect-ratio:1.45}.digital-reference-page .dr-reasons{grid-template-columns:1fr 1fr}.digital-reference-page .dr-why-copy h2{font-size:31px}.digital-reference-page .dr-why-copy p{font-size:14px}.digital-reference-page .dr-example-traffic{right:20px;top:20px;width:145px}.digital-reference-page .dr-example-leads{right:20px;bottom:24px}.digital-reference-page .dr-app-service h3{font-size:14px}.digital-reference-page .dr-cta-copy{align-items:flex-start;gap:14px}.digital-reference-page .dr-cta-copy>.dr-icon{width:43px;height:43px}.digital-reference-page .dr-cta h2{font-size:25px}}
+@media(max-width:380px){.digital-reference-page .dr-service-strip,.digital-reference-page .dr-reasons{grid-template-columns:1fr}}

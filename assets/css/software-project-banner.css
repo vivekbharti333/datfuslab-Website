@@ -1,0 +1,13 @@
+.sd-reference-page .sd-project-banner{position:relative;overflow:hidden;background:linear-gradient(100deg,#d84700 0%,#d43c00 55%,#c93b00 100%);border-top:3px solid #fff1df;border-bottom:1px solid #eebc77;padding:22px 0;color:#fff}
+.sd-reference-page .sd-project-banner:before,.sd-reference-page .sd-project-banner:after{content:"";position:absolute;pointer-events:none;border-radius:50%;border-top:2px solid #ffbb21;background:linear-gradient(160deg,#ffba16,#ff7800 62%,#e64c00)}
+.sd-reference-page .sd-project-banner:before{width:340px;height:150px;left:-120px;bottom:-119px;transform:rotate(12deg)}
+.sd-reference-page .sd-project-banner:after{width:440px;height:160px;right:-155px;bottom:-85px;transform:rotate(-32deg)}
+.sd-reference-page .sd-project-banner .sd-wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:38px}
+.sd-reference-page .sd-project-banner h2{margin:0;color:#fff;font-family:inherit;font-size:clamp(24px,2.2vw,31px);font-weight:750;line-height:1.14;letter-spacing:-.025em;max-width:800px}
+.sd-reference-page .sd-project-banner h2 span{color:#ffdd25}
+.sd-reference-page .sd-project-banner-link{display:inline-flex;align-items:center;justify-content:center;gap:12px;flex-shrink:0;min-height:48px;padding:13px 25px;border:1px solid #ffe1d0;border-radius:13px;background:#fff;color:#c43a00;font-family:inherit;font-size:15px;font-weight:750;line-height:1.3;text-decoration:none;box-shadow:0 4px 10px #7c2a0015;transition:background .18s,transform .18s}
+.sd-reference-page .sd-project-banner-link svg{display:block;width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sd-reference-page .sd-project-banner-link:hover{background:#fff4e3;color:#a63200;transform:translateY(-2px)}
+.sd-reference-page .sd-project-banner-link:focus-visible{outline:3px solid #17283a;outline-offset:4px}
+@media(max-width:767px){.sd-reference-page .sd-project-banner{padding:25px 0}.sd-reference-page .sd-project-banner .sd-wrap{flex-direction:column;align-items:flex-start;gap:20px}.sd-reference-page .sd-project-banner h2{font-size:26px;max-width:560px}.sd-reference-page .sd-project-banner h2 br{display:none}.sd-reference-page .sd-project-banner-link{width:100%;font-size:14px;min-height:48px}.sd-reference-page .sd-project-banner:after{right:-230px}}
+@media(prefers-reduced-motion:reduce){.sd-reference-page .sd-project-banner-link{transition:none}}

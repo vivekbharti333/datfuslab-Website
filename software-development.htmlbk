@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html lang="en-IN">
+<head>
+<!--========= Required meta tags =========-->
+<meta charset="utf-8"/>
+<meta content="ie=edge" http-equiv="x-ua-compatible"/>
+
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+
+<!-- Google tag (gtag.js) -->
+<script defer src="assets/js/analytics.js"></script>
+<link href="assets/img/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<!-- css include -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/css/fontawesome.css" rel="stylesheet"/>
+<link href="assets/css/animate.css" rel="stylesheet"/>
+<link href="assets/css/swiper.min.css" rel="stylesheet"/>
+<link href="assets/css/slick.css" rel="stylesheet"/>
+<link href="assets/css/odometer.css" rel="stylesheet"/>
+<link href="assets/css/nice-select.css" rel="stylesheet"/>
+<link href="assets/css/magnific-popup.css" rel="stylesheet"/>
+<link href="assets/css/custom-font.css" rel="stylesheet"/>
+<link href="assets/css/main.css" rel="stylesheet"/>
+
+<link href="assets/css/software-services.css" rel="stylesheet"/>
+
+
+<title>Custom Software Development Company in India | Datfuslab</title>
+<meta content="Custom CRM, ERP, workflow automation and web application development services tailored to your operations, users and growth plans." name="description"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://datfuslab.com/software-development" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="Datfuslab Technologies" property="og:site_name"/>
+<meta content="Custom Software Development Company in India | Datfuslab" property="og:title"/>
+<meta content="Custom CRM, ERP, workflow automation and web application development services tailored to your operations, users and growth plans." property="og:description"/>
+<meta content="https://datfuslab.com/software-development" property="og:url"/>
+<meta content="https://datfuslab.com/assets/img/og-preview.jpg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Custom Software Development Company in India | Datfuslab" name="twitter:title"/>
+<meta content="Custom CRM, ERP, workflow automation and web application development services tailored to your operations, users and growth plans." name="twitter:description"/>
+<meta content="https://datfuslab.com/assets/img/og-preview.jpg" name="twitter:image"/>
+
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://datfuslab.com/#organization",
+      "name": "Datfuslab Technologies Pvt. Ltd.",
+      "url": "https://datfuslab.com/",
+      "logo": "https://datfuslab.com/assets/img/logo/logo-black02.png",
+      "sameAs": []
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://datfuslab.com/#website",
+      "url": "https://datfuslab.com/",
+      "name": "Datfuslab Technologies",
+      "publisher": {
+        "@id": "https://datfuslab.com/#organization"
+      },
+      "inLanguage": "en-IN"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://datfuslab.com/software-development#webpage",
+      "url": "https://datfuslab.com/software-development",
+      "name": "Custom Software Development Company in India | Datfuslab",
+      "description": "Custom CRM, ERP, workflow automation and web application development services tailored to your operations, users and growth plans.",
+      "isPartOf": {
+        "@id": "https://datfuslab.com/#website"
+      },
+      "about": {
+        "@id": "https://datfuslab.com/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://datfuslab.com/software-development#service",
+      "name": "Custom Software Development Services",
+      "serviceType": "Custom software development",
+      "url": "https://datfuslab.com/software-development",
+      "description": "Custom CRM, ERP, workflow automation, web application and enterprise software development for organisations in India.",
+      "provider": {
+        "@id": "https://datfuslab.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    }
+  ]
+}</script><link rel="stylesheet" href="assets/css/navigation-nested.css?v=20260908-footer-local">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://datfuslab.com/"}, {"@type": "ListItem", "position": 2, "name": "Software Development", "item": "https://datfuslab.com/software-development"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Software Development Service", "provider": {"@type": "Organization", "name": "Datfuslab Technologies", "url": "https://datfuslab.com/"}, "areaServed": "IN", "url": "https://datfuslab.com/software-development", "description": "Custom CRM, ERP, workflow automation and web application development services tailored to your operations, users and growth plans."}</script>
+<link rel="stylesheet" href="/assets/css/site-navigation.css?v=20261103"/>
+<link rel="stylesheet" href="assets/css/brand-loader.css?v=20261112"/>
+<noscript><style>#brand-page-loader{display:none!important}</style></noscript>
+</head>
+<body class="sco_agency software-service-page">
+<!-- Branded page loader -->
+<div id="brand-page-loader" hidden role="status" aria-live="polite" aria-label="Loading Datfuslab website">
+  <img class="brand-loader-animation" src="assets/img/loader/datfuslab-logo-loader.gif" width="484" height="363" alt="" fetchpriority="low" decoding="async"/>
+  <img class="brand-loader-static" src="assets/img/logo/logo-black02.png" width="447" height="103" alt="" decoding="async"/>
+  <span class="brand-loader-sr">Loading…</span>
+</div>
+<script async src="assets/js/brand-loader.js?v=20261112-local2"></script>
+
+<!-- backtotop - start -->
+<div class="xb-backtotop">
+<a class="scroll" href="#">
+<i class="far fa-arrow-up"></i>
+</a>
+</div>
+<!-- backtotop - end -->
+<!-- Preloader - Start -->
+<div class="xb-loader" id="xb-loadding"><div class="xb-dual-ring"></div></div>
+<!-- Preloader - End -->
+<div class="body_wrap">
+<!-- header start -->
+<header class="header-area header-style-two header-transparent" id="xb-header-area">
+<div class="xb-header stricky">
+<div class="container">
+<div class="header__wrap ul_li_between">
+<!-- Logo -->
+<div class="header-logo">
+<a class="logo01" href="/">
+<img width="447" height="103" decoding="async" alt="Datfuslab Technologies logo" src="assets/img/logo/logo-black02.png" style="height:80px;"/>
+</a>
+<a class="logo02" href="/">
+<img width="447" height="103" decoding="async" alt="Datfuslab Technologies logo" src="assets/img/logo/logo-black02.png" style="height:80px;"/>
+</a>
+</div>
+<!-- Desktop Menu -->
+<div class="main-menu__wrap ul_li navbar navbar-expand-xl">
+<nav class="main-menu collapse navbar-collapse">
+<ul>
+<li><a href="/"><span>Home</span></a></li>
+<li class="menu-item-has-children">
+<a href="software-development"><span>Services</span></a>
+<ul class="submenu">
+<li><a href="software-development">Software Development</a></li>
+<li><a href="website-design">Website Design</a></li>
+<li><a href="mobile-app-development">Mobile App Development</a></li>
+<li><a href="digital-marketing">Digital Marketing</a></li>
+<li class="menu-item-has-children bulk-message-menu"><a href="bulk-sms"><span>Bulk Message</span></a>
+<ul class="submenu sub-menu">
+<li><a href="bulk-email">Bulk Email</a></li>
+<li><a href="bulk-sms">Bulk SMS</a></li>
+<li><a href="bulk-whatsapp-message">Bulk WhatsApp</a></li>
+</ul>
+</li>
+<li class="menu-item-has-children server-service-menu"><a href="web-hosting-server"><span>Hosting &amp; Servers</span></a>
+<ul class="submenu sub-menu">
+<li><a href="web-hosting-server">Web Hosting Server</a></li>
+<li><a href="linux-server">Linux Server</a></li>
+<li><a href="windows-server">Windows Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item-has-children">
+<a href="ngo-crm-software"><span>Our Product</span></a>
+<ul class="submenu">
+<li><a href="ngo-crm-software">NGO'S CRM</a></li>
+<li><a href="school-management-software">School Management</a></li>
+</ul>
+</li>
+<li><a href="about-us"><span>About Us</span></a></li>
+<li><a href="faq"><span>FAQ</span></a></li>
+<li><a href="contact"><span>Contact</span></a></li>
+<li><a href="blog"><span>Blog</span></a></li>
+</ul>
+</nav>
+</div>
+<!-- END Desktop Menu -->
+<!-- Mobile Menu Icon -->
+<div class="header-bar-mobile side-menu d-xl-none">
+<button class="xb-nav-mobile" type="button" aria-label="Open navigation menu">
+<i class="far fa-bars"></i>
+</button>
+</div>
+<!-- Contact Button -->
+<div class="header-contact d-none d-md-block">
+<a class="thm-btn thm-btn--aso thm-btn--header-black" href="contact">
+                        Let’s talk
+                        <img width="27" height="23" loading="lazy" decoding="async" alt="" src="assets/img/icon/sms-white-icon01.svg"/>
+</a>
+</div>
+</div> <!-- header__wrap -->
+</div> <!-- container -->
+</div> <!-- xb-header -->
+<!-- MOBILE MENU (Correct Placement) -->
+<div class="xb-header-menu">
+<div class="xb-header-menu-scroll lenis lenis-smooth">
+<div class="xb-menu-close xb-hide-xl xb-close"></div>
+<div class="xb-logo-mobile xb-hide-xl">
+<a href="/"><img width="447" height="103" decoding="async" alt="Datfuslab Technologies logo" src="assets/img/logo/logo-black02.png"/></a>
+</div>
+<nav class="xb-header-nav">
+<ul class="xb-menu-primary clearfix">
+<li class="menu-item"><a href="/">Home</a></li>
+<li class="menu-item menu-item-has-children">
+<a href="software-development">Services</a>
+<ul class="sub-menu">
+<li><a href="software-development">Software Development</a></li>
+<li><a href="website-design">Website Design</a></li>
+<li><a href="mobile-app-development">Mobile App Development</a></li>
+<li><a href="digital-marketing">Digital Marketing</a></li>
+<li class="menu-item-has-children bulk-message-menu"><a href="bulk-sms"><span>Bulk Message</span></a>
+<ul class="submenu sub-menu">
+<li><a href="bulk-email">Bulk Email</a></li>
+<li><a href="bulk-sms">Bulk SMS</a></li>
+<li><a href="bulk-whatsapp-message">Bulk WhatsApp</a></li>
+</ul>
+</li>
+<li class="menu-item-has-children server-service-menu"><a href="web-hosting-server"><span>Hosting &amp; Servers</span></a>
+<ul class="submenu sub-menu">
+<li><a href="web-hosting-server">Web Hosting Server</a></li>
+<li><a href="linux-server">Linux Server</a></li>
+<li><a href="windows-server">Windows Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-has-children">
+<a href="ngo-crm-software">Our Product</a>
+<ul class="sub-menu">
+<li><a href="ngo-crm-software">NGO'S CRM</a></li>
+<li><a href="school-management-software">School Management</a></li>
+</ul>
+</li>
+<li class="menu-item"><a href="about-us">About Us</a></li>
+<li class="menu-item"><a href="faq">FAQ</a></li>
+<li class="menu-item"><a href="contact">Contact</a></li>
+<li class="menu-item"><a href="blog">Blog</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="xb-header-menu-backdrop"></div>
+</header>
+<!-- header end -->
+<!-- main area start  -->
+<main>
+<!-- page title start  -->
+<section class="page-title pt-200 pos-rel bg_img" data-background="assets/img/bg/page_bg01.jpg">
+<div class="container">
+<div class="page-title-wrap sd-title-wrap">
+<div class="row mt-none-30 align-items-center">
+<div class="col-lg-8 mt-30">
+<div class="page-title-box">
+<span class="sub-title"><img width="20" height="20" loading="lazy" decoding="async" alt="" src="assets/img/icon/ser-01.svg"/> Custom Software Development</span>
+<h1 class="title">Software built around your business</h1>
+<p class="software-hero-lead">Plan and develop CRM, ERP, workflow automation and web applications that reflect how your teams work—not the limitations of generic software.</p>
+<div class="software-hero-actions">
+<a class="software-hero-button" href="contact">Discuss your project <span aria-hidden="true">→</span></a>
+<a class="software-hero-link" href="#software-process">See how we work <span aria-hidden="true">↓</span></a>
+</div>
+<div class="software-hero-proof" aria-label="Software development capabilities">
+<span>CRM &amp; ERP systems</span><span>Workflow automation</span><span>Web apps &amp; portals</span>
+</div>
+</div>
+</div>
+<div class="col-lg-4 mt-30">
+<div class="sd-right-img pos-rel xbzoominzoomup">
+<div class="software-hero-panel-label"><span>Product delivery</span><strong>From discovery to launch</strong></div>
+<img width="320" height="324" decoding="async" alt="Custom software development services" src="assets/img/hero/sd-img.png"/>
+<div class="software-hero-panel-status"><i aria-hidden="true"></i><span>Designed for your workflow</span></div>
+<div class="sd-arrow-shape">
+<img width="42" height="38" decoding="async" alt="" class="xbzoominzoomup" src="assets/img/shape/brd_shape.png"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- page title end  -->
+<!-- service-details-content start  -->
+<div class="sd-ser-content_wrap pb-110">
+<div class="container">
+<div class="sd-ser-content">
+<div class="software-benefits-layout">
+<div class="software-benefits-intro">
+<span>Why custom software?</span>
+<h2>Software that works the way your business does</h2>
+<p>Growing businesses need systems that support their processes instead of forcing teams to work around generic tools. We plan CRM, ERP, workflow automation and web applications around your users, operations and measurable goals.</p>
+<p>That means fewer disconnected tasks, clearer information flow and a product that can evolve as requirements change.</p>
+</div>
+<ul>
+<li style="margin-bottom: 10px;"><span class="software-capability-icon"><img src="assets/img/icon/tp-work-icon01.svg" width="51" height="51" loading="lazy" decoding="async" alt="Built around your workflows icon"/></span><strong>Built around your workflows</strong><br/>
+                    Design the system around your users, approvals, data and reporting requirements.
+                </li>
+<li style="margin-bottom: 10px;"><span class="software-capability-icon"><img src="assets/img/icon/tp-work-icon06.svg" width="51" height="51" loading="lazy" decoding="async" alt="Ready to integrate icon"/></span><strong>Ready to integrate</strong><br/>
+                    Connect CRM, payments, communication tools and approved third-party platforms.
+                </li>
+<li style="margin-bottom: 10px;"><span class="software-capability-icon"><img src="assets/img/icon/tp-work-icon04.svg" width="51" height="51" loading="lazy" decoding="async" alt="Secure and maintainable icon"/></span><strong>Secure and maintainable</strong><br/>
+                    Apply appropriate access controls, testing, documentation and data-protection practices.
+                </li>
+<li style="margin-bottom: 10px;"><span class="software-capability-icon"><img src="assets/img/icon/tp-work-icon02.svg" width="51" height="51" loading="lazy" decoding="async" alt="Designed to grow icon"/></span><strong>Designed to grow</strong><br/>
+                    Extend users, features and integrations as your operational requirements evolve.
+                </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sd-process_warp" id="software-process">
+<div class="container">
+<div class="sd-heading">
+<h2 class="sd-title">Our software development process</h2>
+<p class="sd-content">
+                A clear delivery process keeps requirements, responsibilities and progress visible from initial discovery through launch and support.
+            </p>
+</div>
+<div class="sd-process_inner ul_li">
+<div class="sd-process-item">
+<div class="xb-item--icon"><img width="53" height="53" loading="lazy" decoding="async" alt="Discovery & Planning icon" src="assets/img/icon/sd-icon01.svg"/></div>
+<h3 class="xb-item--title">Discovery &amp; Planning</h3>
+<p class="xb-item--contact">We define your users, workflows, challenges and measurable project goals before technical planning and development begin.</p>
+<span class="xb-item--number">01</span>
+</div>
+<div class="sd-process-item">
+<div class="xb-item--icon"><img width="53" height="53" loading="lazy" decoding="async" alt="Solution Design icon" src="assets/img/icon/sd-icon02.svg"/></div>
+<h3 class="xb-item--title">Solution Design</h3>
+<p class="xb-item--contact">We plan the user experience, system architecture, integrations and delivery roadmap for a reliable, scalable digital product.</p>
+<span class="xb-item--number">02</span>
+</div>
+<div class="sd-process-item">
+<div class="xb-item--icon"><img width="53" height="53" loading="lazy" decoding="async" alt="Development & Integration icon" src="assets/img/icon/sd-icon03.svg"/></div>
+<h3 class="xb-item--title">Development &amp; Integration</h3>
+<p class="xb-item--contact">We build, review and connect each feature through transparent stages, with regular progress updates and quality reviews.</p>
+<span class="xb-item--number">03</span>
+</div>
+<div class="sd-process-item">
+<div class="xb-item--icon"><img width="53" height="53" loading="lazy" decoding="async" alt="Launch & Ongoing Support icon" src="assets/img/icon/sd-icon04.svg"/></div>
+<h3 class="xb-item--title">Launch &amp; Ongoing Support</h3>
+<p class="xb-item--contact">We verify quality, deploy securely and support improvements after launch through performance monitoring, maintenance and future enhancements.</p>
+<span class="xb-item--number">04</span>
+</div>
+<div class="sd-shape"><img width="1275" height="330" loading="lazy" decoding="async" alt="" src="assets/img/shape/sd-shape-white.svg"/></div>
+</div>
+</div>
+</div>
+<div class="sd-service_wrap pt-115 pb-130">
+<div class="container">
+<div class="sd-ser-outcome">
+<div class="sd-heading">
+<h2 class="sd-title">What your business can achieve</h2>
+<p class="sd-content">
+                    The right software can remove avoidable manual work, improve information flow and give customers and employees a more consistent experience.
+                </p>
+<p class="sd-content"><br/>Potential outcomes are defined during discovery and measured against the agreed project goals:</p>
+</div>
+<div class="sd-list-item ul_li">
+<ul class="sd-ser-list list-unstyled">
+<li><img width="25" height="25" loading="lazy" decoding="async" alt="" src="assets/img/icon/orange-check.png"/>Streamlined operations and reduced manual workload.</li>
+<li><img width="25" height="25" loading="lazy" decoding="async" alt="" src="assets/img/icon/orange-check.png"/>Improved customer experience and engagement.</li>
+<li><img width="25" height="25" loading="lazy" decoding="async" alt="" src="assets/img/icon/orange-check.png"/>Enhanced security and data protection.</li>
+</ul>
+<ul class="sd-ser-list list-unstyled">
+<li><img width="25" height="25" loading="lazy" decoding="async" alt="" src="assets/img/icon/orange-check.png"/>Technology that scales with your business.</li>
+<li><img width="25" height="25" loading="lazy" decoding="async" alt="" src="assets/img/icon/orange-check.png"/>Better decision-making with real-time insights.</li>
+<li><img width="25" height="25" loading="lazy" decoding="async" alt="" src="assets/img/icon/orange-check.png"/>Planned support and improvements as requirements evolve.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<section class="sd-service_wrap pb-130" aria-labelledby="software-expertise-title">
+<div class="container">
+<div class="sd-ser-outcome">
+<div class="sd-heading">
+<h2 class="sd-title" id="software-expertise-title">Custom software built around your operations</h2>
+<p class="sd-content">Datfuslab designs business applications, workflow automation systems, CRM platforms and web portals for organisations whose operational needs are not fully served by off-the-shelf software.</p>
+</div>
+<div class="row mt-none-30">
+<div class="col-lg-4 mt-30"><h3>Business-first discovery</h3><p>We map users, processes, integrations and measurable outcomes before recommending an architecture or technology stack.</p></div>
+<div class="col-lg-4 mt-30"><h3>Scalable engineering</h3><p>Modular development, testing and documentation make the system easier to maintain, integrate and extend as requirements change.</p></div>
+<div class="col-lg-4 mt-30"><h3>Long-term product support</h3><p>After deployment, we can monitor performance, resolve issues, improve features and help internal teams adopt the new system.</p></div>
+</div>
+</div>
+</div>
+</section>
+<!-- service-details-content end  -->
+<section class="software-cta">
+<div class="container">
+<div class="software-cta__box">
+<div><span>Have a software idea?</span><h2>Turn your business requirements into a dependable digital product.</h2><p>Share your workflow, users and goals. We will help you define a practical development scope and the right next step.</p></div>
+<a class="software-cta__button" href="contact">Discuss your project <span aria-hidden="true">→</span></a>
+</div>
+</div>
+</section>
+</main></div>
+
+<!-- main area end  -->
+<!-- footer strt -->
+<footer class="footer footer-style-two bg_img pos-rel" data-bg-color="#111112">
+            <div class="container">
+                <div class="xb-footer pt-5">
+                    <div class="footer-inner mt-10 mb-50 ul_li_between align-items-start">
+                        <div class="sa-newslatter footer-widget">
+                            <div class="icon icon--two"><img width="447" height="103" loading="lazy" decoding="async" alt="Datfuslab Technologies" src="assets/img/logo/logo-footer.webp"
+                                    style="height: 80px; width: auto;" /></div><br />
+                            <p class="xb-item--content clr-white">At Datfuslab Technologies, innovation is ingrained in
+                                our DNA. We're dedicated to crafting impactful online experiences that drive your
+                                brand's success in the digital sphere. With a team of adept professionals passionate
+                                about technology, we strive to transform ideas into reality, leveraging the latest tools
+                                and methodologies.</p>
+                        </div>
+                        <div class="footer-widget">
+                            <span class="xb-item--sub-title">Our Industries</span>
+                            <ul class="xb-item--holder list-unstyled">
+                                <li class="xb-item--list">NGO</li>
+                                <li class="xb-item--list">Schools &amp; Educational Institutions</li>
+                                <li class="xb-item--list">Real estate</li>
+                                <li class="xb-item--list">Insurance</li>
+                                <li class="xb-item--list">Tour &amp; Travel</li>
+                                <li class="xb-item--list">Finance</li>
+                                <li class="xb-item--list">Healthcare</li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget">
+                            <span class="xb-item--sub-title">Our Services</span>
+                            <ul class="xb-item--holder list-unstyled">
+                                <li class="xb-item--list"><a href="software-development">Software Development</a></li>
+                                <li class="xb-item--list"><a href="website-design">Website Design &amp; Development</a></li>
+                                <li class="xb-item--list"><a href="mobile-app-development">Mobile App Development</a></li>
+                                <li class="xb-item--list"><a href="digital-marketing">Digital Marketing</a></li>
+                                <li class="xb-item--list"><a href="ngo-crm-software">NGO CRM Software</a></li>
+                                <li class="xb-item--list"><a href="bulk-sms">Bulk SMS</a></li>
+                                <li class="xb-item--list"><a href="bulk-whatsapp-message">Bulk WhatsApp Messaging</a></li>
+                                <li class="xb-item--list"><a href="bulk-email">Bulk Email</a></li>
+                                <li class="xb-item--list"><a href="web-hosting-server">Web Hosting</a></li>
+                                <li class="xb-item--list"><a href="linux-server">Linux Server Management</a></li>
+                                <li class="xb-item--list"><a href="windows-server">Windows Server Management</a></li>
+                                <li class="xb-item--list"><a href="blog">Blog</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget">
+                            <span class="xb-item--sub-title">Our Certificate</span>
+                            <ul class="xb-item--holder list-unstyled">
+                                <li><img width="866" height="288" loading="lazy" decoding="async" alt="DPIIT recognition certificate" src="assets/img/footer/DPIIT-header.webp" style="height: 100px; width: auto;" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-copyright mt-70 ul_li_between">
+                        <p class="copyright">Copyright © 2026 <a href="">Datfuslab Technologies Pvt. Ltd.</a>
+                            All rights reserved.</p>
+                        <ul class="footer-link ul_li">
+                            <li><a href="terms-conditions"><span>Term &amp; Conditions </span></a></li>
+                            <li><span> | </span></li>
+                            <li><a href="privacy-policy"><span>Privacy Policy </span></a></li>
+                            <li><span> | </span></li>
+                            <li><a href="refund-policy"><span>Refund Policy </span></a></li>
+                            <!--<li><span> | </span></li>
+                        <li><span>Follow us :</span></li>
+                        <li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#!"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#!"><i class="fab fa-instagram"></i></a></li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+<!-- <?php include 'footer.html'; ?> -->
+<!-- footer end -->
+
+<!-- jquery include -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/gsap.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/parallaxie.js"></script>
+<script src="assets/js/parallax-scroll.js"></script>
+<script src="assets/js/odometer.min.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/easing.min.js"></script>
+<script src="assets/js/scrollspy.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/jquery.marquee.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script defer src="/assets/js/site-navigation.js?v=20261103"></script>
+</body>
+</html>
+
+
+
+
+

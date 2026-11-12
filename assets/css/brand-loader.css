@@ -1,0 +1,17 @@
+/* Shared branded loader; the timeout also works if JavaScript fails. */
+#xb-loadding { display:none!important; }
+#brand-page-loader {
+  position:fixed; inset:0; z-index:2147483000;
+  display:grid; place-items:center; background:#fdfafa;
+  pointer-events:none;
+  animation:brand-loader-timeout 2.2s step-end forwards;
+}
+#brand-page-loader[hidden] { display:none!important; }
+#brand-page-loader img { display:block; width:min(260px,70vw); height:auto; }
+#brand-page-loader .brand-loader-static { display:none; }
+.brand-loader-sr { position:absolute; width:1px; height:1px; padding:0; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+@keyframes brand-loader-timeout { to { visibility:hidden; opacity:0; } }
+@media (prefers-reduced-motion:reduce) {
+  #brand-page-loader .brand-loader-animation { display:none; }
+  #brand-page-loader .brand-loader-static { display:block; }
+}

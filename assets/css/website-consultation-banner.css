@@ -1,0 +1,13 @@
+.website-consultation-banner{position:relative;overflow:hidden;padding:23px 0;background:linear-gradient(105deg,#ff9009,#ff6200 52%,#ff8500);color:#fff;border-top:2px solid #fff1dd;font-family:Inter,Arial,sans-serif}
+.website-consultation-banner:before,.website-consultation-banner:after{content:"";position:absolute;pointer-events:none;border-radius:50%;background:linear-gradient(140deg,#ffc329,#ff8d00);border-top:1px solid #ffd05c}
+.website-consultation-banner:before{width:330px;height:150px;left:-150px;bottom:-122px;transform:rotate(12deg)}
+.website-consultation-banner:after{width:450px;height:170px;right:-180px;bottom:-104px;transform:rotate(-32deg)}
+.website-consultation-inner{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:30px;width:min(1240px,calc(100% - 64px));margin-inline:auto}
+.website-consultation-banner h2{margin:0 0 6px;font-family:inherit;color:#fff;font-size:clamp(24px,2.1vw,30px);line-height:1.15;letter-spacing:-.025em;font-weight:750}
+.website-consultation-banner p{margin:0;font-family:inherit;color:#fff;font-size:13px;line-height:1.5}
+.website-consultation-banner a{display:inline-flex;align-items:center;justify-content:center;gap:11px;flex-shrink:0;min-height:46px;padding:13px 22px;border:1px solid #ffe7d8;border-radius:10px;background:#fff;color:#ef5900;font-family:inherit;font-weight:750;font-size:13px;line-height:1.35;text-decoration:none;box-shadow:0 4px 10px #af470012;transition:transform .18s,background .18s}
+.website-consultation-banner a svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.website-consultation-banner a:hover{color:#b64100;background:#fff4df;transform:translateY(-2px)}
+.website-consultation-banner a:focus-visible{outline:3px solid #182a3d;outline-offset:4px}
+@media(max-width:767px){.website-consultation-banner{padding:25px 0}.website-consultation-inner{width:calc(100% - 36px);flex-direction:column;align-items:flex-start;gap:20px}.website-consultation-banner h2{font-size:25px}.website-consultation-banner p{font-size:13px}.website-consultation-banner a{width:100%;min-height:48px}}
+@media(prefers-reduced-motion:reduce){.website-consultation-banner a{transition:none}}

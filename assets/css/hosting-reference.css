@@ -1,0 +1,77 @@
+.hosting-reference-page{--hr-orange:#ff6907;--hr-ink:#101828;--hr-muted:#4c5664;font-family:Inter,Arial,sans-serif;color:var(--hr-ink);background:#fff;isolation:isolate}
+.hosting-reference-page *{box-sizing:border-box}
+.hosting-reference-page h1,.hosting-reference-page h2,.hosting-reference-page h3,.hosting-reference-page p{margin:0;color:inherit;font-family:inherit}
+.hosting-reference-page h1,.hosting-reference-page h2,.hosting-reference-page h3{font-weight:750;letter-spacing:-.04em}
+.hosting-reference-page p{color:var(--hr-muted);line-height:1.6;font-size:14px}
+.hosting-reference-page .hr-wrap{width:min(1240px,calc(100% - 64px));margin-inline:auto}
+.hosting-reference-page .hr-symbols{position:absolute;width:0;height:0;overflow:hidden}
+.hosting-reference-page .hr-icon{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.hosting-reference-page .hr-eyebrow{display:block;text-transform:uppercase;color:#f36605;font-size:11px;letter-spacing:.07em;font-weight:800;margin-bottom:8px}
+.hosting-reference-page .hr-hero{position:relative;overflow:hidden;padding:145px 0 27px;background:linear-gradient(110deg,#fff 25%,#fff7ef 75%,#ffead3)}
+.hosting-reference-page .hr-hero:after{content:"";position:absolute;top:-160px;right:-120px;width:650px;height:650px;border:80px solid #ffe0bc;border-radius:50%;opacity:.5;pointer-events:none}
+.hosting-reference-page .hr-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.07fr);gap:48px;align-items:center}
+.hosting-reference-page .hr-tag{display:inline-flex;gap:7px;align-items:center;padding:6px 11px;border-radius:30px;background:#fff0df;color:#c64e03;font-size:11px;font-weight:750}
+.hosting-reference-page .hr-tag .hr-icon{width:17px;height:17px}
+.hosting-reference-page h1{font-size:clamp(37px,3.7vw,56px);line-height:1.04;margin:15px 0 23px;letter-spacing:-.045em}
+.hosting-reference-page h1 span{display:block;position:relative;color:#f46300;width:fit-content;padding-bottom:8px}
+.hosting-reference-page h1 span:after{content:"";position:absolute;bottom:-5px;left:4%;right:8%;height:11px;border-top:3px solid #ff6b0a;border-radius:50%;transform:rotate(-2deg)}
+.hosting-reference-page .hr-hero-copy>p{font-size:15px;max-width:520px}
+.hosting-reference-page .hr-hero-art{margin:0;min-width:0}
+.hosting-reference-page .hr-hero-art img{display:block;width:100%;height:auto}
+.hosting-reference-page .hr-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:25px}
+.hosting-reference-page .hr-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:45px;padding:12px 18px;border:1px solid #f46e1c;border-radius:8px;background:linear-gradient(120deg,#ff8018,#fa5900);color:#fff;font-size:13px;font-weight:750;text-decoration:none;line-height:1.35;transition:transform .18s,background .18s;box-shadow:0 6px 14px #ec6c0012}
+.hosting-reference-page .hr-button:hover{background:#db4d00;color:#fff;transform:translateY(-2px)}
+.hosting-reference-page .hr-button.hr-secondary{color:#27313d;background:#fff;box-shadow:none;border-color:#ffb37d}
+.hosting-reference-page .hr-button .hr-icon{width:17px;height:17px}
+.hosting-reference-page a:focus-visible{outline:3px solid #17283a;outline-offset:4px}
+.hosting-reference-page .hr-proof{display:flex;flex-wrap:wrap;gap:14px 22px;list-style:none;margin:23px 0 0;padding:0;color:#424a55;font-size:11px;font-weight:600}
+.hosting-reference-page .hr-proof li{display:flex;align-items:center;gap:5px}.hosting-reference-page .hr-proof .hr-icon{width:15px;height:15px;color:#ff6b00;stroke-width:3}
+.hosting-reference-page .hr-section-head{text-align:center;margin:0 auto 25px;max-width:900px}
+.hosting-reference-page .hr-section-head h2{font-size:32px;line-height:1.15;margin-bottom:10px}
+.hosting-reference-page .hr-section-head p{font-size:13px}
+.hosting-reference-page .hr-services{padding:28px 0 22px}
+.hosting-reference-page .hr-services-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.hosting-reference-page .hr-service{display:flex;align-items:center;flex-direction:column;text-align:center;padding:21px 15px 18px;border:1px solid #f0e7df;border-radius:15px;background:linear-gradient(#fff,#fffbf6);box-shadow:0 4px 12px #62421309}
+.hosting-reference-page .hr-service>.hr-icon{width:48px;height:48px;color:#ff6d00;margin-bottom:12px;stroke-width:1.7}
+.hosting-reference-page .hr-service h3{font-size:18px;line-height:1.3;margin-bottom:10px;letter-spacing:-.025em}
+.hosting-reference-page .hr-service p{font-size:12px;line-height:1.6;margin-bottom:16px}
+.hosting-reference-page .hr-service a{margin-top:auto;display:inline-flex;gap:7px;align-items:center;border-radius:25px;padding:7px 15px;color:#e45b05;background:#fff0dd;font-size:11px;font-weight:750}
+.hosting-reference-page .hr-service a .hr-icon{width:13px;height:13px}
+.hosting-reference-page .hr-service a:hover{background:#ffdfb4;color:#a54100}
+.hosting-reference-page .hr-benefits{padding:9px 0 24px}
+.hosting-reference-page .hr-benefits h2{text-align:center;font-size:27px;line-height:1.2;margin:0 0 20px}
+.hosting-reference-page .hr-benefit-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px}
+.hosting-reference-page .hr-benefit{display:flex;align-items:center;gap:12px;border:1px solid #f5ece5;border-radius:12px;padding:16px 13px;background:#fffaf5;box-shadow:0 3px 9px #5b2f0e04}
+.hosting-reference-page .hr-benefit>.hr-icon{width:28px;height:28px;color:#ff7900}
+.hosting-reference-page .hr-benefit h3{font-size:12px;line-height:1.4;letter-spacing:-.02em}
+.hosting-reference-page .hr-management{padding:17px 0 28px;scroll-margin-top:110px}
+.hosting-reference-page .hr-management-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:center}
+.hosting-reference-page .hr-support-photo{margin:0;padding:6px;position:relative;min-width:0}
+.hosting-reference-page .hr-support-photo:before{content:"";position:absolute;inset:0;border:3px solid #ff8b20;border-radius:44px 15px 42px 15px;transform:rotate(-2deg)}
+.hosting-reference-page .hr-support-photo img{display:block;position:relative;width:100%;height:265px;object-fit:cover;object-position:45% 50%;border-radius:38px 12px 36px 12px}
+.hosting-reference-page .hr-management-copy h2{font-size:30px;line-height:1.15;margin-bottom:12px}
+.hosting-reference-page .hr-management-copy>p{font-size:13px}
+.hosting-reference-page .hr-management-list{display:grid;grid-template-columns:1fr 1fr;gap:13px 22px;margin:20px 0 0;padding:0;list-style:none}
+.hosting-reference-page .hr-management-list li{display:flex;align-items:flex-start;gap:8px;font-size:12px;line-height:1.5;color:#38404d}
+.hosting-reference-page .hr-management-list .hr-icon{width:16px;height:16px;color:#fa6b0c;stroke-width:2.7;margin-top:1px}
+.hosting-reference-page .hr-management-copy .hr-scope-note{font-size:10px;color:#6c727a;margin-top:15px;line-height:1.6}
+.hosting-reference-page .hr-industries{position:relative;overflow:hidden;padding:25px 0 30px;background:linear-gradient(110deg,#fff0de,#fffaf4 50%,#fff0e0)}
+.hosting-reference-page .hr-industries:before{content:"";position:absolute;width:500px;height:500px;border:70px solid #ffe4c2;border-radius:50%;left:-260px;top:10px;opacity:.5}
+.hosting-reference-page .hr-industries>.hr-wrap{position:relative}
+.hosting-reference-page .hr-industries-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px}
+.hosting-reference-page .hr-industry{padding:17px 6px;text-align:center;border:1px solid #ffe9d5;border-radius:12px;background:#fffaf5;box-shadow:0 3px 10px #82471205}
+.hosting-reference-page .hr-industry>.hr-icon{width:32px;height:32px;color:#ff7d00;margin-bottom:9px}
+.hosting-reference-page .hr-industry h3{font-size:11px;line-height:1.35;letter-spacing:-.01em;margin-bottom:4px}
+.hosting-reference-page .hr-industry p{font-size:9px;line-height:1.4}
+.hosting-reference-page .hr-cta{position:relative;overflow:hidden;background:linear-gradient(110deg,#ff9d0e,#ff6700 50%,#ff8c00);color:#fff;padding:18px 0}
+.hosting-reference-page .hr-cta:after{content:"";position:absolute;right:-100px;bottom:-150px;border-radius:50%;width:430px;height:240px;background:#ffcf37;transform:rotate(-25deg);opacity:.5}
+.hosting-reference-page .hr-cta-grid{position:relative;z-index:1;display:grid;grid-template-columns:145px 1fr auto;gap:23px;align-items:center}
+.hosting-reference-page .hr-cta-grid>img{display:block;width:145px;height:auto}
+.hosting-reference-page .hr-cta h2{font-size:28px;line-height:1.1;margin-bottom:8px;color:#fff}
+.hosting-reference-page .hr-cta p{font-size:12px;color:#fff;line-height:1.6}
+.hosting-reference-page .hr-cta .hr-button{background:#fff;border-color:#fff;color:#ed5e00;box-shadow:none}
+.hosting-reference-page .hr-cta .hr-button:hover{background:#fff3dc;color:#a64000}
+@media(max-width:1100px){.hosting-reference-page .hr-wrap{width:calc(100% - 44px)}.hosting-reference-page .hr-services-grid{gap:10px}.hosting-reference-page .hr-service{padding:18px 10px}.hosting-reference-page .hr-service h3{font-size:16px}.hosting-reference-page .hr-benefit-grid{grid-template-columns:repeat(3,1fr)}.hosting-reference-page .hr-industries-grid{grid-template-columns:repeat(4,1fr)}.hosting-reference-page .hr-cta-grid{grid-template-columns:100px 1fr auto;gap:16px}.hosting-reference-page .hr-cta-grid>img{width:100px}.hosting-reference-page .hr-cta h2{font-size:25px}.hosting-reference-page .hr-management-grid{gap:28px}}
+@media(max-width:767px){.hosting-reference-page .hr-wrap{width:calc(100% - 36px)}.hosting-reference-page .hr-hero{padding:112px 0 23px}.hosting-reference-page .hr-hero-grid{grid-template-columns:1fr;gap:27px}.hosting-reference-page h1{font-size:clamp(35px,8.5vw,49px)}.hosting-reference-page .hr-hero-art{width:100%;max-width:560px;justify-self:center}.hosting-reference-page .hr-services-grid{grid-template-columns:1fr 1fr;gap:12px}.hosting-reference-page .hr-service{padding:20px 13px}.hosting-reference-page .hr-service h3{font-size:17px}.hosting-reference-page .hr-service p{font-size:12px}.hosting-reference-page .hr-section-head h2{font-size:29px}.hosting-reference-page .hr-section-head p{font-size:13px}.hosting-reference-page .hr-benefits h2{font-size:26px}.hosting-reference-page .hr-benefit-grid{grid-template-columns:1fr 1fr;gap:10px}.hosting-reference-page .hr-benefit{padding:15px 12px;gap:10px}.hosting-reference-page .hr-management-grid{grid-template-columns:1fr;gap:25px}.hosting-reference-page .hr-support-photo img{height:auto;aspect-ratio:1.5}.hosting-reference-page .hr-management-copy h2{font-size:29px}.hosting-reference-page .hr-management-copy>p{font-size:14px}.hosting-reference-page .hr-management-list{gap:12px}.hosting-reference-page .hr-management-list li{font-size:12px}.hosting-reference-page .hr-industries-grid{grid-template-columns:1fr 1fr;gap:10px}.hosting-reference-page .hr-industry h3{font-size:13px}.hosting-reference-page .hr-industry p{font-size:11px}.hosting-reference-page .hr-cta-grid{grid-template-columns:80px 1fr;gap:15px}.hosting-reference-page .hr-cta-grid>img{width:80px}.hosting-reference-page .hr-cta h2{font-size:23px}.hosting-reference-page .hr-cta p{font-size:12px}.hosting-reference-page .hr-cta .hr-button{grid-column:1/-1}.hosting-reference-page .hr-cta br{display:none}}
+@media(max-width:380px){.hosting-reference-page .hr-management-list{grid-template-columns:1fr}.hosting-reference-page .hr-proof{gap:10px}.hosting-reference-page .hr-service h3{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.hosting-reference-page *{transition:none!important;scroll-behavior:auto!important}}
